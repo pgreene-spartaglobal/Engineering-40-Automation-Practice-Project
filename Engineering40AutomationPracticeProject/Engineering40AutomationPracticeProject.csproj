@@ -99,7 +99,7 @@
     <Folder Include="Steps\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Features\SpecFlowFeature1.feature" />
+    <None Include="Features\AddToCart.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
