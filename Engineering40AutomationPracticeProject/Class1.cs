@@ -8,5 +8,6 @@ namespace Engineering40AutomationPracticeProject
 {
     public class Class1
     {
+
     }
 }
