@@ -31,7 +31,7 @@ Scenario: Succesful Purchase using check
     When I clicked on I confirm my order button on Order Summary page
     Then I should see the Order Confirmation page
 
-Scenario: Succesful Purchase using check
+Scenario: Succesful Purchase using check while not signed in
     Given I have added at least one item to the shopping cart
     And I am on the Shopping-Cart Summary page
     And I clicked on the Proceed to checkout button
@@ -48,7 +48,7 @@ Scenario: Succesful Purchase using check
     When I clicked on I confirm my order button on Order Summary page
     Then I should see the Order Confirmation page
 
-Scenario: Succesful Purchase using bank wire
+Scenario: Succesful Purchase using bank wire while not signed in
     Given I have added at least one item to the shopping cart
     And I am on the Shopping-Cart Summary page
     And I clicked on the Proceed to checkout button
