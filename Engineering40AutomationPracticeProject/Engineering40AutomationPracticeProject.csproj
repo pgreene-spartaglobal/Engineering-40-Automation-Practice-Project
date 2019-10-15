@@ -103,8 +103,11 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="Features\AddToCart.feature" />
+    <None Include="Features\Checkout.feature" />
     <None Include="Features\ItemsInCart.feature" />
+    <None Include="Features\SetDeliveryAddressCheckoutSection.feature" />
     <None Include="Features\SetQuantity.feature" />
+    <None Include="Features\UpdateBillingAddressCheckoutSection.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
