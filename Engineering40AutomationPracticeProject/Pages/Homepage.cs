@@ -21,6 +21,10 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.ClassName, Using = "product-image_link")]
         private readonly IWebElement GotoProduct;
 
+
+        [FindsBy(How = How.ClassName, Using = "shopping_cart")]
+        private readonly IWebElement GotoShoppingCart;
+
         public void GoToPage()
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
@@ -29,6 +33,11 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void ClickProduct()
         {
             GotoProduct.Click();
+        }
+
+        public void ClickCart()
+        {
+            GotoShoppingCart.Click();
         }
     }
 }
