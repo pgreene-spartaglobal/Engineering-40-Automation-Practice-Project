@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Engineering40AutomationPracticeProject
 {
-    public class Class1
+    public partial class Class1
     {
+        //Something
     }
 }
