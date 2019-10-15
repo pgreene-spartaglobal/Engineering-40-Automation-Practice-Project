@@ -27,6 +27,9 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.ClassName, Using = "cart_summary")]
         private IWebElement CartSummary;
 
+        [FindsBy(How = How.ClassName, Using = "cart_quantity_delete")]
+        private IWebElement DeleteCart;
+
         public void GoToShoppingCart()
         {
             GotoShoppingCart.Click();
@@ -35,6 +38,11 @@ namespace Engineering40AutomationPracticeProject.Pages
         public string emptyShoppingCart()
         {
             return EmptyShoppingCart.Text;
+        }
+
+        public void deleteCart()
+        {
+            DeleteCart.Click();
         }
     }
 }
