@@ -48,6 +48,7 @@ Test data will be created specifically for the tests by the test team.
 | Brandon Stephens | Tester | Design and execute test cases for purchasing |
 | Cosmin Balosache | Tester | Design and execute test cases for purchasing |
 | Nazir Ahmed | Tester | Design and execute test cases for purchasing |
+| Dipak Mukesh | Tester | Design and execute test cases for purchasing |
 | Norberta Balaisyte | Tester | Design and execute test cases for purchasing |
 | Philip Greene | Test Manager | Lead all testing activities, including test planning, test execution and status reporting. Design and execute test cases for account management |
 | Ciaran Cullen | Tester | Design and execute test cases for account management |
