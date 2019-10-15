@@ -91,6 +91,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\CartPage.cs" />
     <Compile Include="Pages\CheckoutPage.cs" />
     <Compile Include="Pages\ProductPage.cs" />
     <Compile Include="Steps\AddToCartSteps.cs" />
