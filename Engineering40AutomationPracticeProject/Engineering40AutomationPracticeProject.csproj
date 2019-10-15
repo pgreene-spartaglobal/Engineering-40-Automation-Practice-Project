@@ -93,6 +93,7 @@
   <ItemGroup>
     <Compile Include="Pages\CartPage.cs" />
     <Compile Include="Pages\CheckoutPage.cs" />
+    <Compile Include="Pages\ProductPage.cs" />
     <Compile Include="Steps\AddToCartSteps.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\Homepage.cs" />
