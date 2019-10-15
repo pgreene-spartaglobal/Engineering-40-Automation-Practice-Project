@@ -18,12 +18,19 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.Id, Using = "Women")]
-        private IWebElement WomenPageLink;
+        [FindsBy(How = How.LinkText, Using = "http://automationpractice.com/index.php?controller=cart&add=1&id_product=1&token=e817bb0705dd58da8db074c69f729fd8")]
+        private IWebElement ButtonAddToCart;
+
+
 
         public void GoToPage()
         {
-            driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=3&controller=category");
+        }
+
+        public void AddToCardButton()
+        {
+            ButtonAddToCart.Click();
         }
     }
 }
