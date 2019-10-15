@@ -78,12 +78,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Pages\EP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\EPStep.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\" />
-    <Folder Include="Pages\" />
-    <Folder Include="Steps\" />
+    <None Include="Features\EP.feature" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
