@@ -96,11 +96,13 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\Homepage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\ItemsInCartSteps.cs" />
     <Compile Include="Steps\SetQuantitySteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="Features\AddToCart.feature" />
+    <None Include="Features\ItemsInCart.feature" />
     <None Include="Features\SetQuantity.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
