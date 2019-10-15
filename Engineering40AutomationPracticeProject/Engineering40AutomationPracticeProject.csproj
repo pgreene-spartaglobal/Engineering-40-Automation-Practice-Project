@@ -80,6 +80,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\EP.cs" />
+    <Compile Include="Steps\ProductFunctionSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\EPStep.cs" />
     <Compile Include="Steps\NavigationSteps.cs" />
@@ -89,6 +90,7 @@
     <None Include="Features\Navigation.feature" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\ProductFunction.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
