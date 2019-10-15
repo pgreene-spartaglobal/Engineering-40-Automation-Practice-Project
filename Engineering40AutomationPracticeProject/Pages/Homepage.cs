@@ -18,9 +18,17 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
+        [FindsBy(How = How.ClassName, Using = "product-image_link")]
+        private readonly IWebElement GotoProduct;
+
         public void GoToPage()
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
+        }
+
+        public void ClickProduct()
+        {
+            GotoProduct.Click();
         }
     }
 }
