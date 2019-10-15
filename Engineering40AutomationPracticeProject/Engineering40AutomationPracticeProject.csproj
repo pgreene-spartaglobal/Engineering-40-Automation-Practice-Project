@@ -91,14 +91,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\CheckoutPage.cs" />
     <Compile Include="Steps\AddToCartSteps.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\Homepage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\SetQuantitySteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="Features\AddToCart.feature" />
+    <None Include="Features\SetQuantity.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
