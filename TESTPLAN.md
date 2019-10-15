@@ -54,6 +54,23 @@ Test data will be created specifically for the tests by the test team.
 | Ciaran Cullen | Tester | Design and execute test cases for account management |
 | Jez Horton | Tester | Design and execute test cases for account management |
 | Canute Gilzene | Tester | Design and execute test cases for account management |
+### Major Tasks
+Day 1: 
+*	Create Test Plan
+*	Generate user stories
+*	Write scenarios in Gherkin syntax
+
+Day 2:
+*	Finish writing scenarios in Gherkin syntax
+*	Generate step files from features
+*	Write implementation for step files
+*	Execute test cases
+
+Day 3:
+*	Finish executing test cases
+*	Test summary report
+*	Create slide deck 
+*	Organise speaking roles for presentation 
 ### Test Environment
 #### Hardware
 All testing will be performed using HP Notebooks
