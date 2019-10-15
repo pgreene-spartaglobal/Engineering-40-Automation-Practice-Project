@@ -34,6 +34,10 @@ namespace Engineering40AutomationPracticeProject
         public IWebElement emailField;
         [FindsBy(How = How.Id, Using = "SubmitLogin")]
         public IWebElement submitButton;
+        [FindsBy(How = How.Id, Using = "email_create")]
+        public IWebElement createAccountEmail;
+
+
         //This is the method to navigate easily during the tests
         public void Navigate(string url)
         {

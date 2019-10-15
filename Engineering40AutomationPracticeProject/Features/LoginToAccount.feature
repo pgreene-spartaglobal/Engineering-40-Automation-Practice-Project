@@ -9,7 +9,7 @@ Scenario: Correct Login Information
 	And I have entered a correct password
 	And I have entered a correct email address
 	And I have clicked the submit button
-	Then I will log in
+	Then I will be redirected to the account page
 
 Scenario: Incorrect Email Information
 	Given I am on the login page

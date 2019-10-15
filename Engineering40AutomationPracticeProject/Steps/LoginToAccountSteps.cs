@@ -20,7 +20,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             ba = new Base(driver);
             ba.Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
         }
-        
+
         [Given(@"I have entered a correct password")]
         public void GivenIHaveEnteredACorrectPassword()
         {
@@ -49,8 +49,8 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             ba.submitButton.Click();
         }
-        [Then(@"I will log in")]
-        public void ThenIWillLogIn()
+        [Then(@"I will be redirected to the account page")]
+        public void Iwillberedirectedtotheaccountpage()
         {
             Assert.AreEqual("http://automationpractice.com/index.php?controller=my-account", driver.Url);
         }

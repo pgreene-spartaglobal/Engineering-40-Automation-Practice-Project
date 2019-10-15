@@ -87,7 +87,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 11
  testRunner.And("I have clicked the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.Then("I will log in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I will be redirected to the account page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

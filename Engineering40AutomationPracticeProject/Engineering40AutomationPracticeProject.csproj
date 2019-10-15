@@ -85,10 +85,12 @@
   <ItemGroup>
     <Compile Include="Pages\BaseLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\CreateAccountSteps.cs" />
     <Compile Include="Steps\LoginToAccountSteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Features\CreateAccount.feature" />
     <None Include="packages.config" />
     <None Include="Features\LoginToAccount.feature" />
   </ItemGroup>
