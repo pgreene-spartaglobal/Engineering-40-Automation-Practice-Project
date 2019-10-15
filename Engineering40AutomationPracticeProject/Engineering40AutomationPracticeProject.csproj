@@ -91,7 +91,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\CartPage.cs" />
     <Compile Include="Pages\CheckoutPage.cs" />
+    <Compile Include="Pages\ProductPage.cs" />
     <Compile Include="Steps\AddToCartSteps.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\Homepage.cs" />
@@ -102,8 +104,11 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="Features\AddToCart.feature" />
+    <None Include="Features\Checkout.feature" />
     <None Include="Features\ItemsInCart.feature" />
+    <None Include="Features\SetDeliveryAddressCheckoutSection.feature" />
     <None Include="Features\SetQuantity.feature" />
+    <None Include="Features\UpdateBillingAddressCheckoutSection.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
