@@ -17,22 +17,22 @@ namespace Engineering40AutomationPracticeProject.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Items In Cart", Description="\t\tAs a User\r\n\t\tI want to be able to check the items in my cart\r\n\t\tSo that I can p" +
-        "roceed to the checkout.", SourceFile="Features\\ItemsInCart.feature", SourceLine=0)]
-    public partial class ItemsInCartFeature
+    [TechTalk.SpecRun.FeatureAttribute("Set Delivery Address Checkout Section", Description="\tAs a user\r\n\tI want to be able to add a delivery address\r\n\tSo that I can receive " +
+        "the ordered items.", SourceFile="Features\\SetDeliveryAddressCheckoutSection.feature", SourceLine=0)]
+    public partial class SetDeliveryAddressCheckoutSectionFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ItemsInCart.feature"
+#line 1 "SetDeliveryAddressCheckoutSection.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Items In Cart", "\t\tAs a User\r\n\t\tI want to be able to check the items in my cart\r\n\t\tSo that I can p" +
-                    "roceed to the checkout.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Set Delivery Address Checkout Section", "\tAs a user\r\n\tI want to be able to add a delivery address\r\n\tSo that I can receive " +
+                    "the ordered items.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -68,36 +68,36 @@ namespace Engineering40AutomationPracticeProject.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("View items in Shopping cart", SourceLine=5)]
-        public virtual void ViewItemsInShoppingCart()
+        [TechTalk.SpecRun.ScenarioAttribute("Add a new new delivery address", SourceLine=5)]
+        public virtual void AddANewNewDeliveryAddress()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View items in Shopping cart", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a new new delivery address", null, ((string[])(null)));
 #line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
-     testRunner.Given("I am on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on the Addresses page In Checkout Section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-     testRunner.When("I click on Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I click on Add a new address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-     testRunner.Then("I should see the items in the Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I should see Your Addresses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("No items in Cart message", SourceLine=10)]
-        public virtual void NoItemsInCartMessage()
+        [TechTalk.SpecRun.ScenarioAttribute("Update a delivery address", SourceLine=10)]
+        public virtual void UpdateADeliveryAddress()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("No items in Cart message", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update a delivery address", null, ((string[])(null)));
 #line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 12
-  testRunner.Given("I am on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on the Addresses page In Checkout Section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
-  testRunner.When("I click on Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I click on Update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
-  testRunner.Then("there should be a Cart message.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I should see Your Addresses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

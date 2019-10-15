@@ -29,11 +29,5 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         [FindsBy(How = How.Id, Using = "add_to_cart")]
         private readonly IWebElement AddToCart;
-
-
-        public void GoToPage()
-        {
-            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_product=1&controller=product");
-        }
     }
 }

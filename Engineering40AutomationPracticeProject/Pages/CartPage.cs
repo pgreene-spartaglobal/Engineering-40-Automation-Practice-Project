@@ -18,10 +18,10 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.ClassName, Using = "ShoppingCart")]
+        [FindsBy(How = How.XPath, Using = "//div[@class='shopping_cart']")]
         private IWebElement GotoShoppingCart;
 
-        [FindsBy(How = How.ClassName, Using = "alert-warning")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/p")]
         private IWebElement EmptyShoppingCart;
 
         [FindsBy(How = How.ClassName, Using = "cart_summary")]
