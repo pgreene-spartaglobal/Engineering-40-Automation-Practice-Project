@@ -26,17 +26,24 @@ namespace Engineering40AutomationPracticeProject
             driver = new ChromeDriver();
 
         }
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div[1]/ol/li")]
+        public IWebElement AuthenticateError;
         [FindsBy(How = How.Id, Using = "passwd")]
         public IWebElement passwordField;
         [FindsBy(How = How.Id, Using = "email")]
         public IWebElement emailField;
         [FindsBy(How = How.Id, Using = "SubmitLogin")]
         public IWebElement submitButton;
+        //This is the method to navigate easily during the tests
         public void Navigate(string url)
         {
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(url);
         }
+        /*(This is the base login method for other testers to use
+         * This has the correct email and password to login
+         * It also navigates to the login page by default                 
+         */
         public void LogIn()
         {
             string password = "PAssword";
@@ -47,8 +54,6 @@ namespace Engineering40AutomationPracticeProject
             submitButton.Click();
         }
     }
-
-        [Binding]
         public class LoginStep
         {
 
