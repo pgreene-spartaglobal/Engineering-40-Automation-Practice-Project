@@ -92,7 +92,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\CartPage.cs" />
+    <Compile Include="Pages\CheckoutAddressPage.cs" />
     <Compile Include="Pages\CheckoutPage.cs" />
+    <Compile Include="Pages\CheckoutPaymentPage.cs" />
+    <Compile Include="Pages\CheckoutShippingPage.cs" />
+    <Compile Include="Pages\CheckoutSignInPage.cs" />
+    <Compile Include="Pages\PayByBankWireOrderConfirmationPage.cs" />
+    <Compile Include="Pages\PayByBankWirePage.cs" />
+    <Compile Include="Pages\PayByCheckOrderConfirmationPage.cs" />
+    <Compile Include="Pages\PayByCheckPage.cs" />
     <Compile Include="Pages\ProductPage.cs" />
     <Compile Include="Pages\ShoppingCartSummaryPage.cs" />
     <Compile Include="Steps\AddToCartSteps.cs" />
