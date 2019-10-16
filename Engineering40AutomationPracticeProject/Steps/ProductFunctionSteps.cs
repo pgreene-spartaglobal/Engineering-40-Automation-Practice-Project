@@ -3,64 +3,79 @@ using TechTalk.SpecFlow;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
+using System.Threading;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
     [Binding]
     public class ProductFunctionSteps
     {
-        [Given(@"That I am on the product page")]
-        public void GivenThatIAmOnTheProductPage()
+        private IWebDriver driver;
+        private WomenPage womenPage;
+        private LoginPage loginPage;
+
+        [BeforeScenario]
+        public void SetUp()
         {
-            ScenarioContext.Current.Pending();
+            driver = new ChromeDriver();
+            loginPage = new LoginPage(driver);
+            womenPage = new WomenPage(driver);
         }
-        
+
         [Given(@"I am logged in")]
         public void GivenIAmLoggedIn()
         {
-            ScenarioContext.Current.Pending();
+            loginPage.GoToPage();
+            loginPage.Login();
+        }
+
+        [Given(@"That I am on the product page")]
+        public void GivenThatIAmOnTheProductPage()
+        {
+            womenPage.GoToPage();
         }
         
-        [Given(@"I have selected a product")]
-        public void GivenIHaveSelectedAProduct()
-        {
-            ScenarioContext.Current.Pending();
-        }
         
         [When(@"I press on the wishlist button")]
         public void WhenIPressOnTheWishlistButton()
         {
-            ScenarioContext.Current.Pending();
+            womenPage.AddToWishList();            
         }
         
         [When(@"I press on the Add to compare button")]
         public void WhenIPressOnTheAddToCompareButton()
         {
-            ScenarioContext.Current.Pending();
+            womenPage.CompareThreeItems();
+            
         }
         
         [When(@"I press on the Compare button")]
         public void WhenIPressOnTheCompareButton()
         {
-            ScenarioContext.Current.Pending();
+            womenPage.CompareBtn();
         }
         
         [Then(@"I should see the product on the wishlist")]
         public void ThenIShouldSeeTheProductOnTheWishlist()
         {
-            ScenarioContext.Current.Pending();
+           Thread.Sleep(3000);
+           Assert.AreEqual("Added to your wishlist.", womenPage.ErrorBox());
+            loginPage.LogOut();
         }
         
         [Then(@"I should see the error message")]
         public void ThenIShouldSeeTheErrorMessage()
         {
-            ScenarioContext.Current.Pending();
+            Thread.Sleep(3000);
+            Assert.AreEqual("You must be logged in to manage your wishlist.", womenPage.ErrorBox());
         }
         
         [Then(@"I should see the selected items side by side")]
         public void ThenIShouldSeeTheSelectedItemsSideBySide()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(4, womenPage.CompareInfo());
         }
+
+
     }
 }

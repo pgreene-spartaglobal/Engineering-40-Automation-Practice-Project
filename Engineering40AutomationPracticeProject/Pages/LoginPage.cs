@@ -19,6 +19,10 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "SubmitLogin")]
         private IWebElement submitBtn;
 
+        [FindsBy(How = How.XPath, Using = "//*[@id='header']/div[2]/div/div/nav/div[2]/a")]
+        private IWebElement signOutBtn;
+
+        
 
         public LoginPage(IWebDriver driver)
         {
@@ -36,6 +40,11 @@ namespace Engineering40AutomationPracticeProject.Pages
             emailField.SendKeys("nbalaisyte@spartaglobal.com");
             passwordField.SendKeys("Sparta2020");
             submitBtn.Click();
+        }
+
+        public void LogOut()
+        {
+            signOutBtn.Click();
         }
 
     }
