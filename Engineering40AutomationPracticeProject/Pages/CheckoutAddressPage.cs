@@ -25,6 +25,15 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/form/p/button")]
         private IWebElement ProceedToCheckOutAddress;
 
+        [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/form/div/p/a")]
+        private IWebElement AddAddress;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='address_delivery']/li[7]/a")]
+        private IWebElement UpdateDeliveryAddress;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='address_invoice']/li[7]/a")]
+        private IWebElement UpdateBillingAddress;
+        
         //Get the Addresses Header
         public string AddressesHeaderResult()
         {
@@ -34,6 +43,18 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void ProceedToCheckOutButtonAddress()
         {
             ProceedToCheckOutAddress.Click();
+        }
+        public void AddAddressButtonCheckout()
+        {
+            AddAddress.Click();
+        }
+        public void UpdateDeliveryAddressButtonCheckout()
+        {
+            UpdateDeliveryAddress.Click();
+        }
+        public void UpdateBillingAddressButtonCheckout()
+        {
+            UpdateBillingAddress.Click();
         }
     }
 }
