@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Pages\BlousesPage.cs" />
     <Compile Include="Pages\CategoryPage.cs" />
     <Compile Include="Pages\DressesPage.cs" />
     <Compile Include="Pages\FacebookPage.cs" />
