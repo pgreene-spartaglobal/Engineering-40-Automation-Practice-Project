@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -18,21 +19,8 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
-        //[FindsBy(How = How.LinkText, Using = "http://automationpractice.com/index.php?controller=cart&add=1&id_product=1&token=e817bb0705dd58da8db074c69f729fd8")]
-        //private IWebElement ButtonAddToCart;
-
-        //public void GoToPage()
-        //{
-        //    driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=3&controller=category");
-        //}
-
-        //public void AddToCardButton()
-        //{
-        //    ButtonAddToCart.Click();
-        //}
-
         //COSMIN'S TERRITORY! TRESSPASS AT YOUR OWN RISK!
-        [FindsBy(How = How.LinkText, Using = "http://automationpractice.com/index.php?controller=cart&add=1&id_product=1&token=e817bb0705dd58da8db074c69f729fd8")]
+        [FindsBy(How = How.CssSelector, Using = "ajax_add_to_cart_button")]
         private IWebElement AddToCart;
 
         [FindsBy(How = How.LinkText, Using = "http://automationpractice.com/index.php?controller=order")]
@@ -90,8 +78,10 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=3&controller=category");
         }
-        public void AddToCartButton()
+        public void AddToCartButton(IWebDriver driver)
         {
+            Actions action = new Actions(driver);
+            action.MoveToElement(AddToCart).Perform();
             AddToCart.Click();
         }
         public void ProceedToCheckoutAfterBuyingButton()
