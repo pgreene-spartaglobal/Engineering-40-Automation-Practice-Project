@@ -125,7 +125,6 @@ namespace Engineering40AutomationPracticeProject.Pages
             return cbPink.GetCssValue("background-color");
         }
 
-
         public bool ContainColour(string colour, int index)
         {
             //Get all the colour pick list in the page

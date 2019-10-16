@@ -79,7 +79,6 @@ namespace Engineering40AutomationPracticeProject
             Assert.AreNotEqual(true, result);
         }
 
-
         [AfterScenario]
         public void TearDown()
         {
