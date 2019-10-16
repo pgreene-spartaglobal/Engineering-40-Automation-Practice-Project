@@ -4,6 +4,8 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
 using Engineering40AutomationPracticeProject.Pages;
+using OpenQA.Selenium.Support.UI;
+
 namespace Engineering40AutomationPracticeProject.Steps
 {
     [Binding]
@@ -34,15 +36,16 @@ namespace Engineering40AutomationPracticeProject.Steps
         public void GivenIHaveEnteredAValidEmailAddressAndClickedCreateAccount()
         {
             driver = new ChromeDriver();
-            lp = new LoginPage(driver);
-            lp.CreateAccount();
             cap = new CreateAccountPage(driver);
+            cap.CreateAccount();
 
         }
         
         [Given(@"I have entered a first name")]
         public void GivenIHaveEnteredAFirstName()
         {
+            WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("customer_firstname")));
             cap.firstNameField.SendKeys("John");
         }
         

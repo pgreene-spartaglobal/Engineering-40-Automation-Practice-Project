@@ -21,6 +21,7 @@ namespace Engineering40AutomationPracticeProject.Pages
             this.driver = Driver;
             PageFactory.InitElements(driver, this);
         }
+        public LoginPage() { }
 
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div[1]/ol/li")]
         public IWebElement AuthenticateError;
@@ -34,13 +35,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         public IWebElement createAccountEmail;
         [FindsBy(How = How.Id, Using = "SubmitCreate")]
         public IWebElement submitCreateButton;
-        //This is the method to access the create account page
-        public void CreateAccount()
-        {
-            Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-            createAccountEmail.SendKeys("john@admin.com");
-            submitCreateButton.Click();
-        }
+
         //This is the method to navigate easily during the tests
         public void Navigate(string url)
         {
@@ -59,6 +54,13 @@ namespace Engineering40AutomationPracticeProject.Pages
             emailField.SendKeys(email);
             passwordField.SendKeys(password);
             submitLoginButton.Click();
+        }
+        //This is the method to access the create account page
+        public void CreateAccount()
+        {
+            Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+            createAccountEmail.SendKeys("john@admin.com");
+            submitCreateButton.Click();
         }
     }
         public class LoginStep
