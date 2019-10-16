@@ -90,14 +90,14 @@ namespace Engineering40AutomationPracticeProject.Pages
             return cbOrage.GetCssValue("background-color");
         }
 
-        public bool ContainColour(string colour)
+        public bool ContainColour(string colour, int index)
         {
             //Get all the colour pick list in the page
             IList<IWebElement> colourPickLists;
             colourPickLists = driver.FindElements(By.ClassName("color_to_pick_list"));
 
             //get the first colour pick list
-            IWebElement firstItem = colourPickLists[0];
+            IWebElement firstItem = colourPickLists[index];
             IList<IWebElement> colourPick = firstItem.FindElements(By.ClassName("color_pick"));
 
             //check if the colour is inside the list

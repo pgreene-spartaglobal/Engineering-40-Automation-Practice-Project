@@ -53,12 +53,15 @@ namespace Engineering40AutomationPracticeProject
             tShirtPage.ClickOrange();
         }
 
-        [Then(@"the result should be showing items in Orange colour only")]
-        public void ThenTheResultShouldBeShowingItemsInOrangeColourOnly()
+        [Then(@"the result should be showing items that is available in Orange")]
+        public void ThenTheResultShouldBeShowingItemsThatIsAvailableInOrange()
         {
-            bool result = tShirtPage.ContainColour(tShirtPage.GetOrangeColourCode());
+            //check if the first item contain orange
+            bool result = tShirtPage.ContainColour(tShirtPage.GetOrangeColourCode(), 0);
+            //compare result
             Assert.AreEqual(true, result);
         }
+
 
 
         [AfterScenario]
