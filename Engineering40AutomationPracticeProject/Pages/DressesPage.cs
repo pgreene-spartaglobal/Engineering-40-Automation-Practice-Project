@@ -12,7 +12,12 @@ namespace Engineering40AutomationPracticeProject.Pages
     {
         public DressesPage(IWebDriver driver) : base(driver)
         {
+            GoToPage();
+        }
 
+        public override void GoToPage()
+        {
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=8&controller=category");
         }
     }
 }
