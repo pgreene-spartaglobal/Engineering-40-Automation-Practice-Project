@@ -12,6 +12,8 @@ namespace Engineering40AutomationPracticeProject.Steps
     {
         private IWebDriver driver;
         private DressesPage dressesPage;
+
+        [Scope(Feature = "ShareItemsOverSocialMedia")]
         [BeforeScenario]
         public void SetUp()
         {
@@ -77,6 +79,13 @@ namespace Engineering40AutomationPracticeProject.Steps
         public void ThenIShouldBeRedirectedToPinterestToPostAboutMyItem()
         {
             ScenarioContext.Current.Pending();
+        }
+
+        [Scope(Feature = "ShareItemsOverSocialMedia")]
+        [AfterScenario]
+        public void CleanUp()
+        {
+            driver.Close();
         }
     }
 }

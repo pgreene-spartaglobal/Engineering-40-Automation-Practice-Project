@@ -14,6 +14,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         IWebDriver chromeDriver;
         CategoryPage categoryPage;
 
+        [Scope(Feature = "ItemDisplayGridViewAndList")]
         [BeforeScenario]
         public void SetUp()
         {
@@ -52,6 +53,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             Assert.IsTrue(categoryPage.IsInListView());
         }
 
+        [Scope(Feature = "ItemDisplayGridViewAndList")]
         [AfterScenario]
         public void CleanUp()
         {
