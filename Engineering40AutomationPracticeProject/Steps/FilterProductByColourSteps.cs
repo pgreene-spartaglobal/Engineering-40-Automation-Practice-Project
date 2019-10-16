@@ -15,6 +15,7 @@ namespace Engineering40AutomationPracticeProject
         WomenPage womenPage;
         DressesPage dressesPage;
 
+        [Scope(Feature = "FilterProductByColour")]
         [BeforeScenario]
         public void Setup()
         {
@@ -119,6 +120,7 @@ namespace Engineering40AutomationPracticeProject
             dressesPage.GoToPage();
         }
 
+        [Scope(Feature = "FilterProductByColour")]
         [AfterScenario]
         public void TearDown()
         {
