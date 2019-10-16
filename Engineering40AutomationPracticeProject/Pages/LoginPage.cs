@@ -35,6 +35,8 @@ namespace Engineering40AutomationPracticeProject.Pages
         public IWebElement createAccountEmail;
         [FindsBy(How = How.Id, Using = "SubmitCreate")]
         public IWebElement submitCreateButton;
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/div[1]/form/div/div[1]/ol/li")]
+        public IWebElement emailCreateAccountErrorBox;
 
         //This is the method to navigate easily during the tests
         public void Navigate(string url)

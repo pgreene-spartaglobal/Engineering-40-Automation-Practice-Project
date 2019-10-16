@@ -9,7 +9,7 @@ Scenario: Email address not valid
 	Given I am on the login page
 	And I have entered an invalid email address
 	And I have clicked create account
-	Then I will see the appropriate message for email
+	Then I will see the appropriate error for incorrect email format
 	
 Scenario: Email address is valid
 	Given I am on the login page
