@@ -26,7 +26,9 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.ClassName, Using = "icon-building")]
         private IWebElement MyAddressButton;
 
-        
+        [FindsBy(How = How.ClassName, Using = "account")]
+        private IWebElement MyAccountButton;
+
         public void ClickMyAddressButton()
         {
             MyAddressButton.Click();
@@ -35,6 +37,11 @@ namespace Engineering40AutomationPracticeProject.Pages
         public string GetPageHeader()
         {
             return pageHeading.Text;
+        }
+
+        public string GetAccountHeader()
+        {
+            return MyAccountButton.Text;
         }
     }
    

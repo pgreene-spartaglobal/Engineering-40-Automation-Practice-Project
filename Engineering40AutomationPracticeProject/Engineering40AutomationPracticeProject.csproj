@@ -83,7 +83,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Pages\MyAccountPage.cs" />
     <Compile Include="Pages\MyAddress.cs" />
     <Compile Include="Pages\AddNewAddressPage.cs" />
@@ -94,11 +93,8 @@
     <Compile Include="Steps\LoginToAccountSteps.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Steps\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Features\SpecFlowFeature1.feature" />
     <None Include="Features\CreateAccount.feature" />
     <None Include="packages.config" />
     <None Include="Features\LoginToAccount.feature" />

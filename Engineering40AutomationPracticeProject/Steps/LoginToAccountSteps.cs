@@ -13,11 +13,13 @@ namespace Engineering40AutomationPracticeProject.Steps
     {
         IWebDriver driver;
         LoginPage lp;
+        MyAccountPage ap;
         [Given(@"I am on the login page")]
         public void GivenIAmOnTheLoginPage()
         {
             driver = new ChromeDriver();
             lp = new LoginPage(driver);
+            ap = new MyAccountPage(driver);
             lp.Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
         }
 
@@ -68,8 +70,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Then(@"I will see my account name in the nav header")]
         public void IWillSeeMyAccountNameInTheNavHeader()
         {
-            // TODO Add web element to Account Page Object
-            Assert.AreEqual("Steve Admin", "Steve Admin");
+            Assert.AreEqual("Steve Admin", ap.GetAccountHeader());
         }
 
         [AfterScenario]
