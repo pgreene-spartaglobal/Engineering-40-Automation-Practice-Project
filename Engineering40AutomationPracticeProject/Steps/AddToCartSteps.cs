@@ -5,6 +5,7 @@ using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
 using Engineering40AutomationPracticeProject.Pages;
 using OpenQA.Selenium.Support.UI;
+using System.Threading;
 
 namespace Engineering40AutomationPracticeProject
 {
@@ -16,7 +17,7 @@ namespace Engineering40AutomationPracticeProject
         private ProductPage product;
 
         [BeforeScenario]
-        public void Setup()
+        public void BeforeScenario()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
@@ -29,7 +30,7 @@ namespace Engineering40AutomationPracticeProject
         {
             homepage.GoToPage();
         }
-        
+
         [Given(@"I have opted an item")]
         public void GivenIHaveOptedAnItem()
         {
@@ -45,13 +46,14 @@ namespace Engineering40AutomationPracticeProject
         [Given(@"I have picked the size")]
         public void GivenIHavePickedTheSize()
         {
-            product.ChooseSize("S");
+            product.ChooseSize("M");
         }
 
         [Given(@"I have added the quantity")]
         public void GivenIHaveAddedTheQuantity()
         {
-            product.ChooseQuant("1");
+            product.clearQuant();
+            product.ChooseQuant("55");
         }
 
         [When(@"I press the add to the cart button")]
@@ -63,11 +65,13 @@ namespace Engineering40AutomationPracticeProject
         [Then(@"I should be able to to see the item added to the cart")]
         public void ThenIShouldBeAbleToToSeeTheItemAddedToTheCart()
         {
-            Assert.IsTrue(product.CheckSuccess());
+            Thread.Sleep(3000);
+            //Assert.IsTrue(product.CheckSuccess());
+            Assert.AreEqual("Product successfully added to your shopping cart", product.SuccessfulAddToTheCart());
         }
 
         [AfterScenario]
-        public void DisposeWebDriver()
+        public void AfterScenario()
         {
             driver.Close();
         }
