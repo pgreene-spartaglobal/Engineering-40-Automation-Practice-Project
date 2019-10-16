@@ -10,38 +10,38 @@ namespace Engineering40AutomationPracticeProject.Steps
     public class SetQuantitySteps
     {
         private IWebDriver driver;
-        private CheckoutPage checkoutpage;
+        private CheckoutPage CheckoutPage;
 
         [Given(@"I am on the checkout page")]
         public void GivenIAmOnTheCheckoutPage()
         {
             driver = new ChromeDriver();
-            //checkoutpage = new CheckoutPage(driver);
-            //checkoutpage.GoToPage();
+            CheckoutPage = new CheckoutPage(driver);
+            CheckoutPage.goToPage();
         }
 
         [Given(@"I have added a product to the Basket")]
         public void GivenIHaveAddedAProductToTheBasket()
         {
-            //checkoutpage.AddToCardButton();
+            CheckoutPage.AddToCartButton(driver);
         }
         
         [Given(@"I have navigated to the Checkout area")]
         public void GivenIHaveNavigatedToTheCheckoutArea()
         {
-            ScenarioContext.Current.Pending();
+            
         }
         
         [When(@"I click the plus button")]
         public void WhenIClickThePlusButton()
         {
-            ScenarioContext.Current.Pending();
+            
         }
         
         [Then(@"I should see Quantity increase")]
         public void ThenIShouldSeeQuantityIncrease()
         {
-            ScenarioContext.Current.Pending();
+            
         }
         [AfterScenario]
         public void DisposeWebDriver()
