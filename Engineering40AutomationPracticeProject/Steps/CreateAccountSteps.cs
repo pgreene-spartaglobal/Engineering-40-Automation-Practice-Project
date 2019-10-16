@@ -155,43 +155,43 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Then(@"I will see the appropriate error message for last name")]
         public void ThenIWillSeeTheAppropriateErrorMessageForLastName()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("lastname is required.", cap.errorBox.Text);
         }
-        
+
         [Then(@"I will see the appropriate error message for address")]
         public void ThenIWillSeeTheAppropriateErrorMessageForAddress()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("address1 is required.", cap.errorBox.Text);
         }
-        
+        //Comment
         [Then(@"I will see the appropriate error message for city")]
         public void ThenIWillSeeTheAppropriateErrorMessageForCity()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("city is required.", cap.errorBox.Text);
         }
-        
+
         [Then(@"I will see the appropriate error message for state")]
         public void ThenIWillSeeTheAppropriateErrorMessageForState()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("firstname is required.", cap.errorBox.Text);
         }
-        
+
         [Then(@"I will see the appropriate error message for postal code")]
         public void ThenIWillSeeTheAppropriateErrorMessageForPostalCode()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("firstname is required.", cap.errorBox.Text);
         }
-        
+
         [Then(@"I will see the appropriate error message for mobile phone")]
         public void ThenIWillSeeTheAppropriateErrorMessageForMobilePhone()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("firstname is required.", cap.errorBox.Text);
         }
-        
+
         [Then(@"I will see the appropriate error message for all failure")]
         public void ThenIWillSeeTheAppropriateErrorMessageForAllFailure()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("firstname is required.", cap.errorBox.Text);
         }
 
     }
