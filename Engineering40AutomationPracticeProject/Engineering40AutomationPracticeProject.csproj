@@ -78,8 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Steps\FilterProductByColourSteps.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\EP.cs" />
+    <Compile Include="Pages\ProductPage.cs" />
     <Compile Include="Steps\ProductFunctionSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\EPStep.cs" />
@@ -87,6 +89,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Features\FilterProductByColour.feature" />
     <None Include="Features\Navigation.feature" />
   </ItemGroup>
   <ItemGroup>
