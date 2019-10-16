@@ -43,6 +43,11 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
+        public void InitPageElements()
+        {
+            PageFactory.InitElements(driver, this);
+        }
+
         public virtual void GoToPage() { }
 
         public void ClickBiege()
@@ -52,34 +57,95 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         public void ClickWhite()
         {
-
+            cbWhite.Click();
         }
 
         public void ClickBlack()
         {
-
+            cbBlack.Click();
         }
 
         public void ClickOrange()
         {
-
+            cbOrage.Click();
         }
 
         public void ClickBlue()
         {
-
+            cbBlack.Click();
         }
 
         public void ClickGreen()
         {
-
+            cbGreen.Click();
         }
 
         public void ClickYellow()
         {
-
+            cbYellow.Click();
         }
 
+        public string GetBiegeColour()
+        {
+            return cbBeige.GetCssValue("background-color");
+        }
 
+        public string GetWhiteColour()
+        {
+            return cbWhite.GetCssValue("background-color");
+        }
+
+        public string GetBlackColour()
+        {
+            return cbBlack.GetCssValue("background-color");
+        }
+
+        public string GetOrangeColour()
+        {
+            return cbOrage.GetCssValue("background-color");
+        }
+
+        public string GetBlueColour()
+        {
+            return cbBlue.GetCssValue("background-color");
+        }
+
+        public string GetGreenColour()
+        {
+            return cbGreen.GetCssValue("background-color");
+        }
+
+        public string GetYellowColour()
+        {
+            return cbYellow.GetCssValue("background-color");
+        }
+
+        public string GetPinkColour()
+        {
+            return cbPink.GetCssValue("background-color");
+        }
+
+        public bool ContainColour(string colour, int index)
+        {
+            //Get all the colour pick list in the page
+            IList<IWebElement> colourPickLists;
+            colourPickLists = driver.FindElements(By.ClassName("color_to_pick_list"));
+
+            //get the first colour pick list
+            IWebElement firstItem = colourPickLists[index];
+            IList<IWebElement> colourPick = firstItem.FindElements(By.ClassName("color_pick"));
+
+            //check if the colour is inside the list
+            //So, for each colour in the list
+            foreach (IWebElement item in colourPick)
+            {
+                //if the colour of the item is equal to my colour
+                if (item.GetCssValue("background-color") == colour)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

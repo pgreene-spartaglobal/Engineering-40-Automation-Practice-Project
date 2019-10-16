@@ -11,6 +11,7 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class WomenPage: ProductPage
     {
+<<<<<<< HEAD
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/ul/li[1]/div/div[3]/div[1]/a")]
         protected IWebElement addToWishlistBtn;
 
@@ -37,6 +38,9 @@ namespace Engineering40AutomationPracticeProject.Pages
 
 
 
+=======
+        
+>>>>>>> cdaa7030293defd5cf0cd00a76923694c85ad38f
         public WomenPage(IWebDriver driver) : base(driver)
         {
             //GoToPage();
@@ -47,6 +51,7 @@ namespace Engineering40AutomationPracticeProject.Pages
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=3&controller=category");
         }
 
+<<<<<<< HEAD
         public void AddToWishList()
         {
             addToWishlistBtn.Click();
@@ -76,5 +81,8 @@ namespace Engineering40AutomationPracticeProject.Pages
             
             return 1;
         }
+=======
+
+>>>>>>> cdaa7030293defd5cf0cd00a76923694c85ad38f
     }
 }
