@@ -6,20 +6,20 @@ namespace Engineering40AutomationPracticeProject
     [Binding]
     public class FilterProductByColourSteps
     {
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
+        [Given(@"I am on the Women Page")]
+        public void GivenIAmOnTheWomenPage()
         {
             ScenarioContext.Current.Pending();
         }
-        
-        [When(@"I press add")]
-        public void WhenIPressAdd()
+
+        [When(@"I tick the Beige check box")]
+        public void WhenITickTheBeigeCheckBox()
         {
             ScenarioContext.Current.Pending();
         }
-        
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
+
+        [Then(@"the result should be showing items in Beige colour only")]
+        public void ThenTheResultShouldBeShowingItemsInBeigeColourOnly()
         {
             ScenarioContext.Current.Pending();
         }
