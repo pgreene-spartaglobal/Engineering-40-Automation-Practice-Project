@@ -29,7 +29,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Given(@"I have navigated to the Checkout area")]
         public void GivenIHaveNavigatedToTheCheckoutArea()
         {
-            
+            CheckoutPage.goToCheckoutPage(driver);
         }
         
         [When(@"I click the plus button")]
@@ -42,11 +42,6 @@ namespace Engineering40AutomationPracticeProject.Steps
         public void ThenIShouldSeeQuantityIncrease()
         {
             
-        }
-        [AfterScenario]
-        public void DisposeWebDriver()
-        {
-            driver.Close();
         }
     }
 }
