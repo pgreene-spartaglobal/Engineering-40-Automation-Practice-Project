@@ -2,7 +2,7 @@
 	As a user,
 	I want to be able to share items over social media
 
-
+@socialDresses
 Scenario: Share on facebook
 	Given I am on the Dresses Page
 	And I have selected an Item

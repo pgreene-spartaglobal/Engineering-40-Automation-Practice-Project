@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Features\ContactCustomerService.feature" />
     <None Include="Features\FilterProductByColour.feature" />
     <None Include="Features\ItemDisplayGridViewAndList.feature" />
     <None Include="Features\Navigation.feature" />

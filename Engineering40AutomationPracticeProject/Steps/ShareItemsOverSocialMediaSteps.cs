@@ -18,6 +18,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             driver = new ChromeDriver();
             dressesPage = new DressesPage(driver);
         }
+        [Scope(Tag = "socialDresses")]
         [Given(@"I am on the Dresses Page")]
         public void GivenIAmOnTheDressesPage()
         {
