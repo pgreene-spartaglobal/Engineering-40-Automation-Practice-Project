@@ -23,9 +23,6 @@ namespace Engineering40AutomationPracticeProject.Pages
             this.driver = Driver;
             PageFactory.InitElements(driver, this);
         }
-        //need help here. i dont know if this will work. 
-        //The button for "my personal information" is a href but not a button.
-        //and information is a title, confused on how to get that.
         [FindsBy(How = How.XPath, Using = "//a[@href='http://automationpractice.com/index.php?controller=identity'")]
         public IWebElement PersonalInfoButton;
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/div[1]/ul/li[4]/a")]
@@ -34,22 +31,11 @@ namespace Engineering40AutomationPracticeProject.Pages
         //This wont work because there are two buttons of this name, dont know how to check which one is selected.
         [FindsBy(How = How.ClassName, Using = "btn btn-default button button-small")]
         public IWebElement goBackToAccountButton;
-
-        //what we need to do is find if within this theres a class named checked.
-        [FindsBy(How = How.Id, Using = "id_gender1")]
-        public IWebElement MaleGender;
-        [FindsBy(How = How.Id, Using = "id_gender2")]
-        public IWebElement FemaleGender;
-        public SelectElement GenderSelectMale;// = new SelectElement(FemaleGender);
-        public SelectElement GenderSelectFemale;// = new SelectElement(FemaleGender);
-        [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/form/fieldset/div[1]/div[1]/label/div/span")]
-        public IWebElement xpathGenderFemale;
+       
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/form/fieldset/div[1]/div[1]/label/div/span/input")]
-        public IWebElement xpathGenderFemaleTwo;
-        [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/form/fieldset/div[1]/div[2]/label/div/span")]
         public IWebElement xpathGenderMale;
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/form/fieldset/div[1]/div[2]/label/div/span/input")]
-        public IWebElement xpathGenderMaleTwo;
+        public IWebElement xpathGenderFemale;
         [FindsBy(How = How.Id, Using = "firstname")]
         public IWebElement FirstName;
         [FindsBy(How = How.Id, Using = "lastname")]
@@ -93,11 +79,10 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         //these functions are for checking the personal info page.
         //need help here.
+        //we are only checking if its male because of time restrants.
         public string CheckGender()
         {
-            string result = xpathGenderMaleTwo.GetAttribute("checked");
-            string resultTwo = xpathGenderFemaleTwo.GetAttribute("checked");
-            //            Assert.AreEqual("checked", MaleGender.GetAttribute("class"));
+            string result = xpathGenderMale.GetAttribute("checked");
             return result;
         }
         //i dont know how to get: value="firstname"
