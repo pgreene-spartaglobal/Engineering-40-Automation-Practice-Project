@@ -71,9 +71,11 @@ namespace Engineering40AutomationPracticeProject.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Share on facebook")]
+        [NUnit.Framework.CategoryAttribute("socialDresses")]
         public virtual void ShareOnFacebook()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Share on facebook", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Share on facebook", null, new string[] {
+                        "socialDresses"});
 #line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
