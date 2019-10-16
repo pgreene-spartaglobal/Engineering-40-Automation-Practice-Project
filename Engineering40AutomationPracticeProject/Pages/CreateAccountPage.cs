@@ -13,12 +13,13 @@ namespace Engineering40AutomationPracticeProject.Pages
 
     class CreateAccountPage
     {
-        public IWebDriver driver;
+        readonly IWebDriver driver;
         public CreateAccountPage(IWebDriver Driver)
         {
             this.driver = Driver;
             PageFactory.InitElements(driver, this);
         }
+
         [FindsBy(How = How.Id, Using = "customer_firstname")]
         public IWebElement firstNameField;
         [FindsBy(How = How.Id, Using = "customer_lastname")]
@@ -29,6 +30,10 @@ namespace Engineering40AutomationPracticeProject.Pages
         public IWebElement addressOneField;
         [FindsBy(How = How.Id, Using = "id_state")]
         public IWebElement stateField;
+        [FindsBy(How = How.Id, Using = "postcode")]
+        public IWebElement postalcodeField;
+        [FindsBy(How = How.Id, Using = "city")]
+        public IWebElement cityField;
         [FindsBy(How = How.Id, Using = "phone_mobile")]
         public IWebElement mobilephoneField;
         [FindsBy(How = How.Id, Using = "submitAccount")]
