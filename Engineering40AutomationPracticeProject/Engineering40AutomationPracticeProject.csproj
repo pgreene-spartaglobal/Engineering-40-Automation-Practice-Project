@@ -103,6 +103,7 @@
     <Compile Include="Pages\PayByCheckPage.cs" />
     <Compile Include="Pages\ProductPage.cs" />
     <Compile Include="Pages\ShoppingCartSummaryPage.cs" />
+    <Compile Include="Steps\AddToCart3Steps.cs" />
     <Compile Include="Steps\AddToCartSteps.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\Homepage.cs" />
@@ -116,6 +117,7 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="Features\AddToCart.feature" />
+    <None Include="Features\AddToCart3.feature" />
     <None Include="Features\Checkout.feature" />
     <None Include="Features\ItemsInCart.feature" />
     <None Include="Features\SetDeliveryAddressCheckoutSection.feature" />
