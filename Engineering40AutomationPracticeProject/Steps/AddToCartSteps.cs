@@ -10,6 +10,8 @@ using System.Threading;
 namespace Engineering40AutomationPracticeProject
 {
     [Binding]
+
+
     public class AddToCartSteps
     {
         private IWebDriver driver;
@@ -17,6 +19,7 @@ namespace Engineering40AutomationPracticeProject
         private ProductPage product;
 
         [BeforeScenario]
+        [Scope(Feature = "SetQuantity")]
         public void BeforeScenario()
         {
             driver = new ChromeDriver();
