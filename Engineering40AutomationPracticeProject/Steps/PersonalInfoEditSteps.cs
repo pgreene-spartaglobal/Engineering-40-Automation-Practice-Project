@@ -21,7 +21,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             driver = new ChromeDriver();
             ba = new LoginPage(driver);
             personalInfoPage = new PersonalInfoPage(driver);
-            ba.LogIn();
+            ba.CiaranLogIn();
         }
 
         [Given(@"I pressed my personal information")]
@@ -61,36 +61,36 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Given(@"I entered my new first name")]
         public void GivenIEnteredMyNewFirstName()
         {
-            ScenarioContext.Current.Pending();
+            personalInfoPage.ChangeFirstName("newFirstName");
         }
         [Given(@"I entered my new last name")]
         public void GivenIEnteredMyNewLastName()
         {
-            ScenarioContext.Current.Pending();
+            personalInfoPage.ChangeLastName("newLastName");
         }
 
         [Given(@"I entered my new email address")]
         public void GivenIEnteredMyNewEmailAddress()
         {
-            ScenarioContext.Current.Pending();
+            personalInfoPage.ChangeLastName("new@email.new");
         }
 
         [Given(@"I have entered my current password")]
         public void GivenIHaveEnteredMyCurrentPassword()
         {
-            ScenarioContext.Current.Pending();
+            personalInfoPage.TypeCurPassword("ababa");
         }
         //navigation part of test.
         [Given(@"I pressed the save button")]
         public void GivenIPressedTheSaveButton()
         {
-            ScenarioContext.Current.Pending();
+            personalInfoPage.ClickSubmit();
         }
         
         [Given(@"I back on my account")]
         public void GivenIBackOnMyAccount()
         {
-            ScenarioContext.Current.Pending();
+            personalInfoPage.GoBack();
         }
         
         //check new values of test.
@@ -98,18 +98,21 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Then(@"I should see the new first name")]
         public void ThenIShouldSeeTheNewFirstName()
         {
-            ScenarioContext.Current.Pending();
+            string result = personalInfoPage.CheckFirstName();
+            StringAssert.Contains(result, "newFirstName");
         }
         [Then(@"I should see the new last name")]
         public void ThenIShouldSeeTheNewLastName()
         {
-            ScenarioContext.Current.Pending();
+            string result = personalInfoPage.CheckLastName();
+            StringAssert.Contains(result, "newLastName");
         }
 
         [Then(@"I should see the new email address")]
         public void ThenIShouldSeeTheNewEmailAddress()
         {
-            ScenarioContext.Current.Pending();
+            string result = personalInfoPage.CheckEmail();
+            StringAssert.Contains(result, "new@email.new");
         }
 
     }

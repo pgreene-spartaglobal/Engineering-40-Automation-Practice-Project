@@ -23,19 +23,16 @@ namespace Engineering40AutomationPracticeProject.Pages
             this.driver = Driver;
             PageFactory.InitElements(driver, this);
         }
-        [FindsBy(How = How.XPath, Using = "//a[@href='http://automationpractice.com/index.php?controller=identity'")]
-        public IWebElement PersonalInfoButton;
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/div[1]/ul/li[4]/a")]
         public IWebElement PersonalInfoButtonXpath;
-
-        //This wont work because there are two buttons of this name, dont know how to check which one is selected.
-        [FindsBy(How = How.ClassName, Using = "btn btn-default button button-small")]
-        public IWebElement goBackToAccountButton;
+        
        
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/form/fieldset/div[1]/div[1]/label/div/span/input")]
         public IWebElement xpathGenderMale;
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/form/fieldset/div[1]/div[2]/label/div/span/input")]
         public IWebElement xpathGenderFemale;
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/ul/li[1]/a")]
+        public IWebElement xpathBackToAccount;
         [FindsBy(How = How.Id, Using = "firstname")]
         public IWebElement FirstName;
         [FindsBy(How = How.Id, Using = "lastname")]
@@ -69,7 +66,7 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         public void GoBack()
         {
-            goBackToAccountButton.Click();
+            xpathBackToAccount.Click();
         }
         //this function is how to get to the info page.
         public void GoToInfoPage()
@@ -98,7 +95,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             return Email.GetAttribute("value");
         }
-
+        //the save button.
         public void ClickSubmit()
         {
             SubmitButton.Click();
@@ -109,17 +106,26 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
 
         }
+        //we need to clear the info box because if we just send the keys it will just add the old info
+        //onto the new one. Maybe this is a bug?
         public void ChangeFirstName(string firstName)
         {
+            LastName.Clear();
             FirstName.SendKeys(firstName);
         }
         public void ChangeLastName(string lastName)
         {
+            LastName.Clear();
             LastName.SendKeys(lastName);
         }
         public void ChangeEmailName(string email)
         {
+            Email.Clear();
             Email.SendKeys(email);
+        }
+        public void TypeCurPassword(string pass)
+        {
+            OldPassword.SendKeys(pass);
         }
         //here we change the old pass with the new pass.
         public void ChangePassword(string oldPass, string newPass)
