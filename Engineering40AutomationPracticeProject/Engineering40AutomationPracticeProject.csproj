@@ -78,6 +78,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Pages\DressesPage.cs" />
+    <Compile Include="Pages\TShirtPage.cs" />
     <Compile Include="Pages\WomenPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Steps\FilterProductByColourSteps.cs" />
