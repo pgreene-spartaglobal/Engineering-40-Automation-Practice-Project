@@ -11,31 +11,89 @@ namespace Engineering40AutomationPracticeProject
     public class FilterProductByColourSteps
     {
         IWebDriver driver;
-        TShirtPage tShirtPage;
-        WomenPage womenPage;
-        DressesPage dressesPage;
+        ProductPage productPage;
 
         [Scope(Feature = "FilterProductByColour")]
         [BeforeScenario]
         public void Setup()
         {
-            //driver.Dispose();
             driver = new ChromeDriver();
+        }
+
+        [Scope(Feature = "FilterProductByColour")]
+        [AfterScenario]
+        public void TearDown()
+        {
+            driver.Close();
+            driver.Dispose();
         }
 
         [Scope(Feature = "FilterProductByColour")]
         [Given(@"I am on the Women Page")]
         public void GivenIAmOnTheWomenPage()
         {
-            womenPage = new WomenPage(driver);
-            womenPage.GoToPage();
+            productPage = new WomenPage(driver);
+            productPage.GoToPage();
+        }
+
+        [Scope(Feature = "FilterProductByColour")]
+        [Given(@"I am on the Brouses Page")]
+        public void GivenIAmOnTheBrousesPage()
+        {
+            productPage = new BlousesPage(driver);
+            productPage.GoToPage();
+        }
+
+        [Scope(Feature = "FilterProductByColour")]
+        [Given(@"I am on the T-Shirt Page")]
+        public void GivenIAmOnTheT_ShirtPage()
+        {
+            productPage = new TShirtPage(driver);
+            productPage.GoToPage();
+        }
+
+        [Scope(Feature = "FilterProductByColour")]
+        [Given(@"I am on the Dresses Page")]
+        public void GivenIAmOnTheDressesPage()
+        {
+            productPage = new DressesPage(driver);
+            productPage.GoToPage();
+        }
+
+        [Scope(Feature = "FilterProductByColour")]
+        [Given(@"I am on the Casual Dresses Page")]
+        public void GivenIAmOnTheCasualDressesPage()
+        {
+            productPage = new CasualDressesPage(driver);
+            productPage.GoToPage();
         }
 
         [Scope(Feature = "FilterProductByColour")]
         [When(@"I tick the Beige check box")]
         public void WhenITickTheBeigeCheckBox()
         {
-            womenPage.ClickBiege();
+            productPage.ClickBiege();
+        }
+
+        [Scope(Feature = "FilterProductByColour")]
+        [When(@"I tick the Green check box")]
+        public void WhenITickTheGreenCheckBox()
+        {
+            productPage.ClickGreen();
+        }
+
+        [Scope(Feature = "FilterProductByColour")]
+        [When(@"I tick the Orange check box")]
+        public void WhenITickTheOrangeCheckBox()
+        {
+            productPage.ClickOrange();
+        }
+
+        [Scope(Feature = "FilterProductByColour")]
+        [When(@"I tick the White check box")]
+        public void WhenITickTheWhiteCheckBox()
+        {
+            productPage.ClickWhite();
         }
 
         [Scope(Feature = "FilterProductByColour")]
@@ -43,25 +101,10 @@ namespace Engineering40AutomationPracticeProject
         public void ThenTheResultShouldBeShowingItemsThatIsAvailableInBeige()
         {
             //Get the css value of beige
-            string beige = womenPage.GetBiegeColour();
+            string beige = productPage.GetBiegeColour();
             //Check if the fourth item available in Beige
-            bool result = womenPage.ContainColour(beige, 3);
+            bool result = productPage.ContainColour(beige, 3);
             Assert.AreEqual(true, result);
-        }
-
-        [Scope(Feature = "FilterProductByColour")]
-        [Given(@"I am on the T-Shirt Page")]
-        public void GivenIAmOnTheT_ShirtPage()
-        {
-            tShirtPage = new TShirtPage(driver);
-            tShirtPage.GoToPage();
-        }
-
-        [Scope(Feature = "FilterProductByColour")]
-        [When(@"I tick the Orange check box")]
-        public void WhenITickTheOrangeCheckBox()
-        {
-            tShirtPage.ClickOrange();
         }
 
         [Scope(Feature = "FilterProductByColour")]
@@ -69,9 +112,9 @@ namespace Engineering40AutomationPracticeProject
         public void ThenTheResultShouldBeShowingItemsThatIsAvailableInOrange()
         {
             //Get the colour string of Orange
-            string orange = tShirtPage.GetOrangeColour();
+            string orange = productPage.GetOrangeColour();
             //check if the first item contain orange
-            bool result = tShirtPage.ContainColour(orange, 0);
+            bool result = productPage.ContainColour(orange, 0);
             //compare result
             Assert.AreEqual(true, result);
         }
@@ -81,25 +124,18 @@ namespace Engineering40AutomationPracticeProject
         public void ThenTheResultShouldBeShowingItemsThatIsNotAvailableInBeige()
         {
             //Get the string for beige
-            string beige = womenPage.GetBiegeColour();
+            string beige = productPage.GetBiegeColour();
             //check if the first item available in Beige
-            bool result = womenPage.ContainColour(beige, 0);
+            bool result = productPage.ContainColour(beige, 0);
             Assert.AreNotEqual(true, result);
-        }
-
-        [Scope(Feature = "FilterProductByColour")]
-        [When(@"I tick the Green check box")]
-        public void WhenITickTheGreenCheckBox()
-        {
-            dressesPage.ClickGreen();
         }
 
         [Scope(Feature = "FilterProductByColour", Tag = "dressesPage")]
         [Then(@"the result should be showing items that is available in Green")]
         public void ThenTheResultShouldBeShowingItemsThatIsAvailableInGreen()
         {
-            string green = dressesPage.GetGreenColour();
-            bool result = dressesPage.ContainColour(green, 4);
+            string green = productPage.GetGreenColour();
+            bool result = productPage.ContainColour(green, 4);
             Assert.AreEqual(true, result);
         }
 
@@ -107,25 +143,18 @@ namespace Engineering40AutomationPracticeProject
         [Then(@"the result should be showing items that is not available in Green")]
         public void ThenTheResultShouldBeShowingItemsThatIsNotAvailableInGreen()
         {
-            string green = dressesPage.GetGreenColour();
-            bool result = dressesPage.ContainColour(green, 0);
+            string green = productPage.GetGreenColour();
+            bool result = productPage.ContainColour(green, 0);
             Assert.AreNotEqual(true, result);
         }
 
-        [Scope(Feature = "FilterProductByColour")]
-        [Given(@"I am on the Dresses Page")]
-        public void GivenIAmOnTheDressesPage()
+        [Scope(Scenario = "Viewing the White items on Brouses Page")]
+        [Then(@"the result should be showing items that is available in White")]
+        public void ThenTheResultShouldBeShowingItemsThatIsAvailableInWhite()
         {
-            dressesPage = new DressesPage(driver);
-            dressesPage.GoToPage();
-        }
-
-        [Scope(Feature = "FilterProductByColour")]
-        [AfterScenario]
-        public void TearDown()
-        {
-            driver.Close();
-            driver.Dispose();
+            string white = productPage.GetWhiteColour();
+            bool result = productPage.ContainColour(white, 0);
+            Assert.AreEqual(true, result);
         }
     }
 }
