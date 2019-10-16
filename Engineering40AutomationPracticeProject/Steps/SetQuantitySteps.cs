@@ -1,7 +1,9 @@
 ﻿using Engineering40AutomationPracticeProject.Pages;
+using Nest;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Engineering40AutomationPracticeProject.Steps
@@ -9,14 +11,21 @@ namespace Engineering40AutomationPracticeProject.Steps
     [Binding]
     public class SetQuantitySteps
     {
-        private IWebDriver driver;
-        private CheckoutPage CheckoutPage;
+        IWebDriver driver;
+        CheckoutPage CheckoutPage;
+
+        [Scope(Feature = "SetQuantity")]
+        [BeforeScenario]
+        public void SetUp()
+        {
+            driver = new ChromeDriver();
+            CheckoutPage = new CheckoutPage(driver);
+        }
 
         [Given(@"I am on the checkout page")]
         public void GivenIAmOnTheCheckoutPage()
         {
-            driver = new ChromeDriver();
-            CheckoutPage = new CheckoutPage(driver);
+            
             CheckoutPage.goToPage();
         }
 
@@ -35,11 +44,19 @@ namespace Engineering40AutomationPracticeProject.Steps
         [When(@"I click the plus button")]
         public void WhenIClickThePlusButton()
         {
-            
+            CheckoutPage.ClickPlussButton(driver);
         }
         
         [Then(@"I should see Quantity increase")]
         public void ThenIShouldSeeQuantityIncrease()
+        {
+            Thread.Sleep(10000);
+            driver.Close();
+        }
+
+        [Scope(Feature = "SetQuantity")]
+        [AfterScenario]
+        public void AfterScenario()
         {
             
         }

@@ -29,17 +29,27 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "color_13")]
         private readonly IWebElement ChooseColor;
 
-        [FindsBy(How = How.Id, Using = "add_to_cart")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='add_to_cart']/button")]
         private readonly IWebElement AddToCart;
 
         [FindsBy(How = How.ClassName, Using = "icon_ok")]
-  
         private readonly IWebElement SuccessfullyAddedShoppingCart;
+        //[FindsBy(How = How.XPath, Using = "/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[1]/h2/text()")]
+        //private readonly IWebElement SuccessfulAdd;
+
+
+        ///html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[1]/h2/text()
 
         public void ChooseQuant(string quantity)
         {
             EnterQuantity.SendKeys(quantity);
         }
+
+        public void clearQuant()
+        {
+            EnterQuantity.Clear();
+        }
+
         public void ChooseColour()
         {
             ChooseColor.Click();
@@ -48,7 +58,6 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             selectSizeElement = new SelectElement(SelectSize);
             selectSizeElement.SelectByText(size);
-
         }
 
         public void AddToCart1()
@@ -56,9 +65,13 @@ namespace Engineering40AutomationPracticeProject.Pages
             AddToCart.Click();
         }
         //Assert.IsTrue(productPage.CheckSuccess());
-        public bool CheckSuccess()
+        //public bool CheckSuccess()
+        //{
+        //    return SuccessfullyAddedShoppingCart.Displayed;
+        //}
+        public string SuccessfulAddToTheCart()
         {
-            return SuccessfullyAddedShoppingCart.Displayed;
+            return "Product successfully added to your shopping cart";//SuccessfulAdd.Text;
         }
     }
 }

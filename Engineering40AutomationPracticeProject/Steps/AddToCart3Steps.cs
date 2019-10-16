@@ -7,19 +7,16 @@ using Engineering40AutomationPracticeProject.Pages;
 using OpenQA.Selenium.Support.UI;
 using System.Threading;
 
-namespace Engineering40AutomationPracticeProject
+namespace Engineering40AutomationPracticeProject.Steps
 {
     [Binding]
-
-
-    public class AddToCartSteps
+    public class AddToCart3Steps
     {
         private IWebDriver driver;
         private Homepage homepage;
         private ProductPage product;
 
         [BeforeScenario]
-        [Scope(Feature = "SetQuantity")]
         public void BeforeScenario()
         {
             driver = new ChromeDriver();
@@ -34,10 +31,16 @@ namespace Engineering40AutomationPracticeProject
             homepage.GoToPage();
         }
 
-        [Given(@"I have opted an item")]
-        public void GivenIHaveOptedAnItem()
+        [Given(@"hover on the product")]
+        public void GivenHoverOnTheProduct()
         {
-            homepage.GoToProduct();
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Given(@"I have click on the quickview")]
+        public void GivenIHaveClickOnTheQuickview()
+        {
+            ScenarioContext.Current.Pending();
         }
 
         [Given(@"I have chosen the colour")]
@@ -69,14 +72,7 @@ namespace Engineering40AutomationPracticeProject
         public void ThenIShouldBeAbleToToSeeTheItemAddedToTheCart()
         {
             Thread.Sleep(3000);
-            //Assert.IsTrue(product.CheckSuccess());
             Assert.AreEqual("Product successfully added to your shopping cart", product.SuccessfulAddToTheCart());
-        }
-
-        [AfterScenario]
-        public void AfterScenario()
-        {
-            driver.Close();
         }
     }
 }

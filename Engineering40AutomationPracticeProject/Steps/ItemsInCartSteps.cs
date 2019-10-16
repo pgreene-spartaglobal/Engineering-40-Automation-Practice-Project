@@ -31,6 +31,17 @@ namespace Engineering40AutomationPracticeProject.Steps
             homepage.GoToPage();
         }
 
+        [Given(@"I have added a product")]
+        public void GivenIHaveAddedAProduct()
+        {
+            homepage.GoToProduct();
+            product.clearQuant();
+            product.ChooseQuant("5");
+            product.ChooseSize("L");
+            product.AddToCart1();
+            driver.Navigate().Refresh();
+        }
+
         [When(@"I click on Cart")]
         public void WhenIClickOnCart()
         {
@@ -40,14 +51,17 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Then(@"I should see the items in the Cart")]
         public void ThenIShouldSeeTheItemsInTheCart()
         {
-            
+            string productsummary = cartPage.ShoppingCartContains();
+            char[] productSummaryArray = productsummary.ToCharArray();
+            char qtysummary = cartPage.QtyCartContains()[0];
+            Assert.Contains(qtysummary, productSummaryArray);
         }
 
         [Then(@"there should be a Cart message\.")]
         public void ThenThereShouldBeACartMessage_()
         {
             string result = cartPage.emptyShoppingCart();
-            Assert.AreEqual("Your shopping cart is empty.", result);
+            Assert.AreSame("Your shopping cart is empty.", result);
         }
 
         [Then(@"delete the item from cart")]

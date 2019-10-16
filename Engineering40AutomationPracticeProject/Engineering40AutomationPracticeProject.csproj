@@ -42,8 +42,14 @@
     <Reference Include="BoDi, Version=1.4.1.0, Culture=neutral, PublicKeyToken=ff7cd5ea2744b496, processorArchitecture=MSIL">
       <HintPath>..\packages\BoDi.1.4.1\lib\net45\BoDi.dll</HintPath>
     </Reference>
+    <Reference Include="Elasticsearch.Net, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elasticsearch.Net.7.3.1\lib\net461\Elasticsearch.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Gherkin, Version=6.0.0.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
       <HintPath>..\packages\Gherkin.6.0.0\lib\net45\Gherkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NEST.7.3.1\lib\net461\Nest.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
@@ -55,7 +61,13 @@
       <HintPath>..\packages\SpecRun.SpecFlow.3-0-0.3.0.391\lib\net45\SpecRun.Runtime.SpecFlowPlugin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -103,6 +115,7 @@
     <Compile Include="Pages\PayByCheckPage.cs" />
     <Compile Include="Pages\ProductPage.cs" />
     <Compile Include="Pages\ShoppingCartSummaryPage.cs" />
+    <Compile Include="Steps\AddToCart3Steps.cs" />
     <Compile Include="Steps\AddToCartSteps.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\Homepage.cs" />
@@ -116,10 +129,12 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="Features\AddToCart.feature" />
+    <None Include="Features\AddToCart3.feature" />
     <None Include="Features\Checkout.feature" />
     <None Include="Features\ItemsInCart.feature" />
     <None Include="Features\SetDeliveryAddressCheckoutSection.feature" />
     <None Include="Features\SetQuantity.feature" />
+    <None Include="Features\AddToCart2.feature" />
     <None Include="Features\UpdateBillingAddressCheckoutSection.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />

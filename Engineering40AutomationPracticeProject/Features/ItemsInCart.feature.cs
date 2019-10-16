@@ -78,42 +78,46 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
      testRunner.Given("I am on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-     testRunner.When("I click on Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("I have added a product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
+     testRunner.When("I click on Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
      testRunner.Then("I should see the items in the Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("No items in Cart message", SourceLine=10)]
+        [TechTalk.SpecRun.ScenarioAttribute("No items in Cart message", SourceLine=11)]
         public virtual void NoItemsInCartMessage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("No items in Cart message", null, ((string[])(null)));
-#line 11
+#line 12
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 12
-  testRunner.Given("I am on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
-  testRunner.When("I click on Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.Given("I am on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
+  testRunner.When("I click on Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
   testRunner.Then("there should be a Cart message.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Remove the item from cart", SourceLine=15)]
+        [TechTalk.SpecRun.ScenarioAttribute("Remove the item from cart", SourceLine=16)]
         public virtual void RemoveTheItemFromCart()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove the item from cart", null, ((string[])(null)));
-#line 16
+#line 17
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 17
-  testRunner.Given("I am on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
-  testRunner.When("I click on Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.Given("I am on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
+  testRunner.And("I have added a product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
+  testRunner.When("I click on Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
   testRunner.Then("delete the item from cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
