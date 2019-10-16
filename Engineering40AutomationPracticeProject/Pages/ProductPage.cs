@@ -37,9 +37,17 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "layered_id_attribute_group_24")]
         protected IWebElement cbPink;
 
+        [FindsBy(How = How.ClassName, Using = "color_to_pick_list clearfix")]
+        List<List<IWebElement>> colourPickList;
+
         public ProductPage(IWebDriver driver)
         {
             this.driver = driver;
+            //PageFactory.InitElements(driver, this);
+        }
+
+        public void InitPageElements()
+        {
             PageFactory.InitElements(driver, this);
         }
 
@@ -80,6 +88,16 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         }
 
-
+        public virtual bool ContainColour(string colourCode, int index)
+        {
+            foreach (IWebElement colour in colourPickList[index])
+            {
+                if (colour.GetCssValue("background") == colourCode)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
