@@ -39,13 +39,18 @@ namespace Engineering40AutomationPracticeProject.Steps
             product.ChooseQuant("5");
             product.ChooseSize("L");
             product.AddToCart1();
-            driver.Navigate().Refresh();
         }
 
         [When(@"I click on Cart")]
         public void WhenIClickOnCart()
         {
             homepage.GoToShoppingCart();
+        }
+
+        [When(@"I click on processcheckout button")]
+        public void WhenIClickOnProcessCheckoutButton()
+        {
+            cartPage.ProcessButton();
         }
 
         [Then(@"I should see the items in the Cart")]
@@ -61,7 +66,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         public void ThenThereShouldBeACartMessage_()
         {
             string result = cartPage.emptyShoppingCart();
-            Assert.AreSame("Your shopping cart is empty.", result);
+            Assert.AreEqual("Your shopping cart is empty.", result);
         }
 
         [Then(@"delete the item from cart")]

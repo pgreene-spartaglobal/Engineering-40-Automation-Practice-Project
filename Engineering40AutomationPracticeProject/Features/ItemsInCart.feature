@@ -6,7 +6,7 @@
 Scenario: View items in Shopping cart
     	Given I am on the homepage
 		And I have added a product
-    	When I click on Cart
+    	When I click on processcheckout button
     	Then I should see the items in the Cart
 
 Scenario: No items in Cart message
@@ -17,5 +17,5 @@ Scenario: No items in Cart message
 Scenario: Remove the item from cart
 		Given I am on the homepage
 		And I have added a product
-		When I click on Cart
+		When I click on processcheckout button
 		Then delete the item from cart 
