@@ -18,6 +18,7 @@ namespace Engineering40AutomationPracticeProject
         [BeforeScenario]
         public void Setup()
         {
+            //driver.Dispose();
             driver = new ChromeDriver();
         }
 
@@ -122,6 +123,7 @@ namespace Engineering40AutomationPracticeProject
         public void TearDown()
         {
             driver.Close();
+            driver.Dispose();
         }
     }
 }
