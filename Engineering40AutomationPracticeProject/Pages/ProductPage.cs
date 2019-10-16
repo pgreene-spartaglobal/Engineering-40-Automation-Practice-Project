@@ -43,6 +43,8 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
+        public virtual void GoToPage() { }
+
         public void ClickBiege()
         {
             cbBeige.Click();
@@ -77,5 +79,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
 
         }
+
+
     }
 }

@@ -15,7 +15,7 @@ namespace Engineering40AutomationPracticeProject.Pages
             GoToPage();
         }
 
-        public void GoToPage()
+        public override void GoToPage()
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=3&controller=category");
         }
