@@ -37,13 +37,10 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "layered_id_attribute_group_24")]
         protected IWebElement cbPink;
 
-        [FindsBy(How = How.ClassName, Using = "color_to_pick_list clearfix")]
-        List<List<IWebElement>> colourPickList;
-
         public ProductPage(IWebDriver driver)
         {
             this.driver = driver;
-            //PageFactory.InitElements(driver, this);
+            PageFactory.InitElements(driver, this);
         }
 
         public void InitPageElements()
@@ -88,11 +85,27 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         }
 
-        public virtual bool ContainColour(string colourCode, int index)
+        public string GetOrangeColourCode()
         {
-            foreach (IWebElement colour in colourPickList[index])
+            return cbOrage.GetCssValue("background-color");
+        }
+
+        public bool ContainColour(string colour)
+        {
+            //Get all the colour pick list in the page
+            IList<IWebElement> colourPickLists;
+            colourPickLists = driver.FindElements(By.ClassName("color_to_pick_list"));
+
+            //get the first colour pick list
+            IWebElement firstItem = colourPickLists[0];
+            IList<IWebElement> colourPick = firstItem.FindElements(By.ClassName("color_pick"));
+
+            //check if the colour is inside the list
+            //So, for each colour in the list
+            foreach (IWebElement item in colourPick)
             {
-                if (colour.GetCssValue("background") == colourCode)
+                //if the colour of the item is equal to my colour
+                if (item.GetCssValue("background-color") == colour)
                 {
                     return true;
                 }
