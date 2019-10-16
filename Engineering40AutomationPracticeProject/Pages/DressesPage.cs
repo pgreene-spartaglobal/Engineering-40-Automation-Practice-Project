@@ -47,4 +47,46 @@ namespace Engineering40AutomationPracticeProject.Pages
             pinterest.Click();
         }
     }
+
+    class EveningDresses : ProductPage
+    {
+        public EveningDresses(IWebDriver driver) : base(driver)
+        {
+
+        }
+
+        public override void GoToPage()
+        {
+            base.GoToPage();
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=10&controller=category");
+        }
+    }
+
+    class SummerDresses : ProductPage
+    {
+        public SummerDresses(IWebDriver driver) : base(driver)
+        {
+
+        }
+
+        public override void GoToPage()
+        {
+            base.GoToPage();
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=11&controller=category");
+        }
+    }
+
+    class CasualDressesPage : ProductPage
+    {
+        public CasualDressesPage(IWebDriver driver) : base(driver)
+        {
+
+        }
+
+        public override void GoToPage()
+        {
+            base.GoToPage();
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=9&controller=category");
+        }
+    }
 }
