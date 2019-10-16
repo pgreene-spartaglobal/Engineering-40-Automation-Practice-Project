@@ -79,7 +79,11 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\DressesPage.cs" />
+    <Compile Include="Pages\FacebookPage.cs" />
+    <Compile Include="Pages\GooglePlusPage.cs" />
+    <Compile Include="Pages\PinterestPage.cs" />
     <Compile Include="Pages\TShirtPage.cs" />
+    <Compile Include="Pages\TwitterPage.cs" />
     <Compile Include="Pages\WomenPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Steps\FilterProductByColourSteps.cs" />
@@ -90,6 +94,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\EPStep.cs" />
     <Compile Include="Steps\NavigationSteps.cs" />
+    <Compile Include="Steps\ShareItemsOverSocialMediaSteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -98,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\ProductFunction.feature" />
+    <None Include="Features\ShareItemsOverSocialMedia.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

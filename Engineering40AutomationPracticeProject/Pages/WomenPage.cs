@@ -10,6 +10,7 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class WomenPage: ProductPage
     {
+        
         public WomenPage(IWebDriver driver) : base(driver)
         {
             GoToPage();
@@ -19,5 +20,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=3&controller=category");
         }
+
+
     }
 }
