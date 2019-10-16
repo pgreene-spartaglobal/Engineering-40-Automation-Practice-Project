@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using OpenQA.Selenium.Support.UI;
 namespace Engineering40AutomationPracticeProject.Pages
 {
     class CheckoutPage
@@ -20,9 +20,6 @@ namespace Engineering40AutomationPracticeProject.Pages
             this.driver = driver;
             PageFactory.InitElements(driver, this);
         }
-
-        [FindsBy(How = How.ClassName, Using = "cart_quantity_up")]
-        private IWebElement QuantityUp;
 
         public void goToPage()
         {
@@ -37,18 +34,23 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         public void goToCheckoutPage(IWebDriver driver)
         {
-            var CheckoutPage = driver.FindElement(By.LinkText("Proceed to checkout"));
+            var CheckoutPage = driver.FindElement(By.XPath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/a"));
+            WebDriverWait confirmCheckout = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            confirmCheckout.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/a")));
+            CheckoutPage.Click();
+
         }
 
         public void ClickPlussButton(IWebDriver driver)
         {
-            QuantityUp.Click();
+            var QuantityPlus = driver.FindElement(By.Id("cart_quantity_up_1_1_0_0"));
+            QuantityPlus.Click();
         }
 
         public string ReadNewQuantity(IWebDriver driver)
         {
             var QuantityResult = driver.FindElement(By.ClassName("cart_quantity_input"));
-            return QuantityResult.Text;
+            return QuantityResult.GetAttribute("value");
         }
 
 

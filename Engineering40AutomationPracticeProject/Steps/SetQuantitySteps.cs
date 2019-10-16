@@ -1,5 +1,6 @@
 ﻿using Engineering40AutomationPracticeProject.Pages;
 using Nest;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -50,8 +51,8 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Then(@"I should see Quantity increase")]
         public void ThenIShouldSeeQuantityIncrease()
         {
-            Thread.Sleep(10000);
-            driver.Close();
+            Thread.Sleep(2000);
+            Assert.AreEqual("2", CheckoutPage.ReadNewQuantity(driver).ToString());
         }
 
         [Scope(Feature = "SetQuantity")]
