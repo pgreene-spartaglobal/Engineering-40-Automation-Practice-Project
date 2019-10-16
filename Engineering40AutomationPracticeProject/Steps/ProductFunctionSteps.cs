@@ -14,6 +14,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         private WomenPage womenPage;
         private LoginPage loginPage;
 
+        [Scope(Feature = "ProductFunction")]
         [BeforeScenario]
         public void SetUp()
         {
@@ -76,6 +77,12 @@ namespace Engineering40AutomationPracticeProject.Pages
             Assert.AreEqual(4, womenPage.CompareInfo());
         }
 
+        [Scope(Feature = "ProductFunction")]
 
+        [AfterScenario]
+        public void TearDown()
+        {
+            driver.Close();
+        }
     }
 }

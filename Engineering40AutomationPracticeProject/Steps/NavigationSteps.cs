@@ -11,6 +11,8 @@ namespace Engineering40AutomationPracticeProject.Pages
     {
         private IWebDriver driver;
         private HomePage homePage;
+
+        [Scope(Feature = "Navigation")]
         [BeforeScenario]
         public void SetUp()
         {
@@ -59,6 +61,8 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             Assert.AreEqual("T-shirts - My Store", driver.Title);
         }
+
+        [Scope(Feature = "Navigation")]
         [AfterScenario]
         public void DisposeWebDriver()
         {
