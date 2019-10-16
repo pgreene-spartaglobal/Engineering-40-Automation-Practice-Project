@@ -12,40 +12,51 @@ namespace Engineering40AutomationPracticeProject.Steps
     [Binding]
     public class PersonalInfoCheckSteps
     {
+        IWebDriver driver;
+        LoginPage ba;
+        PersonalInfoPage personalInfoPage;
+        //no clue why we need to of these the syntax is the same for both thingys.
         [Given(@"I have logged in")]
         public void GivenIHaveLoggedIn()
         {
-            ScenarioContext.Current.Pending();
+            driver = new ChromeDriver();
+            ba = new LoginPage(driver);
+            personalInfoPage = new PersonalInfoPage(driver);
+            ba.LogIn();
         }
         
         [Given(@"I pressed my personal information")]
         public void GivenIPressedMyPersonalInformation()
         {
-            ScenarioContext.Current.Pending();
+            personalInfoPage.GoToInfoPage();
         }
         
         [Then(@"I should see appropriate gender")]
         public void ThenIShouldSeeAppropriateGender()
         {
-            ScenarioContext.Current.Pending();
+            string result = personalInfoPage.CheckGender();// Denpends on how we can check gender.
+            StringAssert.Contains(result, "Checked");
         }
         
         [Then(@"I should see appropriate first name")]
         public void ThenIShouldSeeAppropriateFirstName()
         {
-            ScenarioContext.Current.Pending();
+            string result = personalInfoPage.CheckFirstName();
+            StringAssert.Contains(result, "Steve");
         }
         
         [Then(@"I should see appropriate last name")]
         public void ThenIShouldSeeAppropriateLastName()
         {
-            ScenarioContext.Current.Pending();
+            string result = personalInfoPage.CheckLastName();
+            StringAssert.Contains(result, "Admin");
         }
         
         [Then(@"I should see appropriate email address")]
         public void ThenIShouldSeeAppropriateEmailAddress()
         {
-            ScenarioContext.Current.Pending();
+            string result = personalInfoPage.CheckEmail();
+            StringAssert.Contains(result, "steve@admin.com");
         }
     }
 }

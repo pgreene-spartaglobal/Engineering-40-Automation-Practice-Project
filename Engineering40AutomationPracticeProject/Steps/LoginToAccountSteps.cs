@@ -72,11 +72,5 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             Assert.AreEqual("Steve Admin", ap.GetAccountHeader());
         }
-
-        [AfterScenario]
-        public void DisposeWebDriver()
-        {
-            driver.Close();
-        }
     }
 }
