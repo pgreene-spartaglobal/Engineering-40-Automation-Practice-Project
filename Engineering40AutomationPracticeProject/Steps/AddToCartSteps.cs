@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
 using Engineering40AutomationPracticeProject.Pages;
+using OpenQA.Selenium.Support.UI;
 
 namespace Engineering40AutomationPracticeProject
 {
@@ -38,31 +39,31 @@ namespace Engineering40AutomationPracticeProject
         [Given(@"I have chosen the colour")]
         public void GivenIHaveChosenTheColour()
         {
-            ScenarioContext.Current.Pending();
+            product.ChooseColour();
         }
 
         [Given(@"I have picked the size")]
         public void GivenIHavePickedTheSize()
         {
-            ScenarioContext.Current.Pending();
+            product.ChooseSize("S");
         }
 
         [Given(@"I have added the quantity")]
         public void GivenIHaveAddedTheQuantity()
         {
-            ScenarioContext.Current.Pending();
+            product.ChooseQuant("1");
         }
 
         [When(@"I press the add to the cart button")]
         public void WhenIPressTheAddToTheCartButton()
         {
-            ScenarioContext.Current.Pending();
+            product.AddToCart1();
         }
 
         [Then(@"I should be able to to see the item added to the cart")]
         public void ThenIShouldBeAbleToToSeeTheItemAddedToTheCart()
         {
-            ScenarioContext.Current.Pending();
+            Assert.IsTrue(product.CheckSuccess());
         }
 
         [AfterScenario]

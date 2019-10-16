@@ -16,14 +16,14 @@ namespace Engineering40AutomationPracticeProject.Steps
         public void GivenIAmOnTheCheckoutPage()
         {
             driver = new ChromeDriver();
-            checkoutpage = new CheckoutPage(driver);
-            checkoutpage.GoToPage();
+            //checkoutpage = new CheckoutPage(driver);
+            //checkoutpage.GoToPage();
         }
 
         [Given(@"I have added a product to the Basket")]
         public void GivenIHaveAddedAProductToTheBasket()
         {
-            checkoutpage.AddToCardButton();
+            //checkoutpage.AddToCardButton();
         }
         
         [Given(@"I have navigated to the Checkout area")]
