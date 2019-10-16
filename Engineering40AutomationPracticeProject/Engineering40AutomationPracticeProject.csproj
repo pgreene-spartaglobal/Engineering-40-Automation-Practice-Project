@@ -132,6 +132,7 @@
     <None Include="Features\ItemsInCart.feature" />
     <None Include="Features\SetDeliveryAddressCheckoutSection.feature" />
     <None Include="Features\SetQuantity.feature" />
+    <None Include="Features\AddToCart2.feature" />
     <None Include="Features\UpdateBillingAddressCheckoutSection.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />

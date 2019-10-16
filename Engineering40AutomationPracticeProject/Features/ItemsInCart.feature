@@ -5,6 +5,7 @@
 
 Scenario: View items in Shopping cart
     	Given I am on the homepage
+		And I have added a product
     	When I click on Cart
     	Then I should see the items in the Cart
 
@@ -15,5 +16,6 @@ Scenario: No items in Cart message
 
 Scenario: Remove the item from cart
 		Given I am on the homepage
+		And I have added a product
 		When I click on Cart
 		Then delete the item from cart 
