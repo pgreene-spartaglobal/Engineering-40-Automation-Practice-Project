@@ -71,6 +71,24 @@ namespace Engineering40AutomationPracticeProject.Features
         }
         
         [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Viewing the Beige items on Women Page")]
+        public virtual void ViewingTheBeigeItemsOnWomenPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Viewing the Beige items on Women Page", null, ((string[])(null)));
+#line 6
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+ testRunner.Given("I am on the Women Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+ testRunner.When("I tick the Beige check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+ testRunner.Then("the result should be showing items that is available in Beige", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Viewing the Orange items on T-Shirt Page")]
         public virtual void ViewingTheOrangeItemsOnT_ShirtPage()
         {
@@ -84,6 +102,24 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I tick the Orange check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
  testRunner.Then("the result should be showing items that is available in Orange", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Items are not available in Beige after selecting Beige")]
+        public virtual void ItemsAreNotAvailableInBeigeAfterSelectingBeige()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Items are not available in Beige after selecting Beige", null, ((string[])(null)));
+#line 16
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 17
+ testRunner.Given("I am on the Women Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 18
+ testRunner.When("I tick the Beige check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
+ testRunner.Then("the result should be showing items that is not available in Beige", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
