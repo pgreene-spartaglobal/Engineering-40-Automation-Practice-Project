@@ -91,11 +91,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\CreateAccountSteps.cs" />
     <Compile Include="Steps\LoginToAccountSteps.cs" />
+    <Compile Include="Steps\PersonalInfoCheckSteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />
   <ItemGroup>
     <None Include="Features\CreateAccount.feature" />
+    <None Include="Features\PersonalInfoCheck.feature" />
     <None Include="packages.config" />
     <None Include="Features\LoginToAccount.feature" />
   </ItemGroup>
