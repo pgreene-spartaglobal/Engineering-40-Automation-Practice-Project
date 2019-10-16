@@ -12,37 +12,38 @@ namespace Engineering40AutomationPracticeProject
     {
         IWebDriver driver;
         TShirtPage tShirtPage;
+
         [BeforeScenario]
         public void Setup()
         {
             driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
+            //driver.Manage().Window.Maximize();
             tShirtPage = new TShirtPage(driver);
         }
 
-        [Given(@"I am on the Women Page")]
-        public void GivenIAmOnTheWomenPage()
-        {
-            ScenarioContext.Current.Pending();
-        }
+        //[Given(@"I am on the Women Page")]
+        //public void GivenIAmOnTheWomenPage()
+        //{
+        //    ScenarioContext.Current.Pending();
+        //}
 
-        [When(@"I tick the Beige check box")]
-        public void WhenITickTheBeigeCheckBox()
-        {
-            ScenarioContext.Current.Pending();
-        }
+        //[When(@"I tick the Beige check box")]
+        //public void WhenITickTheBeigeCheckBox()
+        //{
+        //    ScenarioContext.Current.Pending();
+        //}
 
-        [Then(@"the result should be showing items in Beige colour only")]
-        public void ThenTheResultShouldBeShowingItemsInBeigeColourOnly()
-        {
-            ScenarioContext.Current.Pending();
-        }
+        //[Then(@"the result should be showing items in Beige colour only")]
+        //public void ThenTheResultShouldBeShowingItemsInBeigeColourOnly()
+        //{
+        //    ScenarioContext.Current.Pending();
+        //}
 
         [Given(@"I am on the T-Shirt Page")]
         public void GivenIAmOnTheT_ShirtPage()
         {
             tShirtPage.GoToPage();
-            tShirtPage.InitPageElements();
+            //tShirtPage.InitPageElements();
         }
 
 
@@ -55,7 +56,7 @@ namespace Engineering40AutomationPracticeProject
         [Then(@"the result should be showing items in Orange colour only")]
         public void ThenTheResultShouldBeShowingItemsInOrangeColourOnly()
         {
-            bool result = tShirtPage.ContainColour("background: #F39C11", 0);
+            bool result = tShirtPage.ContainColour(tShirtPage.GetOrangeColourCode());
             Assert.AreEqual(true, result);
         }
 

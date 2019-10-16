@@ -8,11 +8,11 @@ using OpenQA.Selenium;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
-    class TShirtPage:ProductPage
+    class TShirtPage : ProductPage
     {
         public TShirtPage(IWebDriver driver) : base(driver)
         {
-            GoToPage();
+            //GoToPage();
         }
 
         public override void GoToPage()
