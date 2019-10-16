@@ -102,6 +102,23 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [TechTalk.SpecRun.ScenarioAttribute("Remove the item from cart", SourceLine=15)]
+        public virtual void RemoveTheItemFromCart()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove the item from cart", null, ((string[])(null)));
+#line 16
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 17
+  testRunner.Given("I am on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 18
+  testRunner.When("I click on Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
+  testRunner.Then("delete the item from cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [TechTalk.SpecRun.TestRunCleanup()]
         public virtual void TestRunCleanup()
         {

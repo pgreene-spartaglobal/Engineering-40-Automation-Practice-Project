@@ -18,9 +18,6 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.XPath, Using = "//div[@class='shopping_cart']")]
-        private IWebElement GotoShoppingCart;
-
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/p")]
         private IWebElement EmptyShoppingCart;
 
@@ -30,10 +27,6 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.ClassName, Using = "cart_quantity_delete")]
         private IWebElement DeleteCart;
 
-        public void GoToShoppingCart()
-        {
-            GotoShoppingCart.Click();
-        }
 
         public string emptyShoppingCart()
         {

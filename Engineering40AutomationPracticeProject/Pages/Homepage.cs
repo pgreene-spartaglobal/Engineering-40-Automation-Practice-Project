@@ -27,5 +27,11 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_product=1&controller=product");
         }
+
+        public void GoToShoppingCart()
+        {
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=order");
+
+        }
     }
 }

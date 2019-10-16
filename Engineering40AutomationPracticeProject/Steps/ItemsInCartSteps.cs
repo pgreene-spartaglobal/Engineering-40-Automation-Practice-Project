@@ -1,6 +1,6 @@
 ﻿using System;
 using TechTalk.SpecFlow;
-using OpenQA.Selenium; 
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
 using Engineering40AutomationPracticeProject.Pages;
@@ -13,14 +13,16 @@ namespace Engineering40AutomationPracticeProject.Steps
         private IWebDriver driver;
         private Homepage homepage;
         private CartPage cartPage;
+        private ProductPage product;
 
         [BeforeScenario]
-        public void Setup()
+        public void BeforeScenario()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             homepage = new Homepage(driver);
             cartPage = new CartPage(driver);
+            product = new ProductPage(driver);
         }
 
         [Given(@"I am on the homepage")]
@@ -28,19 +30,19 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             homepage.GoToPage();
         }
-        
+
         [When(@"I click on Cart")]
         public void WhenIClickOnCart()
         {
-            cartPage.GoToShoppingCart();
+            homepage.GoToShoppingCart();
         }
-        
+
         [Then(@"I should see the items in the Cart")]
         public void ThenIShouldSeeTheItemsInTheCart()
         {
-            ScenarioContext.Current.Pending();
+            
         }
-        
+
         [Then(@"there should be a Cart message\.")]
         public void ThenThereShouldBeACartMessage_()
         {
@@ -48,10 +50,10 @@ namespace Engineering40AutomationPracticeProject.Steps
             Assert.AreEqual("Your shopping cart is empty.", result);
         }
 
-        [AfterScenario]
-        public void DisposeWebDriver()
+        [Then(@"delete the item from cart")]
+        public void ThenDeleteTheItemFromCart()
         {
-            driver.Close();
+            cartPage.deleteCart();
         }
     }
 }

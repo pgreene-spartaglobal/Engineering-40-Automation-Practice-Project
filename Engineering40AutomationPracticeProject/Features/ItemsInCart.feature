@@ -12,3 +12,8 @@ Scenario: No items in Cart message
 		Given I am on the homepage
 		When I click on Cart
 		Then there should be a Cart message. 
+
+Scenario: Remove the item from cart
+		Given I am on the homepage
+		When I click on Cart
+		Then delete the item from cart 
