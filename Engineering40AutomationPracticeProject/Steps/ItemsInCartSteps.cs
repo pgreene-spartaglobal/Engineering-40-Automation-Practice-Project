@@ -47,7 +47,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             homepage.GoToShoppingCart();
         }
 
-        [When(@"I click on processcheckout button")]
+        [Given(@"I click on processcheckout button")]
         public void WhenIClickOnProcessCheckoutButton()
         {
             cartPage.ProcessButton();
@@ -69,7 +69,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             Assert.AreEqual("Your shopping cart is empty.", result);
         }
 
-        [Then(@"delete the item from cart")]
+        [When(@"delete the item from cart")]
         public void ThenDeleteTheItemFromCart()
         {
             cartPage.deleteCart();

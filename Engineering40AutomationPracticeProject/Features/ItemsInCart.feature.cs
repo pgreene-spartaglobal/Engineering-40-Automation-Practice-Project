@@ -116,9 +116,11 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
   testRunner.And("I have added a product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
-  testRunner.When("I click on processcheckout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("I click on processcheckout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21
-  testRunner.Then("delete the item from cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.When("delete the item from cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
+  testRunner.Then("there should be a Cart message.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -17,5 +17,6 @@ Scenario: No items in Cart message
 Scenario: Remove the item from cart
 		Given I am on the homepage
 		And I have added a product
-		When I click on processcheckout button
-		Then delete the item from cart 
+		And I click on processcheckout button
+		When delete the item from cart 
+		Then there should be a Cart message.
