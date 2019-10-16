@@ -83,19 +83,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\MyAccountPage.cs" />
     <Compile Include="Pages\MyAddress.cs" />
     <Compile Include="Pages\AddNewAddressPage.cs" />
+=======
+    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\CreateAccountPage.cs" />
+>>>>>>> 67c69cdc7262bb45ebe05ffd892e6edd3393e010
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\CreateAccountSteps.cs" />
+    <Compile Include="Steps\LoginToAccountSteps.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
+<<<<<<< HEAD
     <Folder Include="Steps\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\SpecFlowFeature1.feature" />
+=======
+    <None Include="Features\CreateAccount.feature" />
+>>>>>>> 67c69cdc7262bb45ebe05ffd892e6edd3393e010
     <None Include="packages.config" />
-    <None Include="SpecFlowFeature1.feature" />
+    <None Include="Features\LoginToAccount.feature" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

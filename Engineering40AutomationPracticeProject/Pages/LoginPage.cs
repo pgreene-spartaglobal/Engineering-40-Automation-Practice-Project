@@ -10,33 +10,42 @@ using TechTalk.SpecFlow;
 using OpenQA.Selenium.Support.PageObjects;
 
 
-namespace Engineering40AutomationPracticeProject
+namespace Engineering40AutomationPracticeProject.Pages
 {
 
-    public class Base
+    public class LoginPage
     {
-        public IWebDriver driver;
-        public Base(IWebDriver Driver)
+        IWebDriver driver;
+        public LoginPage(IWebDriver Driver)
         {
             this.driver = Driver;
             PageFactory.InitElements(driver, this);
         }
-        public void SetUp()
-        {
-            driver = new ChromeDriver();
+        public LoginPage() { }
 
-        }
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div[1]/ol/li")]
+        public IWebElement AuthenticateError;
         [FindsBy(How = How.Id, Using = "passwd")]
         public IWebElement passwordField;
         [FindsBy(How = How.Id, Using = "email")]
         public IWebElement emailField;
         [FindsBy(How = How.Id, Using = "SubmitLogin")]
-        public IWebElement submitButton;
+        public IWebElement submitLoginButton;
+        [FindsBy(How = How.Id, Using = "email_create")]
+        public IWebElement createAccountEmail;
+        [FindsBy(How = How.Id, Using = "SubmitCreate")]
+        public IWebElement submitCreateButton;
+
+        //This is the method to navigate easily during the tests
         public void Navigate(string url)
         {
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(url);
         }
+        /*(This is the base login method for other testers to use
+         * This has the correct email and password to login
+         * It also navigates to the login page by default                 
+         */
         public void LogIn()
         {
             string password = "PAssword";
@@ -44,11 +53,16 @@ namespace Engineering40AutomationPracticeProject
             Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
             emailField.SendKeys(email);
             passwordField.SendKeys(password);
-            submitButton.Click();
+            submitLoginButton.Click();
+        }
+        //This is the method to access the create account page
+        public void CreateAccount()
+        {
+            Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+            createAccountEmail.SendKeys("john@admin.com");
+            submitCreateButton.Click();
         }
     }
-
-        [Binding]
         public class LoginStep
         {
 
@@ -57,8 +71,8 @@ namespace Engineering40AutomationPracticeProject
             public void GivenIAmOnTheLoginPage()
             {
                 driver = new ChromeDriver();
-                Base ba = new Base(driver);
-                ba.LogIn();
+                LoginPage lp = new LoginPage(driver);
+                lp.LogIn();
             }
             [AfterScenario]
             public void DisposeWebDriver()
