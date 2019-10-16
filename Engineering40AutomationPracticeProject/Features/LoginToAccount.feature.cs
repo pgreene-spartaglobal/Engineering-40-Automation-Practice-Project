@@ -135,6 +135,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Successfully Logged In")]
+        public virtual void SuccessfullyLoggedIn()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successfully Logged In", null, ((string[])(null)));
+#line 28
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 29
+ testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 30
+ testRunner.And("I have entered a correct password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+ testRunner.And("I have entered a correct email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
+ testRunner.And("I have clicked the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 33
+ testRunner.Then("I will see my account name in the nav header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

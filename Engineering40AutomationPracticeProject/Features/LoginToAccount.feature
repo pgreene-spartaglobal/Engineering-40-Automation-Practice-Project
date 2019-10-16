@@ -25,4 +25,9 @@ Scenario: Incorrect Password Information
 	And I have clicked the submit button
 	Then I will see the appropriate error message for password
 
-
+Scenario: Successfully Logged In
+	Given I am on the login page
+	And I have entered a correct password 
+	And I have entered a correct email address
+	And I have clicked the submit button
+	Then I will see my account name in the nav header
