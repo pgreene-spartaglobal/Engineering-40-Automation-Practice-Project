@@ -86,7 +86,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 11
  testRunner.And("I have clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.Then("I will see the appropriate error for incorrect email format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I will see the appropriate message for email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -390,7 +390,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 124
  testRunner.And("I have not entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 125
- testRunner.And("I have not enterd a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have not entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 126
  testRunner.And("I have clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 127

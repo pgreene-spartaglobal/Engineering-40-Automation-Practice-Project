@@ -37,7 +37,8 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             driver = new ChromeDriver();
             cap = new CreateAccountPage(driver);
-            cap.CreateAccount();
+            lp = new LoginPage(driver);
+            lp.CreateAccount();
 
         }
         
@@ -124,37 +125,31 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Given(@"I have not entered a valid mobile phone")]
         public void GivenIHaveNotEnteredAValidMobilePhone()
         {
-            ScenarioContext.Current.Pending();
+            cap.mobilephoneField.SendKeys("");
         }
         
         [Given(@"I have not entered a city")]
         public void Ihavenotenteredacity()
         {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"I have not enterd a valid mobile phone")]
-        public void GivenIHaveNotEnterdAValidMobilePhone()
-        {
-            ScenarioContext.Current.Pending();
+            cap.cityField.SendKeys("");
         }
         
         [Then(@"I will see the appropriate error for incorrect email format")]
         public void ThenIWillSeeTheAppropriateErrorForIncorrectEmailFormat()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("Invalid email address.", lp.emailCreateAccountErrorBox.Text);
         }
         
         [Then(@"I will go to the relevant page to create an account")]
         public void ThenIWillGoToTheRelevantPageToCreateAnAccount()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("http://automationpractice.com/index.php?controller=my-account", driver.Url);
         }
 
         [Then(@"I will see the appropriate error message for first name")]
         public void ThenIWillSeeTheAppropriateErrorMessageForFirstName()
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual("firstname is required.", cap.errorBox.Text);
         }
         
         [Then(@"I will see the appropriate error message for last name")]

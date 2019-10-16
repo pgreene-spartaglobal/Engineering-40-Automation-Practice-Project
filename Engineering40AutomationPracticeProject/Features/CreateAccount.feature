@@ -9,7 +9,7 @@ Scenario: Email address not valid
 	Given I am on the login page
 	And I have entered an invalid email address
 	And I have clicked create account
-	Then I will see the appropriate error for incorrect email format
+	Then I will see the appropriate message for email
 	
 Scenario: Email address is valid
 	Given I am on the login page
@@ -122,6 +122,6 @@ Scenario: I have failed to enter any of the relevant fields
 	And I have not entered a city
 	And I have not entered a valid state
 	And I have not entered a valid Postal code
-	And I have not enterd a valid mobile phone
+	And I have not entered a valid mobile phone
 	And I have clicked create account
 	Then I will see the appropriate error message for all failure

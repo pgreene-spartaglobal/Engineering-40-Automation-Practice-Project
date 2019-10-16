@@ -38,20 +38,8 @@ namespace Engineering40AutomationPracticeProject.Pages
         public IWebElement mobilephoneField;
         [FindsBy(How = How.Id, Using = "submitAccount")]
         public IWebElement submitButton;
-        [FindsBy(How = How.Id, Using = "email_create")]
-        public IWebElement createAccountEmail;
-        [FindsBy(How = How.Id, Using = "SubmitCreate")]
-        public IWebElement submitCreateButton;
-
-        //This is the method to access the create account page
-        public void CreateAccount()
-        {
-            driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-            createAccountEmail.SendKeys("john@admin.com");
-            submitCreateButton.Click();
-        }
-
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/ol/li")]
+        public IWebElement errorBox;
 
     }
 }
