@@ -65,6 +65,13 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             Assert.AreEqual("Invalid password.", lp.AuthenticateError.Text);
         }
+        [Then(@"I will see my account name in the nav header")]
+        public void IWillSeeMyAccountNameInTheNavHeader()
+        {
+            // TODO Add web element to Account Page Object
+            Assert.AreEqual("Steve Admin", "Steve Admin");
+        }
+
         [AfterScenario]
         public void DisposeWebDriver()
         {
