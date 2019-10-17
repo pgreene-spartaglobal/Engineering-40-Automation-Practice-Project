@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Interactions;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
@@ -176,6 +177,14 @@ namespace Engineering40AutomationPracticeProject.Pages
                 itemNames.Add(item.Text);
             }
             return itemNames;
+        }
+
+        public void MoveSlider(int num)
+        {
+            Actions sliderAction = new Actions(driver);
+            sliderAction.ClickAndHold(rangeSlider)
+                .MoveByOffset((-(int)rangeSlider.Size.Width / 2), 0)
+                .MoveByOffset(100, 0).Release().Perform();
         }
 
         public bool ContainName(string name)
