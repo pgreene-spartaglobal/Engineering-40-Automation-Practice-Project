@@ -74,7 +74,8 @@ namespace Engineering40AutomationPracticeProject.Pages
         [Then(@"I should see the selected items side by side")]
         public void ThenIShouldSeeTheSelectedItemsSideBySide()
         {
-            Assert.AreEqual(1, womenPage.CompareInfo());
+            Thread.Sleep(2000);
+            Assert.IsTrue(womenPage.ItemsAppear());
         }
 
         [Scope(Feature = "ProductFunction")]
