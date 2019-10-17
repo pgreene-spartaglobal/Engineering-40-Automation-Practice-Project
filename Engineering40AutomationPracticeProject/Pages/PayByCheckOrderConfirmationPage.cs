@@ -10,7 +10,6 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class PayByCheckOrderConfirmationPage
     {
-        //COSMIN'S TERRITORY! TRESSPASS AT YOUR OWN RISK!
         private IWebDriver driver;
 
         public PayByCheckOrderConfirmationPage(IWebDriver driver)

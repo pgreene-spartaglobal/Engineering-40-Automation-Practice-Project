@@ -10,7 +10,6 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class CheckoutPaymentPage
     {
-        //COSMIN'S TERRITORY! TRESSPASS AT YOUR OWN RISK!
         private IWebDriver driver;
 
         public CheckoutPaymentPage(IWebDriver driver)
@@ -25,7 +24,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.XPath, Using = "//*[@id='HOOK_PAYMENT']/div[1]/div/p/a")]
         private IWebElement PayByBankWire;
 
-        [FindsBy(How = How.LinkText, Using = "//*[@id='HOOK_PAYMENT']/div[2]/div/p/a")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='HOOK_PAYMENT']/div[2]/div/p/a")]
         private IWebElement PayByCheck;
 
         public void PayByBankWireButton()

@@ -10,7 +10,6 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class CheckoutAddressPage
     {
-        //COSMIN'S TERRITORY! TRESSPASS AT YOUR OWN RISK!
         private IWebDriver driver;
 
         public CheckoutAddressPage(IWebDriver driver)

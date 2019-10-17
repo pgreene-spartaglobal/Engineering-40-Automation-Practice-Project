@@ -10,7 +10,6 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class ShoppingCartSummaryPage
     {
-        //COSMIN'S TERRITORY! TRESSPASS AT YOUR OWN RISK!
         private IWebDriver driver;
 
         public ShoppingCartSummaryPage(IWebDriver driver)

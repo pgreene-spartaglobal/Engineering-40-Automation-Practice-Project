@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
 using Engineering40AutomationPracticeProject.Pages;
+using OpenQA.Selenium.Support.UI;
 
 namespace Engineering40AutomationPracticeProject.Steps
 {
@@ -60,7 +61,6 @@ namespace Engineering40AutomationPracticeProject.Steps
         public void GivenIAmOnTheShopping_CartSummaryPage()
         {
             cartPage.ProcessButton();
-            //summaryPage.ShopingCartSummaryHeaderResult();
         }
         
         [Given(@"I clicked on the Proceed to checkout button")]
@@ -68,7 +68,31 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             summaryPage.ProceedToCheckOutButtonSummary();
         }
-        
+
+        [Given(@"I have entered a valid email address")]
+        public void GivenIHaveEnteredAValidEmailAddress()
+        {
+            checkoutSignInPage.FillUserNameSignIn("nbalaisyte@spartaglobal.com");
+        }
+
+        [Given(@"I have entered a invalid password")]
+        public void GivenIHaveEnteredAInvalidPassword()
+        {
+            checkoutSignInPage.FillPasswordSignIn("Sparta2019");
+        }
+
+        [When(@"I have clicked on the Sign in button on the Authentication page")]
+        public void WhenIHaveClickedOnTheSignInButtonOnTheAuthenticationPage()
+        {
+            checkoutSignInPage.SignInButton();
+        }
+
+        [Then(@"I should receive an error called Authentication failed")]
+        public void ThenIShouldReceiveAnErrorCalledAuthenticationFailed()
+        {
+            Assert.AreEqual("Authentication failed.", checkoutSignInPage.InvalidPasswordMessageResult());
+        }
+
         [Given(@"I am signed in")]
         public void GivenIAmSignedIn()
         {
@@ -113,7 +137,13 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             checkoutPaymentPage.PayByBankWireButton();
         }
-        
+
+        [Given(@"I clicked on Pay by check button on the Payment Method page")]
+        public void GivenIClickedOnPayByCheckButtonOnThePaymentMethodPage()
+        {
+            checkoutPaymentPage.PayByCheckButton();
+        }
+
         [When(@"I clicked on I confirm my order button on Order Summary page")]
         public void WhenIClickedOnIConfirmMyOrderButtonOnOrderSummaryPage()
         {

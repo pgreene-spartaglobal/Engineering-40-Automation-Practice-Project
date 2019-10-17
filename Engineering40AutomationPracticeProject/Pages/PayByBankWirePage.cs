@@ -10,7 +10,6 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class PayByBankWirePage
     {
-        //COSMIN'S TERRITORY! TRESSPASS AT YOUR OWN RISK!
         private IWebDriver driver;
 
         public PayByBankWirePage(IWebDriver driver)
@@ -29,7 +28,6 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             IConfirmMyOrder.Click();
         }
-        //Get the Order Summary Header
         public string OrderSummaryResult()
         {
             return OrderSummary.Text;

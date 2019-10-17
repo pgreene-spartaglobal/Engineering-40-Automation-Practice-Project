@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support.UI;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
     class CheckoutSignInPage
     {
-        //COSMIN'S TERRITORY! TRESSPASS AT YOUR OWN RISK!
         private IWebDriver driver;
 
         public CheckoutSignInPage(IWebDriver driver)
@@ -27,7 +27,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/h1")]
         private IWebElement AddressesHeader;
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='noSlide']/h1")]
+        [FindsBy(How = How.ClassName, Using = "page-heading")]
         private IWebElement CreateAccountHeader;
 
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/div[1]/ol/li")]
@@ -51,7 +51,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "SubmitLogin")]
         private IWebElement SignIn;
 
-        [FindsBy(How = How.Id, Using = "SubmitCreate")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='SubmitCreate']")]
         private IWebElement CreateAnAccount;
 
         public void FillUserNameSignIn(string userName)
