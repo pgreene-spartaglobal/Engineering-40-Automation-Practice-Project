@@ -6,9 +6,7 @@
 	Then press create account 
 
 Scenario:  All of the information is valid
-	Given I am on the login page
-	And I have entered a valid email address
-	And I have clicked create account
+	Given I have entered a valid email address and clicked create account
 	And I have entered a first name
 	And I have entered a valid password
 	And I have entered a last name

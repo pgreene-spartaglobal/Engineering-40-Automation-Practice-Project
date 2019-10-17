@@ -88,13 +88,16 @@
     <Compile Include="Pages\AddNewAddressPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\CreateAccountPage.cs" />
+    <Compile Include="Pages\OrderPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\CheckingOrderPage.cs" />
     <Compile Include="Steps\CreateAccountSteps.cs" />
     <Compile Include="Steps\LoginToAccountSteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />
   <ItemGroup>
+    <None Include="Features\CheckingOrderPage.feature" />
     <None Include="Features\CreateAccount.feature" />
     <None Include="packages.config" />
     <None Include="Features\LoginToAccount.feature" />

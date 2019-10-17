@@ -42,8 +42,6 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Given(@"I have entered a first name")]
         public void GivenIHaveEnteredAFirstName()
         {
-            WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("customer_firstname")));
             cap.firstNameField.SendKeys("John");
         }
         
@@ -118,7 +116,15 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             cap.postalcodeField.SendKeys("");
         }
-        
+        [Given(@"I have clicked create account button")]
+        public void GivenIHaveClickedCreateAccountButton()
+        {
+            lp.submitCreateButton.Click();
+            WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("customer_firstname")));
+        }
+
+
         [Given(@"I have not entered a valid mobile phone")]
         public void GivenIHaveNotEnteredAValidMobilePhone()
         {

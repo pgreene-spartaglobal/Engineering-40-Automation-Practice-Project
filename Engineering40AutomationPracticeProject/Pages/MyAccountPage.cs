@@ -26,6 +26,9 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.ClassName, Using = "icon-building")]
         private IWebElement MyAddressButton;
 
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/div[1]/ul/li[1]/a")]
+        public IWebElement orderButton;
+
         
         public void ClickMyAddressButton()
         {

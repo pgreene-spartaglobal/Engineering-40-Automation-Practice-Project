@@ -84,7 +84,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.And("I have entered a valid email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.And("I have clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have clicked create account button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
  testRunner.And("I have entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
