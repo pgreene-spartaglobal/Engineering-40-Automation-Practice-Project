@@ -8,23 +8,29 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
-    class PayByBankWireOrderConfirmationPage
+    class PurchasingPayByBankWirePage
     {
         private IWebDriver driver;
 
-        public PayByBankWireOrderConfirmationPage(IWebDriver driver)
+        public PurchasingPayByBankWirePage(IWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/h1")]
-        private IWebElement OrderConfirmation;
+        private IWebElement OrderSummary;
 
-        //Get the OrderConfirmation Header
-        public string OrderConfirmationResult()
+        [FindsBy(How = How.XPath, Using = "//*[@id='cart_navigation']/button")]
+        private IWebElement IConfirmMyOrder;
+
+        public void PayByBankWireButton()
         {
-            return OrderConfirmation.Text;
+            IConfirmMyOrder.Click();
+        }
+        public string OrderSummaryResult()
+        {
+            return OrderSummary.Text;
         }
     }
 }

@@ -9,11 +9,11 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
-    class CartPage
+    class PurchasingCartPage
     {
         private IWebDriver driver;
 
-        public CartPage(IWebDriver driver)
+        public PurchasingCartPage(IWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

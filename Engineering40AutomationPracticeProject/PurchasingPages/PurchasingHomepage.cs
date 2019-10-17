@@ -10,12 +10,12 @@ using OpenQA.Selenium.Interactions;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
-    class Homepage
+    class PurchasingHomepage
     {
         private IWebDriver driver;
         OpenQA.Selenium.Interactions.Actions actions;
 
-        public Homepage(IWebDriver driver)
+        public PurchasingHomepage(IWebDriver driver)
         {
             this.driver = driver;
             actions = new OpenQA.Selenium.Interactions.Actions(driver);

@@ -9,13 +9,12 @@ using OpenQA.Selenium.Support.UI;
 namespace Engineering40AutomationPracticeProject.Steps
 {
     [Binding]
-    public class CheckoutSteps
+    public class PurchasingCheckoutSteps
     {
         private IWebDriver driver;
         private Homepage homepage;
         private CartPage cartPage;
         private ProductPage product;
-        private ItemsInCartSteps itemsInCartSteps;
         private ShoppingCartSummaryPage summaryPage;
         private CheckoutSignInPage checkoutSignInPage;
         private CheckoutAddressPage checkoutAddressPage;

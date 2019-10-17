@@ -9,7 +9,7 @@ using System.Threading;
 namespace Engineering40AutomationPracticeProject.Steps
 {
     [Binding]
-    public class ItemsInCartSteps
+    public class PurchasingItemsInCartSteps
     {
         private IWebDriver driver;
         private Homepage homepage;

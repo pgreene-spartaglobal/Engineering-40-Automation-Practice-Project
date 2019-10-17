@@ -103,32 +103,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\CartPage.cs" />
-    <Compile Include="Pages\CheckoutAddressPage.cs" />
-    <Compile Include="Pages\CheckoutPage.cs" />
-    <Compile Include="Pages\CheckoutPaymentPage.cs" />
-    <Compile Include="Pages\CheckoutShippingPage.cs" />
-    <Compile Include="Pages\CheckoutSignInPage.cs" />
-    <Compile Include="Pages\PayByBankWireOrderConfirmationPage.cs" />
-    <Compile Include="Pages\PayByBankWirePage.cs" />
-    <Compile Include="Pages\PayByCheckOrderConfirmationPage.cs" />
-    <Compile Include="Pages\PayByCheckPage.cs" />
-    <Compile Include="Pages\ProductPage.cs" />
-    <Compile Include="Pages\ShoppingCartSummaryPage.cs" />
-    <Compile Include="Steps\AddToCartSteps.cs" />
+    <Compile Include="PurchasingPages\PurchasingCartPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingCheckoutAddressPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingCheckoutPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingCheckoutPaymentPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingCheckoutShippingPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingCheckoutSignInPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingPayByBankWireOrderConfirmationPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingPayByBankWirePage.cs" />
+    <Compile Include="PurchasingPages\PurchasingPayByCheckOrderConfirmationPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingPayByCheckPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingProductPage.cs" />
+    <Compile Include="PurchasingPages\PurchasingShoppingCartSummaryPage.cs" />
+    <Compile Include="PurchasingSteps\PurchasingAddToCartSteps.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Pages\Homepage.cs" />
+    <Compile Include="PurchasingPages\PurchasingHomepage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steps\CheckoutSteps.cs" />
-    <Compile Include="Steps\ItemsInCartSteps.cs" />
-    <Compile Include="Steps\SetQuantitySteps.cs" />
+    <Compile Include="PurchasingSteps\PurchasingCheckoutSteps.cs" />
+    <Compile Include="PurchasingSteps\PurchasingItemsInCartSteps.cs" />
+    <Compile Include="PurchasingSteps\PurchasingSetQuantitySteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Features\AddToCart.feature" />
-    <None Include="Features\Checkout.feature" />
-    <None Include="Features\ItemsInCart.feature" />
-    <None Include="Features\SetQuantity.feature" />
+    <None Include="PurchasingFeatures\PurchasingAddToCart.feature" />
+    <None Include="PurchasingFeatures\PurchasingCheckout.feature" />
+    <None Include="PurchasingFeatures\PurchasingItemsInCart.feature" />
+    <None Include="PurchasingFeatures\PurchasingSetQuantity.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">

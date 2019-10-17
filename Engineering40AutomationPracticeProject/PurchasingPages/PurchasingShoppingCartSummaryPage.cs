@@ -8,11 +8,11 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
-    class ShoppingCartSummaryPage
+    class PurchasingShoppingCartSummaryPage
     {
         private IWebDriver driver;
 
-        public ShoppingCartSummaryPage(IWebDriver driver)
+        public PurchasingShoppingCartSummaryPage(IWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

@@ -9,11 +9,11 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
-    class CheckoutSignInPage
+    class PurchasingCheckoutSignInPage
     {
         private IWebDriver driver;
 
-        public CheckoutSignInPage(IWebDriver driver)
+        public PurchasingCheckoutSignInPage(IWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

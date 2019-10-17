@@ -8,11 +8,11 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
-    class PayByCheckPage
+    class PurchasingPayByCheckPage
     {
         private IWebDriver driver;
 
-        public PayByCheckPage(IWebDriver driver)
+        public PurchasingPayByCheckPage(IWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

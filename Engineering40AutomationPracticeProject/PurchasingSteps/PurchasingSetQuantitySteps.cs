@@ -10,7 +10,7 @@ using TechTalk.SpecFlow;
 namespace Engineering40AutomationPracticeProject.Steps
 {
     [Binding]
-    public class SetQuantitySteps
+    public class PurchasingSetQuantitySteps 
     {
         IWebDriver driver;
         CheckoutPage checkoutPage;

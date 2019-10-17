@@ -12,7 +12,7 @@ namespace Engineering40AutomationPracticeProject
     [Binding]
 
 
-    public class AddToCartSteps
+    public class PurchasingAddToCartSteps   
     {
         private IWebDriver driver;
         private Homepage homepage;

@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Support.UI;
 namespace Engineering40AutomationPracticeProject.Pages
 {
-    class CheckoutPage
+    class PurchasingCheckoutPage
     {
         private IWebDriver driver;
 
-        public CheckoutPage(IWebDriver driver)
+        public PurchasingCheckoutPage(IWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);
