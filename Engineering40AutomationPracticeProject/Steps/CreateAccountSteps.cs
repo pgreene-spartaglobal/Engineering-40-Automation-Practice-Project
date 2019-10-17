@@ -6,6 +6,7 @@ using NUnit.Framework;
 using Engineering40AutomationPracticeProject.Pages;
 using OpenQA.Selenium.Support.UI;
 
+//no more bugs
 namespace Engineering40AutomationPracticeProject.Steps
 {
     [Binding]
