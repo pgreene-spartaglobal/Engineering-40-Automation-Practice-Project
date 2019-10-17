@@ -11,6 +11,13 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class AddNewAddressPage
     {
+        IWebDriver driver;
+        public AddNewAddressPage(IWebDriver Driver)
+        {
+            this.driver = Driver;
+            PageFactory.InitElements(driver, this);
+        }
+
         [FindsBy(How = How.Name, Using = "firstname")]
         private IWebElement FirstNameField;
 
@@ -32,6 +39,7 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         [FindsBy(How = How.Name, Using = "id_country")]
         private IWebElement CountryIdField;
+        SelectElement countrySelect;
 
         [FindsBy(How = How.Name, Using = "phone")]
         private IWebElement PhoneIdField;
@@ -39,11 +47,12 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Name, Using = "phone_mobile")]
         private IWebElement MobileIdField;
 
-        [FindsBy(How = How.ClassName, Using = "page-heading")]
-        private IWebElement pageHeading;
 
         [FindsBy(How = How.ClassName, Using = "page-subheading")]
         private IWebElement pagesubHeading;
+
+        [FindsBy(How = How.Id, Using = "submitAddress")]
+        private IWebElement SaveButton;
 
 
 
@@ -80,7 +89,9 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         public void SelectedcountryField(string country)
         {
-            //FirstNameField.SendKeys(firstname);
+            countrySelect = new SelectElement(CountryIdField);
+            countrySelect.SelectByText(country);
+
         }
 
         public void FillPhoneField(string phone)
@@ -96,6 +107,11 @@ namespace Engineering40AutomationPracticeProject.Pages
         public string GetSubpageHeader()
         {
             return pagesubHeading.Text;
+        }
+
+        public void SaveButtonClick()
+        {
+            SaveButton.Click();
         }
     }
 }
