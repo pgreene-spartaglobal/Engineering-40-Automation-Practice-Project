@@ -138,9 +138,7 @@
     <None Include="Features\SetDeliveryAddressCheckoutSection.feature" />
     <None Include="Features\SetQuantity.feature" />
     <None Include="Features\AddToCart2.feature" />
-    <None Include="Features\SetSHipping.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-    </None>
+    <None Include="Features\SetSHipping.feature" />
     <None Include="Features\UpdateBillingAddressCheckoutSection.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
