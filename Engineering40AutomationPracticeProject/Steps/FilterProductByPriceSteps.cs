@@ -77,14 +77,14 @@ namespace Engineering40AutomationPracticeProject
         }
 
         [Scope(Feature = "FilterProductByPrice")]
-        [When(@"I move the head of the slider to £(.*)")]
+        [When(@"I move the head of the slider to $(.*)")]
         public void WhenIMoveTheHeadOfTheSliderTo(double p0)
         {
             productPage.RangeSlider();
         }
 
         [Scope(Feature = "FilterProductByPrice")]
-        [Then(@"result should be showing products that is below £(.*)")]
+        [Then(@"result should be showing products that is below $(.*)")]
         public void ThenResultShouldBeShowingProductsThatIsBelow(double p0)
         {
             bool result = productPage.PriceOutOfRange(34.13, 53.00);
