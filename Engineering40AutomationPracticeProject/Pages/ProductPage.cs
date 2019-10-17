@@ -37,6 +37,9 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "layered_id_attribute_group_24")]
         protected IWebElement cbPink;
 
+        [FindsBy(How = How.ClassName, Using = "product_list")]
+        protected IWebElement ulProductList;
+
         public ProductPage(IWebDriver driver)
         {
             this.driver = driver;
@@ -151,6 +154,12 @@ namespace Engineering40AutomationPracticeProject.Pages
                 }
             }
             return false;
+        }
+
+        public int GetProductListCount()
+        {
+            IList<IWebElement> productList = ulProductList.FindElements(By.TagName("li"));
+            return productList.Count;
         }
     }
 }
