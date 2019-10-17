@@ -59,6 +59,37 @@ namespace Engineering40AutomationPracticeProject.Steps
             Assert.AreEqual("Your message has been successfully sent to our team.", contactPage.GetDisplayedMessage());
         }
 
+        [Then(@"It should display an appropriate error message")]
+        public void ThenItShouldDisplayAnAppropriateErrorMessage()
+        {
+            Assert.AreEqual("The message cannot be blank.", contactPage.GetErrorMessage());
+        }
+
+        [When(@"I click on the add file button")]
+        public void WhenIClickOnTheAddFileButton()
+        {
+            contactPage.ClickAddFileButton();
+        }
+
+        [Then(@"It should not show a file explorer so I can choose file to add")]
+        public void ThenItShouldNotShowAFileExplorerSoICanChooseFileToAdd()
+        {
+            Assert.IsFalse(contactPage.CheckIfFileExplorerAvailable());
+        }
+
+        [Given(@"I have not given a vaild email address")]
+        public void GivenIHaveNotGivenAVaildEmailAddress()
+        {
+            contactPage.InvalidEmail();
+        }
+
+        [Then(@"It should display an appropriate no email error message")]
+        public void ThenItShouldDisplayAnAppropriateNoEmailErrorMessage()
+        {
+            Assert.AreEqual("Invalid email address.", contactPage.GetErrorMessage());
+        }
+
+
         [Scope(Feature = "ContactCustomerService")]
         [AfterScenario]
         public void CleanUp()

@@ -14,6 +14,10 @@ namespace Engineering40AutomationPracticeProject.Pages
         // driver 
         private IWebDriver driver;
 
+        // Error message element
+        [FindsBy(How = How.XPath, Using = ".//*[@class='alert alert-danger']/ol/li")]
+        private IWebElement errorMessage;
+
         // Send button element
         [FindsBy(How = How.Id, Using = "submitMessage")]
         private IWebElement sendButton;
@@ -32,6 +36,13 @@ namespace Engineering40AutomationPracticeProject.Pages
         // Message field element
         [FindsBy(How = How.XPath, Using = ".//*[@id='center_column']//p")]
         private IWebElement displayText;
+
+        // Add file button
+        [FindsBy(How = How.XPath, Using = ".//*[@id='uniform-fileUpload']/span[1]")]
+        private IWebElement addFileButton;
+
+        // True if file explorer is displayed
+        private bool fileExplorerAvailable = false;
 
         /**
          * Constructor
@@ -91,5 +102,49 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             return displayText.Text;
         }
+
+        /**
+         * Get the displayed error message
+         * @return the error text
+         */
+        public string GetErrorMessage()
+        {
+            return errorMessage.Text;
+        }
+
+        /**
+         * Click the add file button on the contacts page
+         */
+        public void ClickAddFileButton()
+        {
+            try
+            {
+                addFileButton.Click();
+                fileExplorerAvailable = true;
+            }
+            catch (Exception ex)
+            {
+                fileExplorerAvailable = false;
+                // handle exception here
+            }     
+        }
+
+        /**
+         * return true if file explorer is available when add file button is clicked
+         */
+        public bool CheckIfFileExplorerAvailable()
+        {
+            return fileExplorerAvailable;
+        }
+
+        /**
+         * Enter invalid email
+         */
+        public void InvalidEmail()
+        {
+            emailField.SendKeys("xyz");
+        }
+
+
     }
 }
