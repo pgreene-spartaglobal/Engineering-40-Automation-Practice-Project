@@ -101,7 +101,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             Assert.AreEqual("http://automationpractice.com/index.php?controller=addresses", driver.Url);
            // ScenarioContext.Current.Pending();
         }
-
+        [Scope(Feature = "AddressEdit")]
         [AfterScenario]
         public void DisposeWebDriver()
         {
