@@ -11,6 +11,7 @@ namespace Engineering40AutomationPracticeProject.Pages
     class Homepage
     {
         private readonly IWebDriver driver;
+        OpenQA.Selenium.Interactions.Actions actions;
 
         public Homepage(IWebDriver driver)
         {
