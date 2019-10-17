@@ -16,6 +16,8 @@ These instructions will get you a copy of the project up and running on your loc
 ## General info
 The project was based on website automation, as group we spilt the into 3 different group with each objectives: navigation, purchasing and account). our Group was to suppose to work on purchasing objectives. 
 
+Group: Dipak Mukesh, Brandon Stephens, Cosmin Balosache, Nazir Ahmed and Norberta Balaisyte
+
 ## Prerequisites
 What things you need to install the software and how to install them
 ```
@@ -37,7 +39,7 @@ A step by step series of examples that tell you how to get a website automation 
 4) Add 3 folders: Feature, Pages and Steps
 5) Inside Feature folder: add SpecFlow features
 6) Inside Pages folder: Website pages 
-7) Inside Steps folder: Generate step definitions and save to steps folder.
+7) Inside Steps folder: Generate step definitions (check step 5) and save to this folder.
 ```
 
 ## NuGet Packages
@@ -81,7 +83,7 @@ Example of Test written
         }
 ```
 
-```C#
+```SpecFlow
 Example of SpecFlow + Gerkin Syntax
        Feature: Checkout
 	            As a user
@@ -89,7 +91,7 @@ Example of SpecFlow + Gerkin Syntax
 	            So that I can receive them.
 
       Scenario: Succesful Purchase using bank wire
-	           Given I am on the Home Page
+	     Given I am on the Home Page
              And I have added at least one item to the shopping cart
              And I am on the Shopping-Cart Summary page
              And I clicked on the Proceed to checkout button
@@ -107,19 +109,24 @@ Example of SpecFlow + Gerkin Syntax
 ## Implementation
 ```
 1) Go to the website.
-2) Write User stories based on the website.
+2) Write User stories based on the website on the trello.
 3) Follow Steps section 
-4) Convert the user stories into Gherkin Syntax (inside feature folder)
-5) ......
-
-
-
+4) Process of testing a feature
+   4.1) create SpecFlow.Feature file inside feature folder
+   4.2) convert the user story into Gherkin syantax inside first created in 4.1
+   4.3) create two c# file for homepage and feature page (e.g product) inside page folder
+   4.4) homepage and feature page uses Selenium NuGet package to call the web driver, locating and manipulating 
+        elements within a browser
+   4.5) Generate step definitions from feature file and save to Step folders 
+   4.6) Inside step folder, use Generate step file (e.g AddToChartSteps) for writing the automation test 
+   4.7) inside step file, use Selenium chrome driver to communicate with goolge chrome, NUnit framework to
+        write the test.
 ```
 
 ## Built With
 ```
 selenium - testing the website 
-specflow - writing scenario in grekin 
+specflow - writing scenario in Ghrekin 
 trello - create user stories with scrum artifact
 Gitbash - create, push, commit and pull Git Repository
 Visual Studio - Create the project 
