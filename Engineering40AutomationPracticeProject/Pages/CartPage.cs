@@ -19,7 +19,7 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/p")]
+        [FindsBy(How = How.ClassName, Using = "alert")]
         private IWebElement EmptyShoppingCart;
 
         [FindsBy(How = How.Id, Using = "summary_products_quantity")]
@@ -34,12 +34,21 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.XPath, Using = "//*[@id='layer_cart']/div[1]/div[2]/div[4]/a")]
         private IWebElement ProcessCheckout;
 
+        [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/p")]
+        private IWebElement EmptyProduct;
+
         public void ProcessButton()
         {
             WebDriverWait confirmCheckout = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             confirmCheckout.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/a")));
             ProcessCheckout.Click();
         }
+
+        public string emptyProduct()
+        {
+            return EmptyProduct.Text;
+        }
+
         public string emptyShoppingCart()
         {
             return EmptyShoppingCart.Text;

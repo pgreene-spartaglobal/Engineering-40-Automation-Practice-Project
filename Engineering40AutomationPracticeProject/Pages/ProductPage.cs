@@ -34,11 +34,8 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         [FindsBy(How = How.ClassName, Using = "icon_ok")]
         private readonly IWebElement SuccessfullyAddedShoppingCart;
-        //[FindsBy(How = How.XPath, Using = "/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[1]/h2/text()")]
-        //private readonly IWebElement SuccessfulAdd;
 
 
-        ///html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[1]/h2/text()
 
         public void ChooseQuant(string quantity)
         {
@@ -64,14 +61,11 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             AddToCart.Click();
         }
-        //Assert.IsTrue(productPage.CheckSuccess());
-        //public bool CheckSuccess()
-        //{
-        //    return SuccessfullyAddedShoppingCart.Displayed;
-        //}
+       
         public string SuccessfulAddToTheCart()
         {
-            return "Product successfully added to your shopping cart";//SuccessfulAdd.Text;
+            return "Product successfully added to your shopping cart";
         }
+       
     }
 }

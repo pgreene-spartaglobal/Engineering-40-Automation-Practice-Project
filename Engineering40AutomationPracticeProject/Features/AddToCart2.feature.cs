@@ -17,9 +17,9 @@ namespace Engineering40AutomationPracticeProject.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Adding to the cart by hoovering on the product without clicking on it", Description="\tAs a user \r\n\twhen I enter the homepage and hover on the item \r\n\tI want to be abl" +
-        "e to add it to the cart\r\n\tby clicking \"add to cart\" on a cart window.", SourceFile="Features\\AddToCart2.feature", SourceLine=0)]
-    public partial class AddingToTheCartByHooveringOnTheProductWithoutClickingOnItFeature
+    [TechTalk.SpecRun.FeatureAttribute("AddToCart2", Description="\tAs a user \r\n\twhen I enter the homepage and hover on the item \r\n\tI want to be abl" +
+        "e to add it to the cart\r\n\tby clicking \"add to cart\" on a cart window.", SourceFile="Features\\AddToCart2.feature", SourceLine=1)]
+    public partial class AddToCart2Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace Engineering40AutomationPracticeProject.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Adding to the cart by hoovering on the product without clicking on it", "\tAs a user \r\n\twhen I enter the homepage and hover on the item \r\n\tI want to be abl" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AddToCart2", "\tAs a user \r\n\twhen I enter the homepage and hover on the item \r\n\tI want to be abl" +
                     "e to add it to the cart\r\n\tby clicking \"add to cart\" on a cart window.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -68,23 +68,19 @@ namespace Engineering40AutomationPracticeProject.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers", new string[] {
-                "mytag"}, SourceLine=7)]
-        public virtual void AddTwoNumbers()
+        [TechTalk.SpecRun.ScenarioAttribute("Adding to the cart 2", SourceLine=7)]
+        public virtual void AddingToTheCart2()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, new string[] {
-                        "mytag"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding to the cart 2", null, ((string[])(null)));
 #line 8
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 9
- testRunner.Given("I have entered 50 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.And("I have entered 70 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I press add to cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
- testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a pop-up window saying Successfully added to the cart should appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

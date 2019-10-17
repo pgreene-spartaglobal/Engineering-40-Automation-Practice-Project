@@ -19,7 +19,7 @@ namespace Engineering40AutomationPracticeProject
         private ProductPage product;
 
         [BeforeScenario]
-        [Scope(Feature = "SetQuantity")]
+        [Scope(Feature = "AddToCart")]
         public void BeforeScenario()
         {
             driver = new ChromeDriver();
@@ -73,7 +73,8 @@ namespace Engineering40AutomationPracticeProject
             Assert.AreEqual("Product successfully added to your shopping cart", product.SuccessfulAddToTheCart());
         }
 
-        /*[AfterScenario]
+        [Scope(Feature = "AddToCart")]
+        [AfterScenario]
         public void AfterScenario()
         {
             driver.Close();
