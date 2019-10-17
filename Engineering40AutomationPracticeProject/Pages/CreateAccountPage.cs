@@ -40,6 +40,8 @@ namespace Engineering40AutomationPracticeProject.Pages
         public IWebElement submitButton;
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/ol/li")]
         public IWebElement errorBox;
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/p")]
+        public IWebElement errorBoxNumber;
 
     }
 }

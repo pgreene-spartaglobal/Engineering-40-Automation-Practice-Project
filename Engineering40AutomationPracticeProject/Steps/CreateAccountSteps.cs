@@ -202,7 +202,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             try
             {
-            Assert.AreEqual("firstname is required.", cap.errorBox.Text);
+            Assert.AreEqual("This country requires you to choose a State.", cap.errorBox.Text);
             }
             finally
             {
@@ -269,7 +269,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             try
             {
-                Assert.AreEqual("firstname is required.", cap.errorBox.Text);
+                Assert.AreEqual("There are 8 errors", cap.errorBoxNumber.Text);
             }
             finally
             {
