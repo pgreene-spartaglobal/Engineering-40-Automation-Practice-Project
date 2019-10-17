@@ -33,7 +33,13 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         [FindsBy(How = How.ClassName, Using = "//*[@id='product_comparison']/tbody/tr[2]")]
         protected IWebElement TRcount;
-        
+
+        [FindsBy(How = How.Id, Using = "layered_category_4")]
+        private IWebElement cbTops;
+
+        [FindsBy(How = How.Id, Using = "layered_category_8")]
+        private IWebElement cbDresses;
+
         public WomenPage(IWebDriver driver) : base(driver)
         {
             //GoToPage();
@@ -72,6 +78,16 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             
             return 1;
+        }
+
+        public void ClickTops()
+        {
+            cbTops.Click();
+        }
+
+        public void ClickDresses()
+        {
+            cbDresses.Click();
         }
     }
 }

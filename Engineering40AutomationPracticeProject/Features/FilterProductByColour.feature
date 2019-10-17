@@ -1,6 +1,7 @@
 ﻿Feature: FilterProductByColour
 	In order to select the items I want
-	As a user I want to be able to filter the result by different catagories
+	As a user
+	I want to be able to filter the result by different colour
 
 Scenario: Viewing the Beige items on Women Page
 	Given I am on the Women Page
