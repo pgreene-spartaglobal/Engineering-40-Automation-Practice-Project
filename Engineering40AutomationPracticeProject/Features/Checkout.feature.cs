@@ -76,225 +76,31 @@ namespace Engineering40AutomationPracticeProject.Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
-    testRunner.Given("I have added at least one item to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-    testRunner.And("I am on the Shopping-Cart Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I have added at least one item to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
-    testRunner.And("I clicked on the Proceed to checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I am on the Shopping-Cart Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-    testRunner.And("I am signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I clicked on the Proceed to checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
-    testRunner.And("I have a valid shipping address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-    testRunner.And("I have a valid billing address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
-    testRunner.And("I clicked on the Proceed to checkout button on Addresses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
-    testRunner.And("I have agreed to the terms of service on the shipping page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
-    testRunner.And("I clicked on the Proceed to checkout button on Shipping page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
-    testRunner.And("I clicked on Pay by bank wire button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
-    testRunner.When("I clicked on I confirm my order button on Order Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
-    testRunner.Then("I should see the Order Confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Succesful Purchase using check", SourceLine=19)]
-        public virtual void SuccesfulPurchaseUsingCheck()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Succesful Purchase using check", null, ((string[])(null)));
-#line 20
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 21
-    testRunner.Given("I have added at least one item to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 22
-    testRunner.And("I am on the Shopping-Cart Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
-    testRunner.And("I clicked on the Proceed to checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
     testRunner.And("I am signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
+#line 12
     testRunner.And("I have a valid shipping address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
+#line 13
     testRunner.And("I have a valid billing address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
+#line 14
     testRunner.And("I clicked on the Proceed to checkout button on Addresses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
+#line 15
     testRunner.And("I have agreed to the terms of service on the shipping page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 16
     testRunner.And("I clicked on the Proceed to checkout button on Shipping page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
-    testRunner.And("I clicked on Pay by check button on the Payment Method page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 17
+    testRunner.And("I clicked on Pay by bank wire button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
     testRunner.When("I clicked on I confirm my order button on Order Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 19
     testRunner.Then("I should see the Order Confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Succesful Purchase using check while not signed in", SourceLine=33)]
-        public virtual void SuccesfulPurchaseUsingCheckWhileNotSignedIn()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Succesful Purchase using check while not signed in", null, ((string[])(null)));
-#line 34
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 35
-    testRunner.Given("I have added at least one item to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 36
-    testRunner.And("I am on the Shopping-Cart Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 37
-    testRunner.And("I clicked on the Proceed to checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 38
-    testRunner.And("I am not signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
-    testRunner.And("I have entered a valid email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
-    testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
-    testRunner.And("I have clicked on the Sign in button on the Authentication page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
-    testRunner.And("I have a valid shipping address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
-    testRunner.And("I have a valid billing address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
-    testRunner.And("I clicked on the Proceed to checkout button on Addresses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
-    testRunner.And("I have agreed to the terms of service on the shipping page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
-    testRunner.And("I clicked on the Proceed to checkout button on Shipping page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
-    testRunner.And("I clicked on Pay by check button on the Payment Method page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
-    testRunner.When("I clicked on I confirm my order button on Order Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 49
-    testRunner.Then("I should see the Order Confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Succesful Purchase using bank wire while not signed in", SourceLine=50)]
-        public virtual void SuccesfulPurchaseUsingBankWireWhileNotSignedIn()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Succesful Purchase using bank wire while not signed in", null, ((string[])(null)));
-#line 51
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 52
-    testRunner.Given("I have added at least one item to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 53
-    testRunner.And("I am on the Shopping-Cart Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
-    testRunner.And("I clicked on the Proceed to checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
-    testRunner.And("I am not signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 56
-    testRunner.And("I have entered a valid email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 57
-    testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 58
-    testRunner.And("I have clicked on the Sign in button on the Authentication page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 59
-    testRunner.And("I have a valid shipping address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 60
-    testRunner.And("I have a valid billing address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 61
-    testRunner.And("I clicked on the Proceed to checkout button on Addresses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 62
-    testRunner.And("I have agreed to the terms of service on the shipping page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 63
-    testRunner.And("I clicked on the Proceed to checkout button on Shipping page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 64
-    testRunner.And("I clicked on Pay by check button on the Payment Method page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 65
-    testRunner.When("I clicked on I confirm my order button on Order Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
-    testRunner.Then("I should see the Order Confirmation page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Wanting to make a purchase, but do not have an account", SourceLine=67)]
-        public virtual void WantingToMakeAPurchaseButDoNotHaveAnAccount()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Wanting to make a purchase, but do not have an account", null, ((string[])(null)));
-#line 68
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 69
-    testRunner.Given("I have added at least one item to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 70
-    testRunner.And("I am on the Shopping-Cart Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 71
-    testRunner.And("I clicked on the Proceed to checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 72
-    testRunner.And("I do not have an account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 73
-    testRunner.And("I have entered a valid email address on Create an Account section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 74
-    testRunner.When("I have clicked on the Create an account button on the Authentication page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 75
-    testRunner.Then("I should see the Create an Account page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Wanting to make a purchase, but typed an invalid password", SourceLine=76)]
-        public virtual void WantingToMakeAPurchaseButTypedAnInvalidPassword()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Wanting to make a purchase, but typed an invalid password", null, ((string[])(null)));
-#line 77
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 78
-    testRunner.Given("I have added at least one item to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 79
-    testRunner.And("I am on the Shopping-Cart Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 80
-    testRunner.And("I clicked on the Proceed to checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 81
-    testRunner.And("I am not signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 82
-    testRunner.And("I have entered a valid email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 83
-    testRunner.And("I have entered a invalid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
-    testRunner.When("I have clicked on the Sign in button on the Authentication page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 85
-    testRunner.Then("I should receive an error called Authentication failed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Wanting to make a purchase, but typed an invalid email address", SourceLine=86)]
-        public virtual void WantingToMakeAPurchaseButTypedAnInvalidEmailAddress()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Wanting to make a purchase, but typed an invalid email address", null, ((string[])(null)));
-#line 87
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 88
-    testRunner.Given("I have added at least one item to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 89
-    testRunner.And("I am on the Shopping-Cart Summary page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 90
-    testRunner.And("I clicked on the Proceed to checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 91
-    testRunner.And("I am not signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
-    testRunner.And("I have entered a invalid email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
-    testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
-    testRunner.When("I have clicked on the Sign in button on the Authentication page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 95
-    testRunner.Then("I should receive an error called Authentication failed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -19,7 +19,7 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='cart_title']")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='cart_title']/text()")]
         private IWebElement ShopingCartSummaryHeader;
 
         [FindsBy(How = How.XPath, Using = "//*[@id='product_1_1_0_227582']/td[5]/input[2]")]

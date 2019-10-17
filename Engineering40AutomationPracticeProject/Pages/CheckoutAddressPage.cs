@@ -22,6 +22,12 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/h1")]
         private IWebElement AddressesHeader;
 
+        [FindsBy(How = How.Id, Using = "address_delivery")]
+        private IWebElement DeliveryAddressField;
+
+        [FindsBy(How = How.Id, Using = "address_invoice")]
+        private IWebElement BillingAddressField;
+
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/form/p/button")]
         private IWebElement ProceedToCheckOutAddress;
 
@@ -39,7 +45,14 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             return AddressesHeader.Text;
         }
-
+        public string DeliveryAddressFieldResult()
+        {
+            return DeliveryAddressField.Text;
+        }
+        public string BillingAddressFieldResult()
+        {
+            return BillingAddressField.Text;
+        }
         public void ProceedToCheckOutButtonAddress()
         {
             ProceedToCheckOutAddress.Click();

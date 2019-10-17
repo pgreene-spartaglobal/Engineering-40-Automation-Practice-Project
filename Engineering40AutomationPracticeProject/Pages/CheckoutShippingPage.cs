@@ -40,7 +40,7 @@ namespace Engineering40AutomationPracticeProject.Pages
             CheckBoxShipping.Click();
         }
 
-        public void ProceedToCheckOutButtonAddress()
+        public void ProceedToCheckOutButtonShipping()
         {
             ProceedToCheckOutShipping.Click();
         }
