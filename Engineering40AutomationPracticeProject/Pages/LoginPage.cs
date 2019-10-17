@@ -16,6 +16,7 @@ namespace Engineering40AutomationPracticeProject.Pages
     public class LoginPage
     {
         IWebDriver driver;
+        CreateAccountPage cap = new CreateAccountPage();
         public LoginPage(IWebDriver Driver)
         {
             this.driver = Driver;
@@ -68,7 +69,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void CreateAccount()
         {
             Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-            createAccountEmail.SendKeys("jimmenycricket@admin.com");
+            createAccountEmail.SendKeys(cap.GenerateName(5));
             submitCreateButton.Click();
         }
     }

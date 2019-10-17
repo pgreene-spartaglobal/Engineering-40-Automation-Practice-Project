@@ -20,6 +20,34 @@ namespace Engineering40AutomationPracticeProject.Pages
             PageFactory.InitElements(driver, this);
         }
 
+        public CreateAccountPage() { }
+
+        public string GenerateName(int len)
+        {
+            Random r = new Random();
+            string[] consonants = { "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "l", "n", "p", "q", "r", "s", "sh", "zh", "t", "v", "w", "x" };
+            string[] vowels = { "a", "e", "i", "o", "u", "ae", "y" };
+            string Name = "", Name2 = "";
+            Name += consonants[r.Next(consonants.Length)].ToUpper();
+            Name += vowels[r.Next(vowels.Length)];
+            int b = 2;
+            while (b < len)
+            {
+                Name += consonants[r.Next(consonants.Length)];
+                b++;
+                Name += vowels[r.Next(vowels.Length)];
+                b++;
+            }
+            while (b < len)
+            {
+                Name2 += consonants[r.Next(consonants.Length)];
+                b++;
+                Name2 += vowels[r.Next(vowels.Length)];
+                b++;
+            }
+            return Name + "@" + Name + ".com";
+        }
+
         [FindsBy(How = How.Id, Using = "customer_firstname")]
         public IWebElement firstNameField;
         [FindsBy(How = How.Id, Using = "customer_lastname")]
