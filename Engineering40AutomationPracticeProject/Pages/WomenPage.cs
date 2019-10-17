@@ -9,7 +9,7 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
-    class WomenPage: ProductPage
+    class WomenPage : ProductPage
     {
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/ul/li[1]/div/div[3]/div[1]/a")]
         protected IWebElement addToWishlistBtn;
@@ -33,7 +33,13 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         [FindsBy(How = How.ClassName, Using = "//*[@id='product_comparison']/tbody/tr[2]")]
         protected IWebElement TRcount;
-        
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='layered_price_slider']/a[1]")]
+        protected IWebElement rangeSlider;
+
+        [FindsBy(How = How.XPath, Using = " //*[@id='center_column']/ul/p/img ")]
+        protected IWebElement bufferImg;
+       
         public WomenPage(IWebDriver driver) : base(driver)
         {
             //GoToPage();
@@ -70,8 +76,19 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         public int CompareInfo()
         {
-            
+
             return 1;
+        }
+
+        public void RangeSlider()
+        {
+            rangeSlider.Click();
+
+        }
+
+        public bool BufferImg()
+        {
+            return bufferImg.Displayed;
         }
     }
 }

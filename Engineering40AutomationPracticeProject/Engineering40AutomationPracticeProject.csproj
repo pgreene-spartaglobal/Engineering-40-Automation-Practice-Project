@@ -100,6 +100,7 @@
     <Compile Include="Steps\EPStep.cs" />
     <Compile Include="Steps\NavigationSteps.cs" />
     <Compile Include="Steps\ShareItemsOverSocialMediaSteps.cs" />
+    <Compile Include="Steps\SortByPriceSteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -111,6 +112,7 @@
   <ItemGroup>
     <None Include="Features\ProductFunction.feature" />
     <None Include="Features\ShareItemsOverSocialMedia.feature" />
+    <None Include="Features\SortByPrice.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
