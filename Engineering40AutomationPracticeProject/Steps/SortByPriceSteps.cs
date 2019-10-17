@@ -10,6 +10,7 @@ namespace Engineering40AutomationPracticeProject.Steps
     [Binding]
     public class SortByPriceSteps
     {
+        //tests for the different functions
         
         private IWebDriver driver;
         private WomenPage womenPage;
@@ -25,6 +26,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Given(@"I am on the women page")]
         public void GivenIAmOnTheWomenPage()
         {
+            //goes to the women page
             womenPage.GoToPage();
         }
         
@@ -37,6 +39,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Then(@"It should display the buffering icon")]
         public void ThenItShouldDisplayTheBufferingIcon()
         {
+            //checks to see if the buffer image is displayed
             Assert.IsTrue(womenPage.BufferImg());
         }
 
@@ -44,6 +47,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         [AfterScenario]
         public void DisposeWebDriver()
         {
+            // closes the web driver
             driver.Close();
         }
     }

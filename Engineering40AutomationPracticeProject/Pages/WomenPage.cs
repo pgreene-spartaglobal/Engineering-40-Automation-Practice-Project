@@ -11,6 +11,8 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class WomenPage : ProductPage
     {
+        //here the elements are assigned
+
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/ul/li[1]/div/div[3]/div[1]/a")]
         protected IWebElement addToWishlistBtn;
 
@@ -22,7 +24,6 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/ul/li[2]/div/div[3]/div[2]/a")]
         protected IWebElement compare2ndstItem;
-
 
         [FindsBy(How = How.XPath, Using = "//*[@id='center_column']/ul/li[3]/div/div[3]/div[2]/a")]
         protected IWebElement compare3rdstItem;
@@ -39,8 +40,6 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.XPath, Using = "//*[@id='product_comparison']/tbody/tr[1]/td[4]/div[2]")]
         protected IWebElement item3;
 
-        
-
         [FindsBy(How = How.XPath, Using = "//*[@id='layered_price_slider']/a[1]")]
         protected IWebElement rangeSlider;
 
@@ -49,9 +48,9 @@ namespace Engineering40AutomationPracticeProject.Pages
        
         public WomenPage(IWebDriver driver) : base(driver)
         {
-            //GoToPage();
-        }
 
+        }
+        //methods used for different functions
         public override void GoToPage()
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=3&controller=category");
