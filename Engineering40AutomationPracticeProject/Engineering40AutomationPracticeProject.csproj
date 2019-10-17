@@ -89,16 +89,23 @@
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\CreateAccountPage.cs" />
     <Compile Include="Pages\OrderPage.cs" />
+    <Compile Include="Pages\PersonalInfoPage.cs" />
+    <Compile Include="Pages\WishlistPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\CheckingOrderPage.cs" />
     <Compile Include="Steps\CreateAccountSteps.cs" />
     <Compile Include="Steps\LoginToAccountSteps.cs" />
+    <Compile Include="Steps\PersonalInfoEditSteps.cs" />
+    <Compile Include="Steps\WishlistEditSteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />
   <ItemGroup>
     <None Include="Features\CheckingOrderPage.feature" />
+    <None Include="Features\PersonalInfoEdit.feature" />
+    <None Include="Features\SpecFlowFeature1.feature" />
     <None Include="Features\CreateAccount.feature" />
+    <None Include="Features\WishlistEdit.feature" />
     <None Include="packages.config" />
     <None Include="Features\LoginToAccount.feature" />
   </ItemGroup>

@@ -57,6 +57,13 @@ namespace Engineering40AutomationPracticeProject.Pages
             passwordField.SendKeys(password);
             submitLoginButton.Click();
         }
+        public void CiaranLogIn(string email, string password)
+        {
+            Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+            emailField.SendKeys(email);
+            passwordField.SendKeys(password);
+            submitLoginButton.Click();
+        }
         //This is the method to access the create account page
         public void CreateAccount()
         {

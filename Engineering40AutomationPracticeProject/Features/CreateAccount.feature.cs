@@ -80,30 +80,26 @@ namespace Engineering40AutomationPracticeProject.Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 9
- testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.And("I have entered a valid email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
- testRunner.And("I have clicked create account button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
  testRunner.And("I have entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
+#line 11
  testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
+#line 12
  testRunner.And("I have entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
+#line 13
  testRunner.And("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
+#line 14
  testRunner.And("I have entered a City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 15
  testRunner.And("I have entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
+#line 16
  testRunner.And("I have entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
+#line 17
  testRunner.And("I have entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
+#line 18
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
+#line 19
  testRunner.Then("I will be redirected to the account page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -114,30 +110,30 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void FeilureToEnterAValidPassword()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Feilure to enter a valid password", null, ((string[])(null)));
-#line 24
+#line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 25
+#line 23
  testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
+#line 24
  testRunner.And("I have entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
+#line 25
  testRunner.And("I have not entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
+#line 26
  testRunner.And("I have entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 27
  testRunner.And("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
+#line 28
  testRunner.And("I have entered a City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 29
  testRunner.And("I have entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 30
  testRunner.And("I have entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
+#line 31
  testRunner.And("I have entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 34
+#line 32
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 35
+#line 33
  testRunner.Then("I will see the appropriate error message for password format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -148,30 +144,30 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void FailureToEnterFirstName()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failure to enter first name", null, ((string[])(null)));
-#line 37
+#line 35
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 38
+#line 36
  testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 39
+#line 37
  testRunner.And("I have not entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
+#line 38
  testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
+#line 39
  testRunner.And("I have entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
+#line 40
  testRunner.And("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
+#line 41
  testRunner.And("I have entered a City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
+#line 42
  testRunner.And("I have entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
+#line 43
  testRunner.And("I have entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
+#line 44
  testRunner.And("I have entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
+#line 45
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
+#line 46
  testRunner.Then("I will see the appropriate error message for first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -182,30 +178,30 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void FailureToEnterLastName()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failure to enter last name", null, ((string[])(null)));
-#line 50
+#line 48
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 51
+#line 49
  testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 52
+#line 50
  testRunner.And("I have entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
+#line 51
  testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
+#line 52
  testRunner.And("I have not entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 53
  testRunner.And("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 56
+#line 54
  testRunner.And("I have entered a City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 57
+#line 55
  testRunner.And("I have entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 58
+#line 56
  testRunner.And("I have entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 59
+#line 57
  testRunner.And("I have entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 60
+#line 58
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 61
+#line 59
  testRunner.Then("I will see the appropriate error message for last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -216,30 +212,30 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void FailureToEnterAddress()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failure to enter address", null, ((string[])(null)));
-#line 63
+#line 61
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 64
+#line 62
  testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 65
+#line 63
  testRunner.And("I have entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
+#line 64
  testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 67
+#line 65
  testRunner.And("I have entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
+#line 66
  testRunner.And("I have not entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 69
+#line 67
  testRunner.And("I have entered a City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 70
+#line 68
  testRunner.And("I have entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 71
+#line 69
  testRunner.And("I have entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 72
+#line 70
  testRunner.And("I have entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 73
+#line 71
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 74
+#line 72
  testRunner.Then("I will see the appropriate error message for address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -250,30 +246,30 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void FailureToEnterCity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failure to enter city", null, ((string[])(null)));
-#line 76
+#line 74
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 77
+#line 75
  testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 78
+#line 76
  testRunner.And("I have entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 79
+#line 77
  testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 80
+#line 78
  testRunner.And("I have entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 81
+#line 79
  testRunner.And("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 82
+#line 80
  testRunner.And("I have not entered a City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 83
+#line 81
  testRunner.And("I have entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
+#line 82
  testRunner.And("I have entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 85
+#line 83
  testRunner.And("I have entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 86
+#line 84
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 87
+#line 85
  testRunner.Then("I will see the appropriate error message for city", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -284,30 +280,30 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void FailureToEnterState()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failure to enter state", null, ((string[])(null)));
-#line 89
+#line 87
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 90
+#line 88
  testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 91
+#line 89
  testRunner.And("I have entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
+#line 90
  testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
+#line 91
  testRunner.And("I have entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
+#line 92
  testRunner.And("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 95
+#line 93
  testRunner.And("I have entered a City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 96
+#line 94
  testRunner.And("I have not entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 97
+#line 95
  testRunner.And("I have entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 98
+#line 96
  testRunner.And("I have entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 99
+#line 97
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 100
+#line 98
  testRunner.Then("I will see the appropriate error message for state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -318,30 +314,30 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void FailureToEnterPostalCode()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failure to enter postal code", null, ((string[])(null)));
-#line 102
+#line 100
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 103
+#line 101
  testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 104
+#line 102
  testRunner.And("I have entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 105
+#line 103
  testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 106
+#line 104
  testRunner.And("I have entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
+#line 105
  testRunner.And("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 108
+#line 106
  testRunner.And("I have entered a City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 109
+#line 107
  testRunner.And("I have entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 110
+#line 108
  testRunner.And("I have not entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 111
+#line 109
  testRunner.And("I have entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 112
+#line 110
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 113
+#line 111
  testRunner.Then("I will see the appropriate error message for postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -352,30 +348,30 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void FailureToEnterPhoneNumber()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failure to enter phone number", null, ((string[])(null)));
-#line 116
+#line 114
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 117
+#line 115
  testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 118
+#line 116
  testRunner.And("I have entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
+#line 117
  testRunner.And("I have entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 120
+#line 118
  testRunner.And("I have entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 121
+#line 119
  testRunner.And("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 122
+#line 120
  testRunner.And("I have entered a City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 123
+#line 121
  testRunner.And("I have entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 124
+#line 122
  testRunner.And("I have entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 125
+#line 123
  testRunner.And("I have not entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 126
+#line 124
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 127
+#line 125
  testRunner.Then("I will see the appropriate error message for mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -386,30 +382,30 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void IHaveFailedToEnterAnyOfTheRelevantFields()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I have failed to enter any of the relevant fields", null, ((string[])(null)));
-#line 129
+#line 127
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 130
+#line 128
  testRunner.Given("I have entered a valid email address and clicked create account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 131
+#line 129
  testRunner.And("I have not entered a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 132
+#line 130
  testRunner.And("I have not entered a valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 133
+#line 131
  testRunner.And("I have not entered a last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 134
+#line 132
  testRunner.And("I have not entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 135
+#line 133
  testRunner.And("I have not entered a city", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 136
+#line 134
  testRunner.And("I have not entered a valid state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 137
+#line 135
  testRunner.And("I have not entered a valid Postal code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 138
+#line 136
  testRunner.And("I have not entered a valid mobile phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 139
+#line 137
  testRunner.And("I have clicked submit information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 140
+#line 138
  testRunner.Then("I will see the appropriate error message for all failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -25,11 +25,11 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         [FindsBy(How = How.ClassName, Using = "icon-building")]
         private IWebElement MyAddressButton;
-
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/div[1]/ul/li[1]/a")]
         public IWebElement orderButton;
 
-        
+        [FindsBy(How = How.ClassName, Using = "account")]
+        private IWebElement MyAccountButton;
         public void ClickMyAddressButton()
         {
             MyAddressButton.Click();
@@ -38,6 +38,11 @@ namespace Engineering40AutomationPracticeProject.Pages
         public string GetPageHeader()
         {
             return pageHeading.Text;
+        }
+
+        public string GetAccountHeader()
+        {
+            return MyAccountButton.Text;
         }
     }
    

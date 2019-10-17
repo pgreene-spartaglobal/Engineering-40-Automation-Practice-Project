@@ -15,11 +15,13 @@ namespace Engineering40AutomationPracticeProject.Steps
 
         IWebDriver driver;
         LoginPage lp;
+        MyAccountPage ap;
         [Given(@"I am on the login page")]
         public void GivenIAmOnTheLoginPage()
         {
             driver = new ChromeDriver();
             lp = new LoginPage(driver);
+            ap = new MyAccountPage(driver);
             lp.Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
         }
         //Add Comment
@@ -166,6 +168,6 @@ namespace Engineering40AutomationPracticeProject.Steps
                 driver.Close();
             }
         }
-
     }
 }
+
