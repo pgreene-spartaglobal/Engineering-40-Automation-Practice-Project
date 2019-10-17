@@ -11,7 +11,7 @@ Scenario: Viewing the Cotton items
 Scenario: Viewing the Polyester items
 	Given I am on the Women Page
 	When I tick the Polyester check box
-	Then the result should be showing Cotton items
+	Then the result should be showing Viscose items
 
 Scenario: Viewing the Viscose items
 	Given I am on the Women Page
