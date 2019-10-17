@@ -78,6 +78,6 @@ namespace Engineering40AutomationPracticeProject
         public void AfterScenario()
         {
             driver.Close();
-        }*/
+        }
     }
 }

@@ -103,6 +103,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\SetShippingPage.cs" />
     <Compile Include="Steps\AddingToCart2Steps.cs" />
     <Compile Include="Pages\CartPage.cs" />
     <Compile Include="Pages\CheckoutAddressPage.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="Steps\ItemsInCartSteps.cs" />
     <Compile Include="Steps\SetDeliveryAddressCheckoutSectionSteps.cs" />
     <Compile Include="Steps\SetQuantitySteps.cs" />
+    <Compile Include="Steps\SetShippingSteps.cs" />
     <Compile Include="Steps\UpdateBillingAddressesCheckoutSectionSteps.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -136,6 +138,9 @@
     <None Include="Features\SetDeliveryAddressCheckoutSection.feature" />
     <None Include="Features\SetQuantity.feature" />
     <None Include="Features\AddToCart2.feature" />
+    <None Include="Features\SetSHipping.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </None>
     <None Include="Features\UpdateBillingAddressCheckoutSection.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />

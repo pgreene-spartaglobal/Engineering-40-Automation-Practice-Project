@@ -66,10 +66,10 @@ namespace Engineering40AutomationPracticeProject.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Set Quantity", SourceLine=2)]
-        public virtual void SetQuantity()
+        [TechTalk.SpecRun.ScenarioAttribute("Add Quantity", SourceLine=2)]
+        public virtual void AddQuantity()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set Quantity", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Quantity", null, ((string[])(null)));
 #line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -83,6 +83,27 @@ testRunner.And("I have navigated to the Checkout area", ((string)(null)), ((Tech
 testRunner.When("I click the plus button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
 testRunner.Then("I should see Quantity increase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Minus Quantity", SourceLine=9)]
+        public virtual void MinusQuantity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Minus Quantity", null, ((string[])(null)));
+#line 10
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 11
+testRunner.Given("I am on the checkout page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+testRunner.And("I have added a product to the Basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+testRunner.And("I have navigated to the Checkout area", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+testRunner.When("I click the minus button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+testRunner.Then("I should see Quantity decrease", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

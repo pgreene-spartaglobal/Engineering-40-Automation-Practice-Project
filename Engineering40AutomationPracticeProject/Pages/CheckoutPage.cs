@@ -41,10 +41,16 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         }
 
-        public void ClickPlussButton()
+        public void ClickPlusButton()
         {
             var QuantityPlus = driver.FindElement(By.Id("cart_quantity_up_1_1_0_0"));
             QuantityPlus.Click();
+        }
+
+        public void ClickMinusButton()
+        {
+            var QuantityMinus = driver.FindElement(By.Id("cart_quantity_down_1_1_0_0"));
+            QuantityMinus.Click();
         }
 
         public string ReadNewQuantity()

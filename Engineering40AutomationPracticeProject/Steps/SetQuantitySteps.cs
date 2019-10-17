@@ -45,15 +45,31 @@ namespace Engineering40AutomationPracticeProject.Steps
         [When(@"I click the plus button")]
         public void WhenIClickThePlusButton()
         {
-            CheckoutPage.ClickPlussButton();
+            Thread.Sleep(2000);
+            CheckoutPage.ClickPlusButton();
         }
-        
+
+        [When(@"I click the minus button")]
+        public void WhenIClickTheMinusButton()
+        {
+            Thread.Sleep(2000);
+            CheckoutPage.ClickMinusButton();
+            
+        }
+
         [Then(@"I should see Quantity increase")]
         public void ThenIShouldSeeQuantityIncrease()
         {
-            Thread.Sleep(2000);
             Assert.AreEqual("2", CheckoutPage.ReadNewQuantity().ToString());
         }
+
+        [Then(@"I should see Quantity decrease")]
+        public void ThenIShouldSeeQuantityDecrease()
+        {
+            
+            Assert.AreEqual("1", CheckoutPage.ReadNewQuantity().ToString());
+        }
+
 
         [Scope(Feature = "SetQuantity")]
         [AfterScenario]
