@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
 using Engineering40AutomationPracticeProject.Pages;
+using System.Threading;
 
 namespace Engineering40AutomationPracticeProject.Steps
 {
@@ -47,7 +48,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             homepage.GoToShoppingCart();
         }
 
-        [Given(@"I click on processcheckout button")]
+        [When(@"I click on processcheckout button")]
         public void WhenIClickOnProcessCheckoutButton()
         {
             cartPage.ProcessButton();
@@ -69,7 +70,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             Assert.AreEqual("Your shopping cart is empty.", result);
         }
 
-        [When(@"delete the item from cart")]
+        [Then(@"delete the item from cart")]
         public void ThenDeleteTheItemFromCart()
         {
             cartPage.deleteCart();

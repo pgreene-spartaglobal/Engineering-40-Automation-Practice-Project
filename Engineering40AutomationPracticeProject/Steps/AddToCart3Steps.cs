@@ -16,6 +16,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         private Homepage homepage;
         private ProductPage product;
 
+
         [BeforeScenario]
         public void BeforeScenario()
         {
@@ -23,6 +24,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             driver.Manage().Window.Maximize();
             homepage = new Homepage(driver);
             product = new ProductPage(driver);
+
         }
 
         [Given(@"I am on the home page")]
@@ -34,7 +36,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Given(@"hover on the product")]
         public void GivenHoverOnTheProduct()
         {
-            ScenarioContext.Current.Pending();
+            homepage.Hover();
         }
         
         [Given(@"I have click on the quickview")]
