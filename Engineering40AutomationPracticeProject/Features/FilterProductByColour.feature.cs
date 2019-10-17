@@ -101,7 +101,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.When("I tick the Beige check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.Then("the result should be showing items that is not available in Beige", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the First item from the result should not be available in Beige", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -159,7 +159,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 29
  testRunner.When("I tick the Green check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 30
- testRunner.Then("the result should be showing items that is not available in Green", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the First item from the result should not be available in Green", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -186,18 +186,80 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Viewing the Orange items on Casual Dresses Page")]
+        [NUnit.Framework.CategoryAttribute("dressesPage")]
         public virtual void ViewingTheOrangeItemsOnCasualDressesPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Viewing the Orange items on Casual Dresses Page", null, ((string[])(null)));
-#line 38
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Viewing the Orange items on Casual Dresses Page", null, new string[] {
+                        "dressesPage"});
+#line 39
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 39
- testRunner.Given("I am on the Casual Dresses Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 40
- testRunner.When("I tick the Orange check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I am on the Casual Dresses Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 41
+ testRunner.When("I tick the Orange check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 42
  testRunner.Then("the result should be showing items that is available in Orange", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Viewing the Pink items on Evening Dresses Page")]
+        [NUnit.Framework.CategoryAttribute("dressesPage")]
+        public virtual void ViewingThePinkItemsOnEveningDressesPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Viewing the Pink items on Evening Dresses Page", null, new string[] {
+                        "dressesPage"});
+#line 45
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 46
+ testRunner.Given("I am on the Evening Dresses Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 47
+ testRunner.When("I tick the Pink check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 48
+ testRunner.Then("the result should be showing items that is available in Pink", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Items are not available in White after selecting Green")]
+        [NUnit.Framework.CategoryAttribute("dressesPage")]
+        public virtual void ItemsAreNotAvailableInWhiteAfterSelectingGreen()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Items are not available in White after selecting Green", null, new string[] {
+                        "dressesPage"});
+#line 51
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 52
+ testRunner.Given("I am on the Summer Dresses Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 53
+ testRunner.When("I tick the White check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 54
+ testRunner.Then("the First item from the result should not be available in White", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Viewing the Yellow items on Summer Dresses Page")]
+        [NUnit.Framework.CategoryAttribute("dressesPage")]
+        public virtual void ViewingTheYellowItemsOnSummerDressesPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Viewing the Yellow items on Summer Dresses Page", null, new string[] {
+                        "dressesPage"});
+#line 57
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 58
+ testRunner.Given("I am on the Summer Dresses Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 59
+ testRunner.When("I tick the Yellow check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+ testRunner.Then("the result should be showing items that is available in Yellow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

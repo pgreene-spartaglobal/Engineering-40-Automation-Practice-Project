@@ -85,6 +85,11 @@ namespace Engineering40AutomationPracticeProject.Pages
             cbYellow.Click();
         }
 
+        public void ClickPink()
+        {
+            cbPink.Click();
+        }
+
         public string GetBiegeColour()
         {
             return cbBeige.GetCssValue("background-color");
