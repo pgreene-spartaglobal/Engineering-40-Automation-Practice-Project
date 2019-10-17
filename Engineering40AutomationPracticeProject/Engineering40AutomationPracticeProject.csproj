@@ -89,10 +89,12 @@
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\CreateAccountPage.cs" />
     <Compile Include="Pages\PersonalInfoPage.cs" />
+    <Compile Include="Pages\WishlistPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\CreateAccountSteps.cs" />
     <Compile Include="Steps\LoginToAccountSteps.cs" />
     <Compile Include="Steps\PersonalInfoEditSteps.cs" />
+    <Compile Include="Steps\WishlistEditSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
@@ -101,6 +103,7 @@
   <ItemGroup>
     <None Include="Features\CreateAccount.feature" />
     <None Include="Features\PersonalInfoEdit.feature" />
+    <None Include="Features\WishlistEdit.feature" />
     <None Include="packages.config" />
     <None Include="Features\LoginToAccount.feature" />
   </ItemGroup>
