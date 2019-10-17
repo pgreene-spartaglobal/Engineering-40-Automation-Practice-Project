@@ -17,6 +17,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         private ProductPage product;
 
         [BeforeScenario]
+        [Scope(Feature = "ItemsInCart")]
         public void BeforeScenario()
         {
             driver = new ChromeDriver();
@@ -74,6 +75,13 @@ namespace Engineering40AutomationPracticeProject.Steps
         public void ThenDeleteTheItemFromCart()
         {
             cartPage.deleteCart();
+        }
+
+        [Scope(Feature = "ItemsInCart")]
+        [AfterScenario]
+        public void AfterScenario()
+        {
+            driver.Close();
         }
     }
 }

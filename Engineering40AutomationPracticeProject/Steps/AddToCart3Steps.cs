@@ -16,7 +16,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         private Homepage homepage;
         private ProductPage product;
 
-
+        [Scope(Feature = "AddToCart3")]
         [BeforeScenario]
         public void BeforeScenario()
         {
@@ -75,6 +75,13 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             Thread.Sleep(3000);
             Assert.AreEqual("Product successfully added to your shopping cart", product.SuccessfulAddToTheCart());
+        }
+
+        [Scope(Feature = "AddToCart3")]
+        [AfterScenario]
+        public void AfterScenario()
+        {
+            driver.Close();
         }
     }
 }
