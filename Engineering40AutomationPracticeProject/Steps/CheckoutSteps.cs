@@ -24,6 +24,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         private PayByBankWireOrderConfirmationPage payByBankWireOrderConfirmationPage;
 
         [BeforeScenario]
+        [Scope(Feature = "CheckoutSteps")]
         public void BeforeScenario()
         {
             driver = new ChromeDriver();
@@ -71,7 +72,10 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Given(@"I am signed in")]
         public void GivenIAmSignedIn()
         {
+            checkoutSignInPage.FillUserNameSignIn("nbalaisyte@spartaglobal.com");
+
             checkoutSignInPage.AddressesHeaderResult();
+
         }
         
         [Given(@"I have a valid shipping address")]
@@ -120,6 +124,12 @@ namespace Engineering40AutomationPracticeProject.Steps
         public void ThenIShouldSeeTheOrderConfirmationPage()
         {
             Assert.AreEqual("ORDER CONFIRMATION", payByBankWireOrderConfirmationPage.OrderConfirmationResult());
+        }
+        [AfterScenario]
+        [Scope(Feature = "CheckoutSteps")]
+        public void AfterScenario()
+        {
+            driver.Close();
         }
     }
 }
