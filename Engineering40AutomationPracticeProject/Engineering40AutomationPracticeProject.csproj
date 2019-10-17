@@ -96,6 +96,7 @@
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\EP.cs" />
     <Compile Include="Pages\ProductPage.cs" />
+    <Compile Include="Steps\FilterProductByCompositionSteps.cs" />
     <Compile Include="Steps\ItemDisplayGridViewAndListSteps.cs" />
     <Compile Include="Steps\ProductFunctionSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,6 +111,7 @@
     <None Include="Features\FilterProductByCategories.feature" />
     <None Include="Features\FilterProductByColour.feature" />
     <None Include="Features\FilterProductByPrice.feature" />
+    <None Include="Features\FilterProductByComposition.feature" />
     <None Include="Features\ItemDisplayGridViewAndList.feature" />
     <None Include="Features\Navigation.feature" />
   </ItemGroup>
