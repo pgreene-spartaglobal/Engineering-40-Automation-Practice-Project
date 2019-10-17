@@ -37,6 +37,16 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "layered_id_attribute_group_24")]
         protected IWebElement cbPink;
 
+        // Composition
+        [FindsBy(How = How.Id, Using = "layered_id_feature_5")]
+        protected IWebElement cbCotton;
+
+        [FindsBy(How = How.Id, Using = "layered_id_feature_1")]
+        protected IWebElement cbPolyester;
+
+        [FindsBy(How = How.Id, Using = "layered_id_feature_3")]
+        protected IWebElement cbViscose;
+
         [FindsBy(How = How.ClassName, Using = "product_list")]
         protected IWebElement ulProductList;
 
@@ -94,6 +104,21 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void ClickPink()
         {
             cbPink.Click();
+        }
+
+        public void ClickCotton()
+        {
+            cbCotton.Click();
+        }
+
+        public void ClickPolyester()
+        {
+            cbPolyester.Click();
+        }
+
+        public void ClickViscose()
+        {
+            cbViscose.Click();
         }
 
         public string GetBiegeColour()
