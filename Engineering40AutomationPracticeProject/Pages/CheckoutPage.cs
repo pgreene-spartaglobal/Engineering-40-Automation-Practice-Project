@@ -25,14 +25,14 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php?id_category=3&controller=category");
         }
-        public void AddToCartButton(IWebDriver driver)
+        public void AddToCartButton()
         {
             var AddToCart = driver.FindElement(By.XPath("//*[@id='center_column']/ul/li[1]/div/div[2]/div[2]/a[1]"));
             Thread.Sleep(2000);
             AddToCart.Click();
         }
 
-        public void goToCheckoutPage(IWebDriver driver)
+        public void goToCheckoutPage()
         {
             var CheckoutPage = driver.FindElement(By.XPath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/a"));
             WebDriverWait confirmCheckout = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
@@ -41,13 +41,13 @@ namespace Engineering40AutomationPracticeProject.Pages
 
         }
 
-        public void ClickPlussButton(IWebDriver driver)
+        public void ClickPlussButton()
         {
             var QuantityPlus = driver.FindElement(By.Id("cart_quantity_up_1_1_0_0"));
             QuantityPlus.Click();
         }
 
-        public string ReadNewQuantity(IWebDriver driver)
+        public string ReadNewQuantity()
         {
             var QuantityResult = driver.FindElement(By.ClassName("cart_quantity_input"));
             return QuantityResult.GetAttribute("value");
