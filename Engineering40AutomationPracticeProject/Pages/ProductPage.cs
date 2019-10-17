@@ -156,10 +156,45 @@ namespace Engineering40AutomationPracticeProject.Pages
             return false;
         }
 
-        public int GetProductListCount()
+        //public int GetProductListCount()
+        //{
+        //    IList<IWebElement> productList = ulProductList.FindElements(By.TagName("li"));
+        //    return productList.Count;
+        //}
+
+        public List<string> GetProductNames()
         {
-            IList<IWebElement> productList = ulProductList.FindElements(By.TagName("li"));
-            return productList.Count;
+            //Get the product name from the list by class name
+            IList<IWebElement> products = ulProductList.FindElements(By.ClassName("product-name"));
+            //convert the names into string, store in a list
+            List<string> itemNames = new List<string>();
+            foreach (IWebElement item in products)
+            {
+                itemNames.Add(item.Text);
+            }
+            return itemNames;
+        }
+
+        public bool ContainName(string name)
+        {
+            //Get all the names from the product list
+            List<string> productNames = GetProductNames();
+            //Get the length of the string parameter
+            int length = name.Length;
+
+            foreach (string n in productNames)
+            {
+                //if the string paramenter is longer than the product name
+                if (n.Length - length >= 0)
+                {
+                    //compare the string paremeter with the end of the product name, also the comparison will ignore case
+                    if (n.Substring(n.Length - length).Equals(name, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }

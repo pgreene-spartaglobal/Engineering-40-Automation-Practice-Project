@@ -89,5 +89,16 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             cbDresses.Click();
         }
+
+        public int GetNumberOfTops()
+        {
+            //IWebElement label = driver.FindElement(By.XPath("/html/body/div/div[2]/div/div[3]/div[1]/div[2]/div[1]/form/div/div[1]/ul/li[1]/label/a/span"));
+            //string labelString = label.Text;
+            //string numString = labelString[1].ToString();
+            //int number;
+            //Int32.TryParse(numString, out number);
+            //return number;
+            return 0;
+        }
     }
 }
