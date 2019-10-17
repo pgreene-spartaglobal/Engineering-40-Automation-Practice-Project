@@ -14,23 +14,18 @@ namespace Engineering40AutomationPracticeProject.Steps
         IWebDriver driver;
         LoginPage lp;
         CreateAccountPage cap;
-        [Given(@"I have entered an invalid email address")]
-        public void GivenIHaveEnteredAnInvalidEmailAddress()
+
+        [Given(@"I have entered a valid password")]
+        public void GivenIHaveEnteredAValidPassword()
         {
-            lp.createAccountEmail.SendKeys("");
+            cap.passwordField.SendKeys("Dinosaurs");
         }
-        
-        [Given(@"I have clicked create account")]
-        public void GivenIHaveClickedCreateAccount()
+        [Given(@"I have not entered a valid password")]
+        public void GivenIHaveEnteredAnInvalidPassword()
         {
-            lp.submitCreateButton.Click();
+            cap.passwordField.SendKeys("");
         }
-        
-        [Given(@"I have entered a valid email address")]
-        public void GivenIHaveEnteredAValidEmailAddress()
-        {
-            lp.createAccountEmail.SendKeys("john@admin.com");
-        }
+
         
         [Given(@"I have entered a valid email address and clicked create account")]
         public void GivenIHaveEnteredAValidEmailAddressAndClickedCreateAccount()
@@ -39,6 +34,8 @@ namespace Engineering40AutomationPracticeProject.Steps
             cap = new CreateAccountPage(driver);
             lp = new LoginPage(driver);
             lp.CreateAccount();
+            WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("customer_firstname")));
 
         }
         
@@ -133,65 +130,151 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             cap.cityField.SendKeys("");
         }
-        
-        [Then(@"I will see the appropriate error for incorrect email format")]
-        public void ThenIWillSeeTheAppropriateErrorForIncorrectEmailFormat()
+        [Given(@"I have clicked submit information")]
+        public void GivenIHaveClickedSubmitInformation()
         {
-            Assert.AreEqual("Invalid email address.", lp.emailCreateAccountErrorBox.Text);
+            cap.submitButton.Click();
         }
-        
-        [Then(@"I will go to the relevant page to create an account")]
-        public void ThenIWillGoToTheRelevantPageToCreateAnAccount()
-        {
-            Assert.AreEqual("http://automationpractice.com/index.php?controller=my-account", driver.Url);
-        }
+
+
+
+
+
+
+
 
         [Then(@"I will see the appropriate error message for first name")]
         public void ThenIWillSeeTheAppropriateErrorMessageForFirstName()
         {
+            try
+            {
             Assert.AreEqual("firstname is required.", cap.errorBox.Text);
+            }
+            finally
+            {
+                driver.Close();
+            }
         }
         
         [Then(@"I will see the appropriate error message for last name")]
         public void ThenIWillSeeTheAppropriateErrorMessageForLastName()
         {
+            try
+            {
             Assert.AreEqual("lastname is required.", cap.errorBox.Text);
+            }
+            finally
+            {
+                driver.Close();
+            }
         }
 
         [Then(@"I will see the appropriate error message for address")]
         public void ThenIWillSeeTheAppropriateErrorMessageForAddress()
         {
+            try
+            {
             Assert.AreEqual("address1 is required.", cap.errorBox.Text);
+
+            }
+            finally
+            {
+                driver.Close();
+            }
         }
         //Comment
         [Then(@"I will see the appropriate error message for city")]
         public void ThenIWillSeeTheAppropriateErrorMessageForCity()
         {
+            try
+            {
             Assert.AreEqual("city is required.", cap.errorBox.Text);
+
+            }
+            finally
+            {
+                driver.Close();
+            }
         }
 
         [Then(@"I will see the appropriate error message for state")]
         public void ThenIWillSeeTheAppropriateErrorMessageForState()
         {
+            try
+            {
             Assert.AreEqual("firstname is required.", cap.errorBox.Text);
+            }
+            finally
+            {
+                driver.Close();
+            }
         }
 
         [Then(@"I will see the appropriate error message for postal code")]
         public void ThenIWillSeeTheAppropriateErrorMessageForPostalCode()
         {
-            Assert.AreEqual("firstname is required.", cap.errorBox.Text);
+            try
+            {
+                Assert.AreEqual("The Zip/Postal code you've entered is invalid. It must follow this format: 00000", cap.errorBox.Text);
+            }
+            finally
+            {
+                driver.Close();
+            }
+
+        }
+
+        [Then(@"I will see the appropriate error message for password format")]
+        public void ThenIWillSeeTheAppropriateErrorMessageForPasswordFormat()
+        {
+            try
+            {
+                Assert.AreEqual("passwd is required.", cap.errorBox.Text);
+            }
+            finally
+            {
+                driver.Close();
+            }
+        }
+
+
+        [Then(@"I will be redirected to the account page")]
+        public void ThenIWillBeRedirectedToTheAccountPage()
+        {
+            try
+            {
+                Assert.AreEqual("http://automationpractice.com/index.php?controller=my-account", driver.Url);
+            }
+            finally
+            {
+                driver.Close();
+            }
         }
 
         [Then(@"I will see the appropriate error message for mobile phone")]
         public void ThenIWillSeeTheAppropriateErrorMessageForMobilePhone()
         {
-            Assert.AreEqual("firstname is required.", cap.errorBox.Text);
+            try
+            {
+                Assert.AreEqual("You must register at least one phone number.", cap.errorBox.Text);
+            }
+            finally
+            {
+                driver.Close();
+            }
         }
 
         [Then(@"I will see the appropriate error message for all failure")]
         public void ThenIWillSeeTheAppropriateErrorMessageForAllFailure()
         {
-            Assert.AreEqual("firstname is required.", cap.errorBox.Text);
+            try
+            {
+                Assert.AreEqual("firstname is required.", cap.errorBox.Text);
+            }
+            finally
+            {
+                driver.Close();
+            }
         }
 
     }

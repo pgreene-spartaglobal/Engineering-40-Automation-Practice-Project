@@ -9,7 +9,7 @@ Scenario: Correct Login Information
 	And I have entered a correct password
 	And I have entered a correct email address
 	And I have clicked the submit button
-	Then I will be redirected to the account page
+	Then I will be redirected to the account page after login
 
 Scenario: Incorrect Email Information
 	Given I am on the login page
@@ -31,3 +31,15 @@ Scenario: Successfully Logged In
 	And I have entered a correct email address
 	And I have clicked the submit button
 	Then I will see my account name in the nav header
+
+Scenario: Email address not valid
+	Given I am on the login page
+	And I have entered an invalid email address
+	And I have clicked create account
+	Then I will see the appropriate error for incorrect email format
+	
+Scenario: Email address is valid
+	Given I am on the login page
+	And I have entered a valid email address
+	And I have clicked create account
+	Then I will go to the relevant page to create an account

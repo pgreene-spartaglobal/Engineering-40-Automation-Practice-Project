@@ -11,7 +11,6 @@ namespace Engineering40AutomationPracticeProject.Pages
 {
     class AddNewAddressPage
     {
-
         [FindsBy(How = How.Name, Using = "firstname")]
         private IWebElement FirstNameField;
 

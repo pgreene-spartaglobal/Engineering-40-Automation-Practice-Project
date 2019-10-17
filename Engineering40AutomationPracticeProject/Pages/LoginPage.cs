@@ -61,7 +61,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void CreateAccount()
         {
             Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-            createAccountEmail.SendKeys("john@admin.com");
+            createAccountEmail.SendKeys("jimmenycricket@admin.com");
             submitCreateButton.Click();
         }
     }
@@ -75,11 +75,6 @@ namespace Engineering40AutomationPracticeProject.Pages
                 driver = new ChromeDriver();
                 LoginPage lp = new LoginPage(driver);
                 lp.LogIn();
-            }
-            [AfterScenario]
-            public void DisposeWebDriver()
-            {
-                driver.Close();
             }
         }
 
