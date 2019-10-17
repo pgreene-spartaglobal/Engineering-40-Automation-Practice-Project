@@ -54,6 +54,8 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void ClickOnDeleteButton()
         {
             RemoveWishlistIcon.Click();
+            IAlert alert = driver.SwitchTo().Alert();
+            alert.Accept();
         }
         public void ClickOnViewButton()
         {
