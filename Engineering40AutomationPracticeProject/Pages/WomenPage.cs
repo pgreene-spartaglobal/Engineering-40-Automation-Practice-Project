@@ -95,11 +95,7 @@ namespace Engineering40AutomationPracticeProject.Pages
             return false;
         }
 
-        public void RangeSlider()
-        {
-            rangeSlider.Click();
 
-        }
 
         public bool BufferImg()
         {

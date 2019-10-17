@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Interactions;
+using System.Globalization;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
@@ -51,7 +52,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.ClassName, Using = "product_list")]
         protected IWebElement ulProductList;
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='layered_price_slider']/a[1]")]
+        [FindsBy(How = How.ClassName, Using = "ui-slider-range")]
         protected IWebElement rangeSlider;
 
         public ProductPage(IWebDriver driver)
@@ -191,6 +192,41 @@ namespace Engineering40AutomationPracticeProject.Pages
         //    return productList.Count;
         //}
 
+        public List<double> GetProductPrices()
+        {
+            IList<IWebElement> productList = ulProductList.FindElements(By.ClassName("product-price"));
+            List<string> priceStringList = new List<string>();
+            List<double> priceList = new List<double>();
+            foreach (IWebElement item in productList)
+            {
+                double price;
+                double.TryParse(item.Text, NumberStyles.Currency, CultureInfo.CurrentCulture.NumberFormat, out price);
+
+                priceList.Add(price);
+            }
+
+            //foreach (string price in priceStringList)
+            //{
+            //    decimal p;
+            //    Decimal.TryParse(price, out p);
+            //    priceList.Add(p);
+            //}
+            return priceList;
+        }
+
+        public bool PriceOutOfRange(double min, double max)
+        {
+            List<double> priceList = GetProductPrices();
+            foreach (double price in priceList)
+            {
+                if (price < min || price > max)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public List<string> GetProductNames()
         {
             //Get the product name from the list by class name
@@ -209,7 +245,12 @@ namespace Engineering40AutomationPracticeProject.Pages
             Actions sliderAction = new Actions(driver);
             sliderAction.ClickAndHold(rangeSlider)
                 .MoveByOffset((-(int)rangeSlider.Size.Width / 2), 0)
-                .MoveByOffset(100, 0).Release().Perform();
+                .MoveByOffset(num, 0).Release().Perform();
+        }
+
+        public void RangeSlider()
+        {
+            rangeSlider.Click();
         }
 
         public bool ContainName(string name)
