@@ -40,6 +40,7 @@ namespace Engineering40AutomationPracticeProject.Pages
         [When(@"I press on the wishlist button")]
         public void WhenIPressOnTheWishlistButton()
         {
+            // checks for the add to wishlist button click
             womenPage.AddToWishList();            
         }
         
@@ -59,7 +60,9 @@ namespace Engineering40AutomationPracticeProject.Pages
         [Then(@"I should see the product on the wishlist")]
         public void ThenIShouldSeeTheProductOnTheWishlist()
         {
+            
            Thread.Sleep(1000);
+            // checks to see if the error box contains the message
            Assert.AreEqual("Added to your wishlist.", womenPage.ErrorBox());
             
         }
@@ -67,14 +70,17 @@ namespace Engineering40AutomationPracticeProject.Pages
         [Then(@"I should see the error message")]
         public void ThenIShouldSeeTheErrorMessage()
         {
+            //waits for 3 seconds
             Thread.Sleep(3000);
+            // checks to see if the error box contains the message
             Assert.AreEqual("You must be logged in to manage your wishlist.", womenPage.ErrorBox());
         }
         
         [Then(@"I should see the selected items side by side")]
         public void ThenIShouldSeeTheSelectedItemsSideBySide()
         {
-            Assert.AreEqual(1, womenPage.CompareInfo());
+            Thread.Sleep(2000);
+            Assert.IsTrue(womenPage.ItemsAppear());
         }
 
         [Scope(Feature = "ProductFunction")]

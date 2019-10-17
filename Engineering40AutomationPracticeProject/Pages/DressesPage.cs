@@ -20,6 +20,16 @@ namespace Engineering40AutomationPracticeProject.Pages
         private IWebElement googleplus;
         [FindsBy(How = How.ClassName, Using = "btn btn-default btn-pinterest")]
         private IWebElement pinterest;
+
+        [FindsBy(How = How.Id, Using = "layered_category_9")]
+        private IWebElement cbCasualDresses;
+
+        [FindsBy(How = How.Id, Using = "layered_category_10")]
+        private IWebElement cbEveningDresses;
+
+        [FindsBy(How = How.Id, Using = "layered_category_11")]
+        private IWebElement cbSummerDresses;
+
         public DressesPage(IWebDriver driver) : base(driver)
         {
             GoToPage();
@@ -45,6 +55,21 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void ClickPinterest()
         {
             pinterest.Click();
+        }
+
+        public void ClickCasualDresses()
+        {
+            cbCasualDresses.Click();
+        }
+
+        public void ClickEveningDresses()
+        {
+            cbEveningDresses.Click();
+        }
+
+        public void ClickSummerDresses()
+        {
+            cbSummerDresses.Click();
         }
     }
 

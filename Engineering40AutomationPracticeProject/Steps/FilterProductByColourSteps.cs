@@ -25,7 +25,6 @@ namespace Engineering40AutomationPracticeProject
         public void TearDown()
         {
             driver.Close();
-            driver.Dispose();
         }
 
         [Scope(Feature = "FilterProductByColour")]

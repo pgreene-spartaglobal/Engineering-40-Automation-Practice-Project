@@ -70,19 +70,127 @@ namespace Engineering40AutomationPracticeProject.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Filter by price range")]
-        public virtual void FilterByPriceRange()
+        [NUnit.Framework.DescriptionAttribute("Filter by price lowest first")]
+        public virtual void FilterByPriceLowestFirst()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter by price range", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter by price lowest first", null, ((string[])(null)));
 #line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
  testRunner.Given("I am on the women page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
- testRunner.When("I click on the price range bar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on price lowest first", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
- testRunner.Then("It should display the buffering icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("It should display items in ascending order by price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Filter by price highest first")]
+        public virtual void FilterByPriceHighestFirst()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter by price highest first", null, ((string[])(null)));
+#line 9
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 10
+ testRunner.Given("I am on the women page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 11
+ testRunner.When("I click on price highest first", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+ testRunner.Then("It should not display items in descending order by price", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Filter by product by A-Z")]
+        public virtual void FilterByProductByA_Z()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter by product by A-Z", null, ((string[])(null)));
+#line 14
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+ testRunner.Given("I am on the women page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 16
+ testRunner.When("I click on product by A-Z", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
+ testRunner.Then("It should not display items in ascending order by product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Filter by product by Z-A")]
+        public virtual void FilterByProductByZ_A()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter by product by Z-A", null, ((string[])(null)));
+#line 19
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 20
+ testRunner.Given("I am on the women page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 21
+ testRunner.When("I click on product by Z-A", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
+ testRunner.Then("It should not display items in descending order by product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Filter by In-Stock")]
+        public virtual void FilterByIn_Stock()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter by In-Stock", null, ((string[])(null)));
+#line 24
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 25
+ testRunner.Given("I am on the women page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 26
+ testRunner.When("I click on in-stock", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+ testRunner.Then("It should display items that are in stock", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Filter by reference - Lowest First")]
+        public virtual void FilterByReference_LowestFirst()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter by reference - Lowest First", null, ((string[])(null)));
+#line 29
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 30
+ testRunner.Given("I am on the women page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 31
+ testRunner.When("I click on reference - Lowest First", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.Then("It should not display items in ascending order by reference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Filter by reference - Highest First")]
+        public virtual void FilterByReference_HighestFirst()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter by reference - Highest First", null, ((string[])(null)));
+#line 34
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 35
+ testRunner.Given("I am on the women page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 36
+ testRunner.When("I click on reference - Highest First", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
+ testRunner.Then("It should not display items in descending order by reference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
