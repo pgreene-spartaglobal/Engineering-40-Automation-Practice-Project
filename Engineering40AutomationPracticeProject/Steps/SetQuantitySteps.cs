@@ -1,5 +1,6 @@
 ﻿using Engineering40AutomationPracticeProject.Pages;
 using Nest;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -32,33 +33,33 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Given(@"I have added a product to the Basket")]
         public void GivenIHaveAddedAProductToTheBasket()
         {
-            CheckoutPage.AddToCartButton(driver);
+            CheckoutPage.AddToCartButton();
         }
         
         [Given(@"I have navigated to the Checkout area")]
         public void GivenIHaveNavigatedToTheCheckoutArea()
         {
-            CheckoutPage.goToCheckoutPage(driver);
+            CheckoutPage.goToCheckoutPage();
         }
         
         [When(@"I click the plus button")]
         public void WhenIClickThePlusButton()
         {
-            CheckoutPage.ClickPlussButton(driver);
+            CheckoutPage.ClickPlussButton();
         }
         
         [Then(@"I should see Quantity increase")]
         public void ThenIShouldSeeQuantityIncrease()
         {
-            Thread.Sleep(10000);
-            driver.Close();
+            Thread.Sleep(2000);
+            Assert.AreEqual("2", CheckoutPage.ReadNewQuantity().ToString());
         }
 
         [Scope(Feature = "SetQuantity")]
         [AfterScenario]
         public void AfterScenario()
         {
-            
+            driver.Close();
         }
     }
 }

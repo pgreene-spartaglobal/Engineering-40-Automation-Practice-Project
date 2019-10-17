@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
 using Engineering40AutomationPracticeProject.Pages;
+using System.Threading;
 
 namespace Engineering40AutomationPracticeProject.Steps
 {
@@ -16,6 +17,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         private ProductPage product;
 
         [BeforeScenario]
+        [Scope(Feature = "ItemsInCart")]
         public void BeforeScenario()
         {
             driver = new ChromeDriver();
@@ -39,13 +41,18 @@ namespace Engineering40AutomationPracticeProject.Steps
             product.ChooseQuant("5");
             product.ChooseSize("L");
             product.AddToCart1();
-            driver.Navigate().Refresh();
         }
 
         [When(@"I click on Cart")]
         public void WhenIClickOnCart()
         {
             homepage.GoToShoppingCart();
+        }
+
+        [When(@"I click on processcheckout button")]
+        public void WhenIClickOnProcessCheckoutButton()
+        {
+            cartPage.ProcessButton();
         }
 
         [Then(@"I should see the items in the Cart")]
@@ -61,13 +68,20 @@ namespace Engineering40AutomationPracticeProject.Steps
         public void ThenThereShouldBeACartMessage_()
         {
             string result = cartPage.emptyShoppingCart();
-            Assert.AreSame("Your shopping cart is empty.", result);
+            Assert.AreEqual("Your shopping cart is empty.", result);
         }
 
         [Then(@"delete the item from cart")]
         public void ThenDeleteTheItemFromCart()
         {
             cartPage.deleteCart();
+        }
+
+        [Scope(Feature = "ItemsInCart")]
+        [AfterScenario]
+        public void AfterScenario()
+        {
+            driver.Close();
         }
     }
 }
