@@ -85,10 +85,14 @@
     <Compile Include="Pages\FacebookPage.cs" />
     <Compile Include="Pages\GooglePlusPage.cs" />
     <Compile Include="Pages\PinterestPage.cs" />
+    <Compile Include="Pages\ProductViewPage.cs" />
+    <Compile Include="Pages\SpecialOfferPage.cs" />
     <Compile Include="Pages\TShirtPage.cs" />
     <Compile Include="Pages\TwitterPage.cs" />
     <Compile Include="Pages\WomenPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Steps\AccessSpecialOffersSteps.cs" />
+    <Compile Include="Steps\BannerLinkSteps.cs" />
     <Compile Include="Steps\ContactCustomerServiceSteps.cs" />
     <Compile Include="Steps\FilterProductByColourSteps.cs" />
     <Compile Include="Pages\HomePage.cs" />
@@ -99,11 +103,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\EPStep.cs" />
     <Compile Include="Steps\NavigationSteps.cs" />
+    <Compile Include="Steps\SendProductViewThroughEmailSteps.cs" />
     <Compile Include="Steps\ShareItemsOverSocialMediaSteps.cs" />
     <Compile Include="Steps\SortByPriceSteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Features\AccessSpecialOffers.feature" />
+    <None Include="Features\BannerLink.feature" />
     <None Include="Features\ContactCustomerService.feature" />
     <None Include="Features\FilterProductByColour.feature" />
     <None Include="Features\ItemDisplayGridViewAndList.feature" />
@@ -111,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\ProductFunction.feature" />
+    <None Include="Features\SendProductViewThroughEmail.feature" />
     <None Include="Features\ShareItemsOverSocialMedia.feature" />
     <None Include="Features\SortByPrice.feature" />
     <None Include="packages.config" />

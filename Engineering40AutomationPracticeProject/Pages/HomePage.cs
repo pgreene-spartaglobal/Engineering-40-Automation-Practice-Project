@@ -18,6 +18,13 @@ namespace Engineering40AutomationPracticeProject.Pages
         private IWebElement dressesBtn;
         [FindsBy(How = How.XPath, Using = "//*[@id='block_top_menu']/ul/li[3]/a")]
         private IWebElement tShirtsBtn;
+        [FindsBy(How = How.XPath, Using = "//*[@id='block_various_links_footer']/ul/li[1]/a")]
+        private IWebElement specials;
+        [FindsBy(How = How.XPath, Using = "//*[@id='header']/div[1]/div/div/a/img")]
+        private IWebElement mainBannerLink;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='homefeatured']/li[1]/div/div[1]/div/a[1]")]
+        private IWebElement productElement;
          
         public HomePage(IWebDriver driver)
         {
@@ -44,6 +51,29 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void TShirtTab()
         {
             tShirtsBtn.Click();           
+        }
+
+        /**
+         * Click on the specials link
+         */
+        public void Special()
+        {
+            specials.Click();
+            
+        }
+        public string SpecialUrl()
+        {
+            return driver.Url;
+        }
+
+        public void BannerClick()
+        {
+            mainBannerLink.Click();
+        }
+
+        public void ClickOnProduct()
+        {
+            productElement.Click();
         }
     }
 }
