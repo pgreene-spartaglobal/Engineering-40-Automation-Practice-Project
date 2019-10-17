@@ -40,6 +40,9 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.ClassName, Using = "product_list")]
         protected IWebElement ulProductList;
 
+        [FindsBy(How = How.XPath, Using = "//*[@id='layered_price_slider']/a[1]")]
+        protected IWebElement rangeSlider;
+
         public ProductPage(IWebDriver driver)
         {
             this.driver = driver;

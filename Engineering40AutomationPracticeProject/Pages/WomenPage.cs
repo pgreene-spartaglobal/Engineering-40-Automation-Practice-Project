@@ -48,9 +48,6 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "layered_category_8")]
         private IWebElement cbDresses;
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='layered_price_slider']/a[1]")]
-        protected IWebElement rangeSlider;
-
         [FindsBy(How = How.XPath, Using = " //*[@id='center_column']/ul/p/img ")]
         protected IWebElement bufferImg;
 
