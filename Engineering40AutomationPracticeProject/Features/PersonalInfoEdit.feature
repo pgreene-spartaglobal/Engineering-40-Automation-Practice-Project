@@ -34,7 +34,7 @@ Scenario: Change first name
 	Then I should see the new first name
 
 	
-Scenario: Change secound name
+Scenario: Change second name
 	Given I have logged in
 	And I pressed my personal information
 	And I entered my new last name
@@ -54,4 +54,23 @@ Scenario: Change email address
 	And I pressed my personal information
 	Then I should see the new email address
 
+Scenario: Change gender
+	Given I have logged in
+	And I pressed my personal information
+	And I entered my new gender
+	And I have entered my current password
+	And I pressed the save button
+	And I back on my account
+	And I pressed my personal information
+	Then I should see my new gender
+
+Scenario: Change password
+	Given I have logged in
+	And I pressed my personal information
+	And I have entered my current password
+	And i have entered my new password
+	And I pressed the save button
+	And i have logged out
+	And I have logged in with new pass
+	Then i should see the logged in page
 

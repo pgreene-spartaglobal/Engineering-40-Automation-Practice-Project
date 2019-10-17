@@ -50,13 +50,12 @@ namespace Engineering40AutomationPracticeProject.Pages
         //is class the same as class name? IE: class="logout"
         [FindsBy(How = How.ClassName, Using = "logout")]
         public IWebElement LogOutButton;
-        [FindsBy(How = How.ClassName, Using = "page-subheading")]
-        public IWebElement CheckLogedOut;
+        [FindsBy(How = How.ClassName, Using = "page-heading")]
+        public IWebElement CheckLoginChange;
 
         public string CheckingLoggedOut()
         {
-            
-            return CheckLogedOut.Text; //this should be: Create an account
+            return CheckLoginChange.Text; //this should be: Create an account
         }
 
         public void LogOut()
@@ -77,9 +76,14 @@ namespace Engineering40AutomationPracticeProject.Pages
         //these functions are for checking the personal info page.
         //need help here.
         //we are only checking if its male because of time restrants.
-        public string CheckGender()
+        public string CheckGenderMale()
         {
             string result = xpathGenderMale.GetAttribute("checked");
+            return result;
+        }
+        public string CheckGenderFemale()
+        {
+            string result = xpathGenderFemale.GetAttribute("checked");
             return result;
         }
         //i dont know how to get: value="firstname"
@@ -100,17 +104,16 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             SubmitButton.Click();
         }
-        //these functions are for changing the personal info page.
-        //the change gender ill need help with.
+        //hopefully this is for clicking for female.
         public void ChangeGender()
         {
-
+            xpathGenderFemale.Click();
         }
         //we need to clear the info box because if we just send the keys it will just add the old info
         //onto the new one. Maybe this is a bug?
         public void ChangeFirstName(string firstName)
         {
-            LastName.Clear();
+            FirstName.Clear();
             FirstName.SendKeys(firstName);
         }
         public void ChangeLastName(string lastName)
@@ -128,9 +131,8 @@ namespace Engineering40AutomationPracticeProject.Pages
             OldPassword.SendKeys(pass);
         }
         //here we change the old pass with the new pass.
-        public void ChangePassword(string oldPass, string newPass)
+        public void newPassword(string newPass)
         {
-            OldPassword.SendKeys(oldPass);
             NewPassword.SendKeys(newPass);
             ConfirmPassword.SendKeys(newPass);
         }

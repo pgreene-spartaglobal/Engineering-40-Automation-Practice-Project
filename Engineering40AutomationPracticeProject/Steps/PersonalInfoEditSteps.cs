@@ -21,7 +21,7 @@ namespace Engineering40AutomationPracticeProject.Steps
             driver = new ChromeDriver();
             ba = new LoginPage(driver);
             personalInfoPage = new PersonalInfoPage(driver);
-            ba.CiaranLogIn();
+            ba.CiaranLogIn("a@b.a","ababa");
         }
 
         [Given(@"I pressed my personal information")]
@@ -33,7 +33,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Then(@"I should see appropriate gender")]
         public void ThenIShouldSeeAppropriateGender()
         {
-            string result = personalInfoPage.CheckGender();
+            string result = personalInfoPage.CheckGenderMale();
             StringAssert.Contains(result, "true");
         }
 
@@ -72,8 +72,14 @@ namespace Engineering40AutomationPracticeProject.Steps
         [Given(@"I entered my new email address")]
         public void GivenIEnteredMyNewEmailAddress()
         {
-            personalInfoPage.ChangeLastName("new@email.new");
+            personalInfoPage.ChangeEmailName("new@email.new");
         }
+        [Given(@"I entered my new gender")]
+        public void GivenIEnteredMyNewGender()
+        {
+            personalInfoPage.ChangeGender();
+        }
+
 
         [Given(@"I have entered my current password")]
         public void GivenIHaveEnteredMyCurrentPassword()
@@ -94,12 +100,13 @@ namespace Engineering40AutomationPracticeProject.Steps
         }
         
         //check new values of test.
-        
+        //first name the first letter becomes a captial even if you dont input it as such.
+        //and it uncaps every other letter. this doesnt happen to the last name.
         [Then(@"I should see the new first name")]
         public void ThenIShouldSeeTheNewFirstName()
         {
             string result = personalInfoPage.CheckFirstName();
-            StringAssert.Contains(result, "newFirstName");
+            StringAssert.Contains(result, "Newfirstname");
         }
         [Then(@"I should see the new last name")]
         public void ThenIShouldSeeTheNewLastName()
@@ -114,6 +121,33 @@ namespace Engineering40AutomationPracticeProject.Steps
             string result = personalInfoPage.CheckEmail();
             StringAssert.Contains(result, "new@email.new");
         }
-
+        [Then(@"I should see my new gender")]
+        public void ThenIShouldSeeMyNewGender()
+        {
+            string result = personalInfoPage.CheckGenderFemale();
+            StringAssert.Contains(result, "true");
+        }
+        //changing password tests
+        [Given(@"i have entered my new password")]
+        public void GivenIHaveEnteredMyNewPassword()
+        {
+            personalInfoPage.newPassword("avava");
+        }
+        [Given(@"i have logged out")]
+        public void GivenIHaveLoggedOut()
+        {
+            personalInfoPage.LogOut();
+        }
+        [Given(@"I have logged in with new pass")]
+        public void GivenIHaveLoggedInWithNewPass()
+        {
+            ba.CiaranLogIn("a@b.a", "avava");
+        }
+        [Then(@"i should see the logged in page")]
+        public void ThenIShouldSeeTheLoggedInPage()
+        {
+            string result = personalInfoPage.CheckingLoggedOut();
+            StringAssert.Contains(result, "MY ACCOUNT");
+        }
     }
 }
