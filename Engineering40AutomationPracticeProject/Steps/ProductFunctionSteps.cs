@@ -59,9 +59,9 @@ namespace Engineering40AutomationPracticeProject.Pages
         [Then(@"I should see the product on the wishlist")]
         public void ThenIShouldSeeTheProductOnTheWishlist()
         {
-           Thread.Sleep(3000);
+           Thread.Sleep(1000);
            Assert.AreEqual("Added to your wishlist.", womenPage.ErrorBox());
-            loginPage.LogOut();
+            
         }
         
         [Then(@"I should see the error message")]
@@ -74,7 +74,8 @@ namespace Engineering40AutomationPracticeProject.Pages
         [Then(@"I should see the selected items side by side")]
         public void ThenIShouldSeeTheSelectedItemsSideBySide()
         {
-            Assert.AreEqual(4, womenPage.CompareInfo());
+            Thread.Sleep(2000);
+            Assert.IsTrue(womenPage.ItemsAppear());
         }
 
         [Scope(Feature = "ProductFunction")]
