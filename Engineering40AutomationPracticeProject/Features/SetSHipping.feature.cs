@@ -17,20 +17,20 @@ namespace Engineering40AutomationPracticeProject.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("SetQuantity", SourceFile="Features\\SetQuantity.feature", SourceLine=0)]
-    public partial class SetQuantityFeature
+    [TechTalk.SpecRun.FeatureAttribute("SetShipping", SourceFile="Features\\SetSHipping.feature", SourceLine=0)]
+    public partial class SetShippingFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "SetQuantity.feature"
+#line 1 "SetSHipping.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SetQuantity", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SetShipping", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,44 +66,27 @@ namespace Engineering40AutomationPracticeProject.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add Quantity", SourceLine=2)]
-        public virtual void AddQuantity()
+        [TechTalk.SpecRun.ScenarioAttribute("Select Shipping Option", SourceLine=2)]
+        public virtual void SelectShippingOption()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Quantity", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Shipping Option", null, ((string[])(null)));
 #line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 4
-testRunner.Given("I am on the checkout page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the Shipping Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 5
-testRunner.And("I have added a product to the Basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I am signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 6
-testRunner.And("I have navigated to the Checkout area", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added an item to the basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 7
-testRunner.When("I click the plus button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I have agreed to terms and conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
-testRunner.Then("I should see Quantity increase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Minus Quantity", SourceLine=9)]
-        public virtual void MinusQuantity()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Minus Quantity", null, ((string[])(null)));
+ testRunner.And("I have selected the shipping option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+ testRunner.When("I click proceed to checkout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 11
-testRunner.Given("I am on the checkout page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 12
-testRunner.And("I have added a product to the Basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
-testRunner.And("I have navigated to the Checkout area", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
-testRunner.When("I click the minus button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
-testRunner.Then("I should see Quantity decrease", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should be able to choose my payment option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

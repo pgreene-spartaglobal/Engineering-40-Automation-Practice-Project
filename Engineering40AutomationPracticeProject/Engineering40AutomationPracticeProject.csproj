@@ -103,7 +103,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Steps\AddingToCart2Steps.cs" />
     <Compile Include="Pages\CartPage.cs" />
     <Compile Include="Pages\CheckoutAddressPage.cs" />
     <Compile Include="Pages\CheckoutPage.cs" />
@@ -116,27 +115,20 @@
     <Compile Include="Pages\PayByCheckPage.cs" />
     <Compile Include="Pages\ProductPage.cs" />
     <Compile Include="Pages\ShoppingCartSummaryPage.cs" />
-    <Compile Include="Steps\AddToCart3Steps.cs" />
     <Compile Include="Steps\AddToCartSteps.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Pages\Homepage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\CheckoutSteps.cs" />
     <Compile Include="Steps\ItemsInCartSteps.cs" />
-    <Compile Include="Steps\SetDeliveryAddressCheckoutSectionSteps.cs" />
     <Compile Include="Steps\SetQuantitySteps.cs" />
-    <Compile Include="Steps\UpdateBillingAddressesCheckoutSectionSteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="Features\AddToCart.feature" />
-    <None Include="Features\AddToCart3.feature" />
     <None Include="Features\Checkout.feature" />
     <None Include="Features\ItemsInCart.feature" />
-    <None Include="Features\SetDeliveryAddressCheckoutSection.feature" />
     <None Include="Features\SetQuantity.feature" />
-    <None Include="Features\AddToCart2.feature" />
-    <None Include="Features\UpdateBillingAddressCheckoutSection.feature" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">

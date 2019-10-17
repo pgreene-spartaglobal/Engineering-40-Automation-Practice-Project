@@ -16,6 +16,7 @@ namespace Engineering40AutomationPracticeProject.Steps
         private Homepage homepage;
         private ProductPage product;
 
+        [Scope(Feature = "AddToCart3")]
         [BeforeScenario]
         public void BeforeScenario()
         {

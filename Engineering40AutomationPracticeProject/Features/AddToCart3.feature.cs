@@ -78,7 +78,7 @@ namespace Engineering40AutomationPracticeProject.Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
-  testRunner.Given("I am on the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("I am on the homepage site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
   testRunner.And("hover on the product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9

@@ -13,47 +13,65 @@ namespace Engineering40AutomationPracticeProject.Steps
     public class SetQuantitySteps
     {
         IWebDriver driver;
-        CheckoutPage CheckoutPage;
+        CheckoutPage checkoutPage;
 
         [Scope(Feature = "SetQuantity")]
         [BeforeScenario]
         public void SetUp()
         {
             driver = new ChromeDriver();
-            CheckoutPage = new CheckoutPage(driver);
+            checkoutPage = new CheckoutPage(driver);
         }
 
         [Given(@"I am on the checkout page")]
         public void GivenIAmOnTheCheckoutPage()
         {
             
-            CheckoutPage.goToPage();
+            checkoutPage.goToPage();
         }
 
         [Given(@"I have added a product to the Basket")]
         public void GivenIHaveAddedAProductToTheBasket()
         {
-            CheckoutPage.AddToCartButton();
+            checkoutPage.AddToCartButton();
         }
         
         [Given(@"I have navigated to the Checkout area")]
         public void GivenIHaveNavigatedToTheCheckoutArea()
         {
-            CheckoutPage.goToCheckoutPage();
+            checkoutPage.goToCheckoutPage();
         }
         
         [When(@"I click the plus button")]
         public void WhenIClickThePlusButton()
         {
-            CheckoutPage.ClickPlussButton();
+            checkoutPage.ClickPlusButton();
+            Thread.Sleep(4000);
         }
-        
+
+        [When(@"I click the minus button")]
+        public void WhenIClickTheMinusButton()
+        {
+            checkoutPage.ClickPlusButton();
+            Thread.Sleep(4000);
+            checkoutPage.ClickMinusButton();
+            Thread.Sleep(4000);
+
+        }
+
         [Then(@"I should see Quantity increase")]
         public void ThenIShouldSeeQuantityIncrease()
         {
-            Thread.Sleep(2000);
-            Assert.AreEqual("2", CheckoutPage.ReadNewQuantity().ToString());
+            Assert.AreEqual("2", checkoutPage.ReadNewQuantity().ToString());
         }
+
+        [Then(@"I should see Quantity decrease")]
+        public void ThenIShouldSeeQuantityDecrease()
+        {
+
+            Assert.AreEqual("1", checkoutPage.ReadNewQuantity().ToString());
+        }
+
 
         [Scope(Feature = "SetQuantity")]
         [AfterScenario]
