@@ -44,6 +44,10 @@ namespace Engineering40AutomationPracticeProject.Pages
         {
             return MyAccountButton.Text;
         }
+        public void method()
+        {
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=my-account");
+        }
     }
    
         

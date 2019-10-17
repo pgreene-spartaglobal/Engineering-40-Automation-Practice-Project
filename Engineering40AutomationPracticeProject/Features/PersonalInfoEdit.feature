@@ -54,6 +54,16 @@ Scenario: Change email address
 	And I pressed my personal information
 	Then I should see the new email address
 
+Scenario: Change email address back
+	Given I have logged in to new email
+	And I pressed my personal information
+	And I entered my old email address
+	And I have entered my current password
+	And I pressed the save button
+	And I back on my account
+	And I pressed my personal information
+	Then I should see the old email address
+
 Scenario: Change gender
 	Given I have logged in
 	And I pressed my personal information

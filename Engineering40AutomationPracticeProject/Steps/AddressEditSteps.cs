@@ -17,9 +17,15 @@ namespace Engineering40AutomationPracticeProject.Steps
         MyAccountPage accountPage;
         MyAddress address;
 
+        [Given(@"I am on the My Accounts Page")]
+        public void GivenIAmOnTheMyAccountsPage()
+        {
+            lp.Navigate("http://automationpractice.com/index.php?controller=my-account");
+            accountPage.GetPageHeader();
+        }
 
-        [Given(@"I have logged in")]
-        public void GivenIHaveLoggedIn()
+        [Given(@"I have logged in to see account")]
+        public void GivenIHaveLoggedInToSeeAccount()
         {
             driver = new ChromeDriver();
             lp = new LoginPage(driver);
@@ -27,16 +33,8 @@ namespace Engineering40AutomationPracticeProject.Steps
             address = new MyAddress(driver);
             lp.LogIn();
             accountPage.method();
-           // address.method();
         }
-        
-        [Given(@"I am on the My Accounts Page")]
-        public void GivenIAmOnTheMyAccountsPage()
-        {
-            lp.Navigate("http://automationpractice.com/index.php?controller=my-account");
-            accountPage.GetPageHeader();
-        }
-        
+
         [Given(@"I am on the My Addresses Page")]
         public void GivenIAmOnTheMyAddressesPage()
         {

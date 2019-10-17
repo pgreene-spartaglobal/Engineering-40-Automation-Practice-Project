@@ -79,7 +79,7 @@ namespace Engineering40AutomationPracticeProject.Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 9
-    testRunner.Given("I have logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I have logged in to see account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
     testRunner.And("I am on the My Accounts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
@@ -97,7 +97,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 14
-    testRunner.Given("I have logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I have logged in to see account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 15
  testRunner.And("I am on the My Accounts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
@@ -115,7 +115,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 19
-    testRunner.Given("I have logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I have logged in to see account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 20
  testRunner.And("I am on the My Accounts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21
@@ -135,7 +135,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 25
-    testRunner.Given("I have logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I have logged in to see account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 26
  testRunner.And("I am on the My Addresses Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 27
@@ -153,7 +153,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 30
-    testRunner.Given("I have logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I have logged in to see account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 31
  testRunner.And("I am on the My Addresses Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
@@ -171,7 +171,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 35
-    testRunner.Given("I have logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I have logged in to see account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 36
  testRunner.And("I am on the My Addresses Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 37

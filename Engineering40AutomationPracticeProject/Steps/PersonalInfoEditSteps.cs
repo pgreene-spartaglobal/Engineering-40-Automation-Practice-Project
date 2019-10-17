@@ -29,6 +29,21 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             personalInfoPage.GoToInfoPage();
         }
+        [Given(@"I have logged in to new email")]
+        public void GivenIHaveLoggedInToNewEmail()
+        {
+            driver = new ChromeDriver();
+            ba = new LoginPage(driver);
+            personalInfoPage = new PersonalInfoPage(driver);
+            ba.CiaranLogIn("new@email.new", "ababa");
+        }
+
+        [Given(@"I entered my old email address")]
+        public void GivenIEnteredMyOldEmailAddress()
+        {
+            personalInfoPage.ChangeEmailName("a@b.a");
+        }
+
         //checking infomation part of test.
         [Then(@"I should see appropriate gender")]
         public void ThenIShouldSeeAppropriateGender()
@@ -57,6 +72,13 @@ namespace Engineering40AutomationPracticeProject.Steps
             string result = personalInfoPage.CheckEmail();
             StringAssert.Contains(result, "a@b.a");
         }
+        [Then(@"I should see the old email address")]
+        public void ThenIShouldSeeTheOldEmailAddress()
+        {
+            string result = personalInfoPage.CheckEmail();
+            StringAssert.Contains(result, "a@b.a");
+        }
+
         //changing of information of test.
         [Given(@"I entered my new first name")]
         public void GivenIEnteredMyNewFirstName()
