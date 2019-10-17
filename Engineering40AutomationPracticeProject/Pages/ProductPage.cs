@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Interactions;
+using System.Globalization;
 
 namespace Engineering40AutomationPracticeProject.Pages
 {
@@ -28,6 +30,13 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "layered_id_attribute_group_14")]
         protected IWebElement cbBlue;
 
+        public void ClickDropDownPrice(int v)
+        {
+            IWebElement dropDown = driver.FindElement(By.XPath("//*[@id='selectProductSort']"));
+            IList<IWebElement> dropDownList = dropDown.FindElements(By.TagName("option"));
+            dropDownList[v].Click();
+        }
+
         [FindsBy(How = How.Id, Using = "layered_id_attribute_group_15")]
         protected IWebElement cbGreen;
 
@@ -37,8 +46,21 @@ namespace Engineering40AutomationPracticeProject.Pages
         [FindsBy(How = How.Id, Using = "layered_id_attribute_group_24")]
         protected IWebElement cbPink;
 
+        // Composition
+        [FindsBy(How = How.Id, Using = "layered_id_feature_5")]
+        protected IWebElement cbCotton;
+
+        [FindsBy(How = How.Id, Using = "layered_id_feature_1")]
+        protected IWebElement cbPolyester;
+
+        [FindsBy(How = How.Id, Using = "layered_id_feature_3")]
+        protected IWebElement cbViscose;
+
         [FindsBy(How = How.ClassName, Using = "product_list")]
         protected IWebElement ulProductList;
+
+        [FindsBy(How = How.ClassName, Using = "ui-slider-range")]
+        protected IWebElement rangeSlider;
 
         public ProductPage(IWebDriver driver)
         {
@@ -49,6 +71,17 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void InitPageElements()
         {
             PageFactory.InitElements(driver, this);
+        }
+
+        public bool CheckLowestFirst()
+        {
+            IWebElement firstItem = driver.FindElement(By.XPath("//*[@id='center_column']/ul/li[1]/div/div[2]/div[1]/span"));
+            IWebElement secondItem = driver.FindElement(By.XPath("//*[@id='center_column']/ul/li[2]/div/div[2]/div[1]/span"));
+            if (double.Parse(firstItem.Text, NumberStyles.Currency, CultureInfo.CurrentCulture.NumberFormat) < double.Parse(secondItem.Text, NumberStyles.Currency, CultureInfo.CurrentCulture.NumberFormat))
+            {
+                return true;
+            }
+            return false;
         }
 
         public virtual void GoToPage() { }
@@ -91,6 +124,28 @@ namespace Engineering40AutomationPracticeProject.Pages
         public void ClickPink()
         {
             cbPink.Click();
+        }
+
+        public string ItemInStock()
+        {
+            IWebElement inStock = driver.FindElement(By.XPath("//*[@id='center_column']/ul/li[1]/div/div[2]/span/span"));
+
+            return inStock.Text;
+        }
+
+        public void ClickCotton()
+        {
+            cbCotton.Click();
+        }
+
+        public void ClickPolyester()
+        {
+            cbPolyester.Click();
+        }
+
+        public void ClickViscose()
+        {
+            cbViscose.Click();
         }
 
         public string GetBiegeColour()
@@ -162,6 +217,41 @@ namespace Engineering40AutomationPracticeProject.Pages
         //    return productList.Count;
         //}
 
+        public List<double> GetProductPrices()
+        {
+            IList<IWebElement> productList = ulProductList.FindElements(By.ClassName("product-price"));
+            List<string> priceStringList = new List<string>();
+            List<double> priceList = new List<double>();
+            foreach (IWebElement item in productList)
+            {
+                double price;
+                double.TryParse(item.Text, NumberStyles.Currency, CultureInfo.CurrentCulture.NumberFormat, out price);
+
+                priceList.Add(price);
+            }
+
+            //foreach (string price in priceStringList)
+            //{
+            //    decimal p;
+            //    Decimal.TryParse(price, out p);
+            //    priceList.Add(p);
+            //}
+            return priceList;
+        }
+
+        public bool PriceOutOfRange(double min, double max)
+        {
+            List<double> priceList = GetProductPrices();
+            foreach (double price in priceList)
+            {
+                if (price < min || price > max)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public List<string> GetProductNames()
         {
             //Get the product name from the list by class name
@@ -173,6 +263,19 @@ namespace Engineering40AutomationPracticeProject.Pages
                 itemNames.Add(item.Text);
             }
             return itemNames;
+        }
+
+        public void MoveSlider(int num)
+        {
+            Actions sliderAction = new Actions(driver);
+            sliderAction.ClickAndHold(rangeSlider)
+                .MoveByOffset((-(int)rangeSlider.Size.Width / 2), 0)
+                .MoveByOffset(num, 0).Release().Perform();
+        }
+
+        public void RangeSlider()
+        {
+            rangeSlider.Click();
         }
 
         public bool ContainName(string name)
