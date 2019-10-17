@@ -32,6 +32,12 @@ Scenario: Successfully Logged In
 	And I have clicked the submit button
 	Then I will see my account name in the nav header
 
+Scenario: Email address already being used
+	Given I am on the login page
+	And I have entered an email already registered
+	And I have clicked create account
+	Then I will see the appropriate error for email address in use
+
 Scenario: Email address not valid
 	Given I am on the login page
 	And I have entered an invalid email address

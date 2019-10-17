@@ -55,6 +55,11 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             lp.emailField.SendKeys("john@admin.com");
         }
+        [Given(@"I have entered an email already registered")]
+        public void GivenIHaveEnteredAnEmailAlreadyRegistered()
+        {
+            lp.createAccountEmail.SendKeys("john@admin.com");
+        }
 
         [Given(@"I have entered an incorrect password")]
         public void GivenIHaveEnteredAnIncorrectPassword()
@@ -66,6 +71,10 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             lp.submitLoginButton.Click();
         }
+
+
+
+
         [Then(@"I will be redirected to the account page after login")]
         public void ThenIWillBeRedirectedToTheAccountPageAfterLogin()
         {
@@ -78,9 +87,21 @@ namespace Engineering40AutomationPracticeProject.Steps
                 driver.Close();
             }
         }
+        [Then(@"I will see the appropriate error for email address in use")]
+        public void ThenIWillSeeTheAppropriateErrorForEmailAddressInUse()
+        {
+            WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("/html/body/div/div[2]/div/div[3]/div/div/div[1]/form/div/div[1]/ol/li")));
+            try
+            {
+                Assert.AreEqual("An account using this email address has already been registered. Please enter a valid password or request a new one.", lp.emailCreateAccountErrorBox.Text);
+            }
+            finally
+            {
+                driver.Close();
+            }
+        }
 
-
-        
         [Then(@"I will see the appropriate error message for email")]
         public void ThenIWillSeeTheAppropriateErrorMessageForEmail()
         {
