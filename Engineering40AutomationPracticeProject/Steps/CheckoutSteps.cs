@@ -23,8 +23,8 @@ namespace Engineering40AutomationPracticeProject.Steps
         private PayByBankWirePage payByBankWire;
         private PayByBankWireOrderConfirmationPage payByBankWireOrderConfirmationPage;
 
+        //[Scope(Feature = "CheckoutSteps")]
         [BeforeScenario]
-        [Scope(Feature = "CheckoutSteps")]
         public void BeforeScenario()
         {
             driver = new ChromeDriver();
@@ -125,8 +125,9 @@ namespace Engineering40AutomationPracticeProject.Steps
         {
             Assert.AreEqual("ORDER CONFIRMATION", payByBankWireOrderConfirmationPage.OrderConfirmationResult());
         }
+
+        //[Scope(Feature = "CheckoutSteps")]
         [AfterScenario]
-        [Scope(Feature = "CheckoutSteps")]
         public void AfterScenario()
         {
             driver.Close();
