@@ -32,12 +32,16 @@ namespace Engineering40AutomationPracticeProject.Pages
         public IWebElement emailField;
         [FindsBy(How = How.Id, Using = "SubmitLogin")]
         public IWebElement submitLoginButton;
+        [FindsBy(How = How.Id, Using = "SubmitLogin")]
+        private IWebElement submitBtn;
         [FindsBy(How = How.Id, Using = "email_create")]
         public IWebElement createAccountEmail;
         [FindsBy(How = How.Id, Using = "SubmitCreate")]
         public IWebElement submitCreateButton;
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[2]/div/div[3]/div/div/div[1]/form/div/div[1]/ol/li")]
         public IWebElement emailCreateAccountErrorBox;
+        [FindsBy(How = How.XPath, Using = "//*[@id='header']/div[2]/div/div/nav/div[2]/a")]
+        private IWebElement signOutBtn;
 
         //This is the method to navigate easily during the tests
         public void Navigate(string url)
@@ -71,6 +75,23 @@ namespace Engineering40AutomationPracticeProject.Pages
             Navigate("http://automationpractice.com/index.php?controller=authentication&back=my-account");
             createAccountEmail.SendKeys(cap.GenerateName(5));
             submitCreateButton.Click();
+        }
+
+        public void GoToPage()
+        {
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+        }
+
+        public void Login()
+        {
+            emailField.SendKeys("nbalaisyte@spartaglobal.com");
+            passwordField.SendKeys("Sparta2020");
+            submitBtn.Click();
+        }
+
+        public void LogOut()
+        {
+            signOutBtn.Click();
         }
     }
         public class LoginStep
